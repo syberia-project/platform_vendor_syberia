@@ -124,4 +124,6 @@
     <string name="config_defaultTextClassifierPackage">com.google.android.as</string>
     <string name="config_defaultListenerAccessPackages">com.android.launcher3:com.google.android.as</string>
 
+    <!-- Enable lockscreen rotation by default -->
+    <bool name="config_enableLockScreenRotation">true</bool>
 </resources>
