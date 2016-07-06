@@ -36,6 +36,7 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/bin/sysinit:system/bin/sysinit
     
 # Init files
+
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/etc/init.local.rc:system/etc/init/syberia.rc
     
@@ -48,7 +49,10 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/build/tools/50-syberia.sh:system/addon.d/50-syberia.sh \
     vendor/syberia/build/tools/backuptool.sh:install/bin/backuptool.sh \
     vendor/syberia/build/tools/backuptool.functions:install/bin/backuptool.functions \
-    
+
+# Backup Services whitelist
+PRODUCT_COPY_FILES += \
+    vendor/syberia/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
 # Keyboard libs
 PRODUCT_COPY_FILES += \
