@@ -94,3 +94,6 @@ include vendor/syberia/config/packages.mk
 
 # Inherit common syberia sepolicy
 include device/syberia/sepolicy/common/sepolicy.mk
+
+# include definitions for SDCLANG
+include device/qcom/common/sdclang/sdclang.mk
