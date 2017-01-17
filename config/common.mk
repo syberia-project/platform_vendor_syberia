@@ -39,7 +39,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# Init files
 
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/etc/init.local.rc:system/etc/init/syberia.rc
@@ -47,6 +46,14 @@ PRODUCT_COPY_FILES += \
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/etc/mkshrc:system/etc/mkshrc
+
+# Init files
+ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/syberia/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/syberia/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/syberia/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
