@@ -33,7 +33,7 @@
     <integer name="config_nightDisplayColorTemperatureDefault">2650</integer>
 
     <!-- Disable stock OTA components if installed -->
-    <!--string-array name="config_disabledComponents" translatable="false">
+    <!-- <string-array name="config_disabledComponents" translatable="false">
         <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateActivity</item>
         <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateService$Receiver</item>
         <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateService$SecretCodeReceiver</item>
@@ -60,10 +60,15 @@
            audio output to the WiFi display encoder in the media server.
          * The remote submix module "audio.r_submix.default" must be installed on the device.
          * The device must be provisioned with HDCP keys (for protected content).
+
     -->
     <bool name="config_enableWifiDisplay">true</bool>
 
     <!-- enable doze powersaving mode -->
     <bool name="config_enableAutoPowerModes">true</bool>
 
+    <!-- Support in Surfaceflinger for blur layers.
+         NOTE: This requires additional hardware-specific code. -->
+    <!-- <bool name="config_uiBlurEnabled">true</bool> -->
+    
 </resources>
