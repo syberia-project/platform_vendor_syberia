@@ -34,21 +34,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/bin/sysinit:system/bin/sysinit
-    
+
 # Init files
 
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/etc/init.local.rc:system/etc/init/syberia.rc
-    
+
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/etc/mkshrc:system/etc/mkshrc
-    
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/syberia/build/tools/50-syberia.sh:system/addon.d/50-syberia.sh \
     vendor/syberia/build/tools/backuptool.sh:install/bin/backuptool.sh \
     vendor/syberia/build/tools/backuptool.functions:install/bin/backuptool.functions \
+    vendor/syberia/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
