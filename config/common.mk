@@ -36,6 +36,8 @@ DEVICE_PACKAGE_OVERLAYS += \
     vendor/syberia/overlay/common \
     vendor/syberia/overlay/themes
 
+BUILD_RRO_SYSTEM_PACKAGE := $(TOPDIR)vendor/syberia/build/core/system_rro.mk
+
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/bin/sysinit:system/bin/sysinit
 
