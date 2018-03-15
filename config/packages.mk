@@ -111,3 +111,7 @@ PRODUCT_PACKAGES += \
 # Ambient Play
 PRODUCT_PACKAGES += \
     AmbientPlayHistoryProvider
+
+#Font package
+PRODUCT_PACKAGES += \
+    Custom-Fonts
