@@ -48,13 +48,15 @@ endif
 PRODUCT_PACKAGES += \
     SettingsDarkTheme \
     SystemDarkTheme \
-    SystemUIDarkTheme
+    SystemUIDarkTheme \
+    UpdaterDark
 
 # Themes Black
 PRODUCT_PACKAGES += \
     SettingsBlackTheme \
     SystemBlackTheme \
-    SystemUIBlackTheme
+    SystemUIBlackTheme \
+    UpdaterBlackAF
 
 # Syberia theme
 PRODUCT_PACKAGES += \
