@@ -12,12 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Themes
+# Themes Dark
 PRODUCT_PACKAGES += \
     GBoardDarkTheme \
     SettingsDarkTheme \
     SystemDarkTheme \
     SystemUIDarkTheme
+
+# Themes Black
+PRODUCT_PACKAGES += \
+    SettingsBlackTheme \
+    SystemBlackTheme
 
 # Overlays
 PRODUCT_PACKAGES += \
