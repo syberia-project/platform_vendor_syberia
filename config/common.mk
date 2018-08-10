@@ -29,7 +29,8 @@ PRODUCT_COPY_FILES += \
 
 # Keyboard libs
 PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/lib64/libjni_latinimegoogle.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libjni_latinimegoogle.so
+    vendor/syberia/prebuilt/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so \
+    vendor/syberia/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
 
 # Inherit common product build prop overrides
 -include vendor/syberia/config/versions.mk
