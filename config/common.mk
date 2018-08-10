@@ -30,19 +30,6 @@ PRODUCT_COPY_FILES += \
 # Keyboard libs
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/lib64/libjni_latinimegoogle.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libjni_latinimegoogle.so
-    
-# LatinIME gesture typing
-ifneq ($(filter tenderloin,$(TARGET_PRODUCT)),)
-ifneq ($(filter shamu,$(TARGET_PRODUCT)),)
-PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
-    vendor/syberia/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
-else
-PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
-    vendor/syberia/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
-endif
-endif
 
 # Inherit common product build prop overrides
 -include vendor/syberia/config/versions.mk
