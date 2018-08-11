@@ -8,6 +8,7 @@ endif
 # Set all versions
 DATE := $(shell date -u +%Y%m%d)
 SYBERIA_VERSION := $(TARGET_PRODUCT)-$(SYBERIA_VERSION)-$(DATE)-$(shell date -u +%H%M)-$(SYBERIA_BUILD_TYPE)
+TARGET_BACON_NAME := $(SYBERIA_VERSION)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
