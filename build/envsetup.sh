@@ -45,8 +45,8 @@ function breakfast()
             # A buildtype was specified, assume a full device name
             lunch $target
         else
-            # This is probably just the DU model name
-            lunch du_$target-userdebug
+            # This is probably just the SYBERIA model name
+            lunch syberia_$target-userdebug
         fi
     fi
     return $?
