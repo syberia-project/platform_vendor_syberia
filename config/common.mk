@@ -35,7 +35,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.service.adb.enable=1
 
 # Overlays
-PRODUCT_PACKAGE_OVERLAYS += \
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/syberia/overlay
+DEVICE_PACKAGE_OVERLAYS += \
     vendor/syberia/overlay/common
 
 # We modify several neverallows, so let the build proceed
