@@ -4,6 +4,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/syberia/overlay/common
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-google
+
 else
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
@@ -47,6 +48,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so \
     vendor/syberia/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
+
+PRODUCT_PACKAGES += \
+    MarkupGoogle
+
+# Markup libs
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
+    vendor/aosp/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
 
 # Inherit common product build prop overrides
 -include vendor/syberia/config/versions.mk
