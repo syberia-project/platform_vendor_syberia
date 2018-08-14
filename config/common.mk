@@ -1,3 +1,7 @@
+#Syberia OS
+#
+# Inherit art options
+include vendor/syberia/config/art.mk
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -29,10 +33,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
     ro.secure=0 \
     persist.service.adb.enable=1
-
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Settings \
-    SystemUI
 
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
