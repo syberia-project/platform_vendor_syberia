@@ -38,6 +38,11 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 BUILD_RRO_SYSTEM_PACKAGE := $(TOPDIR)vendor/syberia/build/core/system_rro.mk
 
+# We modify several neverallows, so let the build proceed
+ifneq ($(TARGET_BUILD_VARIANT),user)
+SELINUX_IGNORE_NEVERALLOWS := true
+endif
+
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/bin/sysinit:system/bin/sysinit
 
