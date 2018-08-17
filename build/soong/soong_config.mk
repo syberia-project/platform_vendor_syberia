@@ -4,6 +4,7 @@ $(eval _contents := $$(_contents)"Syberia": {$$(newline))
 
 $(call add_json_str_omitempty, Additional_gralloc_10_usage_bits, $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS))
 $(call add_json_bool,	Has_legacy_camera_hal1,				$(filter true,$(TARGET_HAS_LEGACY_CAMERA_HAL1)))
+$(call add_json_str, 	Java_Source_Overlays, 				$(filter true,$(JAVA_SOURCE_OVERLAYS)))
 $(call add_json_bool,	Needs_legacy_camera_hal1_dyn_native_handle,	$(filter true,$(TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE)))
 $(call add_json_bool,	Uses_media_extensions,				$(filter true,$(TARGET_USES_MEDIA_EXTENSIONS)))
 $(call add_json_bool,	Uses_generic_camera_parameter_library,		$(if $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY),,true))
@@ -17,7 +18,6 @@ $(call add_json_bool,	TargetUsesProprietaryLibs,			$(filter true,$(TARGET_USES_P
 $(call add_json_bool,	Target_uses_qsml,				$(filter true,$(TARGET_USES_QSML)))
 $(call add_json_bool,	Target_uses_eigen,				$(filter true,$(if $(strip $(TARGET_USES_QSML)),false,true)))
 $(call add_json_bool,	Target_use_sdclang,				$(filter true,$(TARGET_USE_SDCLANG)))
-
 $(call add_json_str_omitempty,	Additional_gralloc_10_usage_bits,	$(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS))
 
 $(call add_json_str,	Specific_camera_parameter_library,		$(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY))
