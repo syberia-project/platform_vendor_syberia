@@ -50,7 +50,8 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
 
 PRODUCT_PACKAGES += \
-    MarkupGoogle
+    MarkupGoogle \
+    WallpaperPickerGoogle
 
 # Markup libs
 PRODUCT_COPY_FILES += \
