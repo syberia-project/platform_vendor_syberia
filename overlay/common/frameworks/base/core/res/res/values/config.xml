@@ -67,6 +67,9 @@
     <!-- enable doze powersaving mode -->
     <bool name="config_enableAutoPowerModes">true</bool>
 
+    <!-- AlwaysOnDisplay  -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+
     <!-- Pixel -->
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
     <bool name="config_smart_battery_available">true</bool>
@@ -76,5 +79,4 @@
     <dimen name="config_dialogCornerRadius">8.0dip</dimen>
     <dimen name="config_buttonCornerRadius">4.0dip</dimen>
     <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
-
 </resources>
