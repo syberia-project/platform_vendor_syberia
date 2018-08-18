@@ -51,7 +51,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     MarkupGoogle \
-    WallpaperPickerGoogle
+    WallpaperPickerGoogle \
+    WellbeingPrebuilt
 
 # Markup libs
 PRODUCT_COPY_FILES += \
