@@ -9,6 +9,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
+# General additions
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     dalvik.vm.debug.alloc=0 \
@@ -26,6 +27,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/bin/sysinit:system/bin/sysinit
+    
+# Init files
+PRODUCT_COPY_FILES += \
+    vendor/syberia/prebuilt/common/etc/init.local.rc:system/etc/init/syberia.rc
+    
+# Don't export PS1 in /system/etc/mkshrc.
+PRODUCT_COPY_FILES += \
+    vendor/syberia/prebuilt/common/etc/mkshrc:system/etc/mkshrc
+    
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/syberia/build/tools/50-du.sh:system/addon.d/50-du.sh \
+    vendor/syberia/build/tools/backuptool.sh:install/bin/backuptool.sh \
+    vendor/syberia/build/tools/backuptool.functions:install/bin/backuptool.functions \
+    
 
 # Keyboard libs
 PRODUCT_COPY_FILES += \
