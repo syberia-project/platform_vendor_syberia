@@ -38,7 +38,7 @@ PRODUCT_COPY_FILES += \
     
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/syberia/build/tools/50-du.sh:system/addon.d/50-du.sh \
+    vendor/syberia/build/tools/50-syberia.sh:system/addon.d/50-syberia.sh \
     vendor/syberia/build/tools/backuptool.sh:install/bin/backuptool.sh \
     vendor/syberia/build/tools/backuptool.functions:install/bin/backuptool.functions \
     
