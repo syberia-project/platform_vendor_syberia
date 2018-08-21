@@ -56,12 +56,12 @@ PRODUCT_PACKAGES += \
 
 # Markup libs
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
-    vendor/aosp/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
+    vendor/syberia/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
+    vendor/syberia/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
 
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
+    vendor/syberia/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
 
 # Inherit common product build prop overrides
 -include vendor/syberia/config/versions.mk
