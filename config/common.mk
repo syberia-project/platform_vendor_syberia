@@ -74,6 +74,11 @@ PRODUCT_PACKAGES += \
     WallpaperPickerGoogle \
     WellbeingPrebuilt
 
+# Turbo
+PRODUCT_PACKAGES += \
+    Turbo \
+    turbo.xml
+
 # Markup libs
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
