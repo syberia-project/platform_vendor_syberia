@@ -32,6 +32,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
     persist.service.adb.enable=1
 
+DEVICE_PACKAGE_OVERLAYS += \
+    vendor/syberia/overlay/common \
+    vendor/syberia/overlay/themes
+
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/bin/sysinit:system/bin/sysinit
 
@@ -81,9 +85,6 @@ PRODUCT_PACKAGES += \
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
-
-# Themes
-include vendor/themes/common.mk
 
 # Inherit common product build prop overrides
 -include vendor/syberia/config/versions.mk
