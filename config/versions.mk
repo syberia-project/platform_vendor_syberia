@@ -6,10 +6,12 @@ ifndef SYBERIA_BUILD_TYPE
 endif
 
 # Set all versions
-DATE := $(shell date -u +%Y%m%d)
-TARGET_BACON_NAME := $(TARGET_PRODUCT)-$(SYBERIA_VERSION)-$(DATE)-$(shell date -u +%H%M)-$(SYBERIA_BUILD_TYPE)
+DATE := $(shell date -u +%Y%m%d-%H%M)
+TARGET_BACON_NAME := $(TARGET_PRODUCT)-$(SYBERIA_VERSION)-$(DATE)-$(SYBERIA_BUILD_TYPE)
+SYBERIA_FINGERPRINT := Syberia/$(SYBERIA_VERSION)/$(PLATFORM_VERSION)/$(BUILD_ID)/$(DATE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     ro.syberia.version=$(SYBERIA_VERSION) \
-    ro.mod.version=$(SYBERIA_BUILD_TYPE)-$(SYBERIA_VERSION)-$(DATE)
+    ro.mod.version=$(SYBERIA_BUILD_TYPE)-$(SYBERIA_VERSION)-$(DATE) \
+    com.syberia.fingerpring=$(SYBERIA_FINGERPRINT)
