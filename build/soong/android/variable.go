@@ -55,6 +55,11 @@ type Product_variables struct {
 	Target_shim_libs struct {
 		Cppflags []string
 	}
+
+	Healthd_enable_op_fastchg struct {
+	    Cflags []string
+	}
+
 }
 
 type ProductVariables struct {
@@ -77,4 +82,5 @@ type ProductVariables struct {
 	Target_uses_eigen							*bool `json:",omitempty"`
 	Target_use_sdclang							*bool `json:",omitempty"`
 	Target_shim_libs							*string `json:",omitempty"`
+        Healthd_enable_op_fastchg  					*bool `json:",omitempty"`
 }
