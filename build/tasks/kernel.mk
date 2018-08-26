@@ -114,7 +114,7 @@ endif
 TARGET_PREBUILT_INT_KERNEL := $(KERNEL_OUT)/arch/$(KERNEL_ARCH)/boot/$(BOARD_KERNEL_IMAGE_NAME)
 
 # Clear this first to prevent accidental poisoning from env
-MAKE_FLAGS :=
+MAKE_FLAGS := -j8 
 
 ifeq ($(KERNEL_ARCH),arm)
   # Avoid "Unknown symbol _GLOBAL_OFFSET_TABLE_" errors
