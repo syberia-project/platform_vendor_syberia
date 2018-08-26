@@ -31,6 +31,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
     ro.secure=0 \
     persist.service.adb.enable=1
+    
+#Bootanimation
+PRODUCT_COPY_FILES += \
+    vendor/syberia/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/bin/sysinit:system/bin/sysinit
