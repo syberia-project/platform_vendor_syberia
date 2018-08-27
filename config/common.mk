@@ -59,9 +59,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/syberia/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
-# Default permissions
+# Default and google apps privapp permissions
 PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/etc/privapp-permissions-syberia.xml:system/etc/permissions/privapp-permissions-syberia.xml
+    vendor/syberia/prebuilt/common/etc/privapp-permissions-syberia.xml:system/etc/permissions/privapp-permissions-syberia.xml \
+    vendor/syberia/prebuilt/common/etc/privapp-permissions-googleapps.xml:system/etc/permissions/privapp-permissions-googleapps.xml
 
 # Keyboard libs
 PRODUCT_COPY_FILES += \
