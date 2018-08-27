@@ -22,4 +22,6 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
   Settings
 
 # Dex pre-opt profiles
+WITH_DEX_PREOPT_GENERATE_PROFILE := true
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed-profile
+PRODUCT_DEX_PREOPT_PROFILE_DIR := vendor/dexopt-profiles
