@@ -94,10 +94,3 @@ include vendor/syberia/config/packages.mk
 
 # Inherit common syberia sepolicy
 include device/syberia/sepolicy/common/sepolicy.mk
-
-# Include SDCLANG definitions if it is requested and available
-ifeq ($(HOST_OS),linux)
-    ifneq ($(wildcard vendor/qcom/sdclang-3.8/),)
-        include vendor/syberia/sdclang/sdclang.mk
-    endif
-endif
