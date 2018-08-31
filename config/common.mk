@@ -31,10 +31,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
     ro.secure=0 \
     persist.service.adb.enable=1
-    
-#Bootanimation
-PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/bin/sysinit:system/bin/sysinit
@@ -54,6 +50,9 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/build/tools/backuptool.sh:install/bin/backuptool.sh \
     vendor/syberia/build/tools/backuptool.functions:install/bin/backuptool.functions \
     vendor/syberia/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
+    
+# Bootanimation
+$(call inherit-product, vendor/syberia/config/bootanimation.mk)
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
