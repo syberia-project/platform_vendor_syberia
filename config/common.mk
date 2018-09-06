@@ -85,6 +85,9 @@ PRODUCT_PACKAGES += \
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
+    
+# Packages
+include vendor/syberia/config/packages.mk
 
 # Inherit common product build prop overrides
 -include vendor/syberia/config/versions.mk
