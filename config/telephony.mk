@@ -6,8 +6,8 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/etc/selective-spn-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/selective-spn-conf.xml
 
 # World APN list
-PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/etc/apns-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/apns-conf.xml
+PRODUCT_PACKAGES += \
+    apns-conf.xml
 
 # World SPN overrides list
 PRODUCT_COPY_FILES += \
