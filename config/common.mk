@@ -69,14 +69,14 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
 
 PRODUCT_PACKAGES += \
-    MarkupGoogle \
-    WallpaperPickerGoogle \
-    WellbeingPrebuilt
+    WallpaperPickerGoogle
+#    MarkupGoogle \
+#    WellbeingPrebuilt
 
 # Markup libs
-PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
-    vendor/syberia/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
+#PRODUCT_COPY_FILES += \
+#    vendor/syberia/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
+#    vendor/syberia/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
 
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
