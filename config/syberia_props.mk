@@ -19,7 +19,8 @@ PRODUCT_GENERIC_PROPERTIES += \
     ro.substratum.verified=true \
     persist.sys.recovery_update=false \
     ro.com.google.ime.theme_id=5 \
-    persist.sys.disable_rescue=true
+    persist.sys.disable_rescue=true \
+    ro.control_privapp_permissions=disable
 
 # Disable HDCP check
 PRODUCT_PROPERTY_OVERRIDES += \
