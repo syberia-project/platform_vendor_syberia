@@ -65,3 +65,4 @@ PRODUCT_SOONG_NAMESPACES += \
   hardware/qcom/media-caf/$(QCOM_HARDWARE_VARIANT)
 
 include vendor/syberia/build/core/BoardConfigKernel.mk
+include vendor/syberia/build/core/BoardConfigSoong.mk
