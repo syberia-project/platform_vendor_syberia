@@ -91,3 +91,6 @@ include vendor/syberia/config/packages.mk
 
 # Inherit common product build prop overrides
 -include vendor/syberia/config/versions.mk
+
+# Inherit common syberia sepolicy
+include device/syberia/sepolicy/common/sepolicy.mk
