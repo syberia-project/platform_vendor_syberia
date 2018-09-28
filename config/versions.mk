@@ -13,8 +13,9 @@ SYBERIA_FINGERPRINT := Syberia/$(SYBERIA_VERSION)/$(PLATFORM_VERSION)/$(BUILD_ID
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     ro.syberia.version=$(SYBERIA_VERSION) \
-    ro.mod.version=$(SYBERIA_BUILD_TYPE)-$(SYBERIA_VERSION)-$(DATE) \
     com.syberia.fingerpring=$(SYBERIA_FINGERPRINT)
 
 PRODUCT_GENERIC_PROPERTIES += \
-    ro.syberia.display.version=Syberia-$(TARGET_PRODUCT)-$(SYBERIA_VERSION)
+    ro.syberia.display.version=Syberia-$(SYBERIA_VERSION) \
+    ro.syberia.releasetype=$(SYBERIA_BUILD_TYPE) \
+    ro.modversion=$(TARGET_BACON_NAME)
