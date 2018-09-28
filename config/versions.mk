@@ -15,3 +15,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.syberia.version=$(SYBERIA_VERSION) \
     ro.mod.version=$(SYBERIA_BUILD_TYPE)-$(SYBERIA_VERSION)-$(DATE) \
     com.syberia.fingerpring=$(SYBERIA_FINGERPRINT)
+
+PRODUCT_GENERIC_PROPERTIES += \
+    ro.syberia.display.version=Syberia-$(TARGET_PRODUCT)-$(SYBERIA_VERSION)
