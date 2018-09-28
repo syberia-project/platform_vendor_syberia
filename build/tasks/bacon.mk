@@ -23,8 +23,9 @@ endif
 
 INTERNAL_BACON_TARGET := $(PRODUCT_OUT)/$(INTERNAL_BACON_NAME).zip
 
-.PHONY: bacon
-bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(INTERNAL_BACON_TARGET)
-	$(hide) $(MD5SUM) $(INTERNAL_BACON_TARGET) | sed "s|$(PRODUCT_OUT)/||" > $(INTERNAL_BACON_TARGET).md5sum
-	@echo "Package Complete: $(INTERNAL_BACON_TARGET)" >&2
+.PHONY: bacon syberia
+bacon: syberia
+syberia: $(INTERNAL_OTA_PACKAGE_TARGET)
+	 $(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(INTERNAL_BACON_TARGET)
+	 $(hide) $(MD5SUM) $(INTERNAL_BACON_TARGET) | sed "s|$(PRODUCT_OUT)/||" > $(INTERNAL_BACON_TARGET).md5sum
+	 @echo "Package Complete: $(INTERNAL_BACON_TARGET)" >&2
