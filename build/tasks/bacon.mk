@@ -15,18 +15,6 @@
 # -----------------------------------------------------------------
 # Bacon update package
 
-# Localized color definitions
-# tput color defs:
-CLR_RED=$(shell tput setaf 1)
-CLR_GRN=$(shell tput setaf 2)
-CLR_YLW=$(shell tput setaf 3)
-CLR_BLU=$(shell tput setaf 4)
-CLR_MAG=$(shell tput setaf 5)
-CLR_CYN=$(shell tput setaf 6)
-CLR_WHT=$(shell tput setaf 7)
-CLR_BOLD=$(shell tput bold)
-CLR_RST=$(shell tput sgr0)
-
 # Shell color defs:
 CL_RED="\033[31m"
 CL_GRN="\033[32m"
@@ -50,7 +38,6 @@ syberia: $(INTERNAL_OTA_PACKAGE_TARGET)
 	 $(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(INTERNAL_BACON_TARGET)
 	 $(hide) $(MD5SUM) $(INTERNAL_BACON_TARGET) | sed "s|$(PRODUCT_OUT)/||" > $(INTERNAL_BACON_TARGET).md5sum
 	 @echo "Package Complete: $(INTERNAL_BACON_TARGET)" >&2
-	 
 	 @echo -e ${CL_RST}"                                                                    "${CL_RST}
 	 @echo -e ${CL_RED}"                                                                    "${CL_RED}
 	 @echo -e ${CL_RED}"          ██████▓██   ██▓ ▄▄▄▄   ▓█████  ██▀███   ██▓ ▄▄▄           "${CL_RED}
@@ -66,5 +53,7 @@ syberia: $(INTERNAL_OTA_PACKAGE_TARGET)
 	 @echo -e ${CL_RST}"                                                                    "${CL_RST}
 	 @echo -e ${CL_RED}"===================================================================="${CL_RED}
 	 @echo -e ${CL_RST}"$(INTERNAL_BACON_TARGET)                                            "${CL_RST}
+	 @echo -e ${CL_BLD}${CL_YLW}"MD5: "${CL_YLW}" `cat $(INTERNAL_BACON_TARGET).md5sum | awk '{print $$1}' `"${CL_RST}
+	 @echo -e ${CL_BLD}${CL_YLW}"Size:"${CL_YLW}" `du -sb $(INTERNAL_BACON_TARGET) | awk '{print $$1}' `"${CL_RST}
 	 @echo -e ${CL_RED}"===================================================================="${CL_RED}
 	 @echo -e ${CL_RST}"                                                                    "${CL_RST}
