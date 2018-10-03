@@ -52,3 +52,7 @@ PRODUCT_PACKAGES += \
     TealAccent \
     YellowAccent \
     WhiteAccent
+
+#Textclassifier bundle
+PRODUCT_PACKAGES += \
+    textclassifier.bundle1
