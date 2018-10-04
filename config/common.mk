@@ -65,7 +65,8 @@ PRODUCT_COPY_FILES += \
 # Default and google apps privapp permissions
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/etc/privapp-permissions-syberia.xml:system/etc/permissions/privapp-permissions-syberia.xml \
-    vendor/syberia/prebuilt/common/etc/privapp-permissions-googleapps.xml:system/etc/permissions/privapp-permissions-googleapps.xml
+    vendor/syberia/prebuilt/common/etc/privapp-permissions-googleapps.xml:system/etc/permissions/privapp-permissions-googleapps.xml \
+    vendor/syberia/prebuilt/common/etc/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml
 
 # Keyboard libs
 PRODUCT_COPY_FILES += \
@@ -75,20 +76,23 @@ PRODUCT_COPY_FILES += \
 # Include Lineage LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/syberia/overlay/dictionaries
 
+#Google prebuilts
 PRODUCT_PACKAGES += \
     MarkupGoogle \
     WallpaperPickerGoogle \
-    WellbeingPrebuilt
+    WellbeingPrebuilt \
+    Turbo
 
 # Markup libs
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
     vendor/syberia/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
 
-# Pixel sysconfig
+#Sysconfig
 PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
-    
+    vendor/syberia/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml \
+    vendor/syberia/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
+
 # Packages
 include vendor/syberia/config/packages.mk
 
