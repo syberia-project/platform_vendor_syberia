@@ -12,6 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# NTFS and ExFAT
+PRODUCT_PACKAGES += \
+    fsck.exfat \
+    fsck.ntfs \
+    mke2fs \
+    mkfs.exfat \
+    mkfs.ntfs \
+    mount.ntfs
+
 # Themes Dark
 PRODUCT_PACKAGES += \
     GBoardDarkTheme \
