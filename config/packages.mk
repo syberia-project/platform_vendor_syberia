@@ -123,3 +123,8 @@ PRODUCT_PACKAGES += \
 #OmniStyle
 PRODUCT_PACKAGES += \
     OmniStyle
+
+#Lawnchair
+PRODUCT_PACKAGES += \
+    Lawnchair \
+    LawnConf
