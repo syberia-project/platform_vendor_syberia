@@ -12,14 +12,37 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# NTFS and ExFAT
+# Additional tools
 PRODUCT_PACKAGES += \
+    e2fsck \
     fsck.exfat \
     fsck.ntfs \
     mke2fs \
     mkfs.exfat \
     mkfs.ntfs \
-    mount.ntfs
+    mount.exfat \
+    mount.ntfs \
+    vim
+    
+ifeq ($(BOARD_INCLUDE_CMDLINE_TOOLS),true)
+PRODUCT_PACKAGES += \
+    bash \
+    htop \
+    nano \
+    powertop \
+    rsync \
+    zip
+
+# Openssh
+PRODUCT_PACKAGES += \
+    scp \
+    sftp \
+    ssh \
+    sshd \
+    sshd_config \
+    ssh-keygen \
+    start-ssh
+endif
 
 # Themes Dark
 PRODUCT_PACKAGES += \
