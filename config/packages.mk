@@ -98,4 +98,5 @@ PRODUCT_PACKAGES += \
 
 #OmniJaws
 PRODUCT_PACKAGES += \
-    OmniJaws
+    OmniJaws \
+    WeatherIcons
