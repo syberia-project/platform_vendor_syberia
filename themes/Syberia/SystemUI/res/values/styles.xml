@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="qs_base" parent="android:Theme.DeviceDefault">
+        <item name="android:panelColorBackground">@*android:color/material_grey_800</item>
+    </style>
+    
+</resources>
