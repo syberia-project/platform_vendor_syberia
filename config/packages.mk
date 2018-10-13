@@ -57,6 +57,12 @@ PRODUCT_PACKAGES += \
     SystemBlackTheme \
     SystemUIBlackTheme
 
+# Syberia theme
+PRODUCT_PACKAGES += \
+    SystemSyberiaTheme \
+    SystemUISyberiaTheme \
+    SettingsSyberiaTheme 
+
 # Overlays
 PRODUCT_PACKAGES += \
     AmberAccent \
