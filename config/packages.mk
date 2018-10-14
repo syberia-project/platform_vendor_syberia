@@ -85,6 +85,7 @@ PRODUCT_PACKAGES += \
     PinkAccent \
     PurpleAccent \
     RedAccent \
+    RosyAccent \
     SettingsDark \
     SystemDark \
     TealAccent \
