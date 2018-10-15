@@ -95,3 +95,7 @@ PRODUCT_PACKAGES += \
 #Textclassifier bundle
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
+
+#OmniJaws
+PRODUCT_PACKAGES += \
+    OmniJaws
