@@ -72,6 +72,9 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so \
     vendor/syberia/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
 
+# Include Lineage LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/syberia/overlay/dictionaries
+
 PRODUCT_PACKAGES += \
     WallpaperPickerGoogle
 #    MarkupGoogle \
