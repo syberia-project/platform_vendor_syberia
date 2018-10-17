@@ -5580,6 +5580,16 @@
       type="mms"
   />
 
+  <apn carrier="IMS"
+      mcc="250"
+      mnc="01"
+      apn="ims"
+      type="ims"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+      user_visible="false"
+  />
+
   <apn carrier="Megafon Internet"
       mcc="250"
       mnc="02"
@@ -5600,6 +5610,16 @@
       mmsport="8080"
       authtype="1"
       type="mms"
+  />
+
+  <apn carrier="IMS"
+      mcc="250"
+      mnc="01"
+      apn="ims"
+      type="ims"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+      user_visible="false"
   />
 
   <apn carrier="YOTA Internet"
