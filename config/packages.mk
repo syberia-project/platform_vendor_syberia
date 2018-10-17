@@ -90,10 +90,10 @@ PRODUCT_PACKAGES += \
     
 # QS tile styles
 PRODUCT_PACKAGES += \
-    QStileCircleTrim \
-    QStileDefault \
-    QStileDualToneCircle \
-    QStileSquircleTrim
+    QStilesDefault \
+    QStilesCircleTrim \
+    QStilesSquircleTrim \
+    QStilesTwoToneCircle
 
 #Textclassifier bundle
 PRODUCT_PACKAGES += \
