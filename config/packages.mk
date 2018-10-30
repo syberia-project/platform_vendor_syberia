@@ -65,7 +65,6 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     AmberAccent \
-    BlackAccent \
     BlueAccent \
     BlueGreyAccent \
     BrownAccent \
@@ -88,7 +87,6 @@ PRODUCT_PACKAGES += \
     SystemDark \
     TealAccent \
     YellowAccent \
-    WhiteAccent
     
 # QS tile styles
 PRODUCT_PACKAGES += \
