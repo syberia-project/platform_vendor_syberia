@@ -93,7 +93,11 @@ PRODUCT_PACKAGES += \
     QStilesDefault \
     QStilesCircleTrim \
     QStilesSquircleTrim \
-    QStilesTwoToneCircle
+    QStilesTwoToneCircle \
+    QStilesSquircle \
+    QStilesTearDrop \
+    QStilesSquare \
+    QStilesRoundedSquare
 
 #Textclassifier bundle
 PRODUCT_PACKAGES += \
