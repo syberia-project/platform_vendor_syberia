@@ -93,6 +93,10 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml \
     vendor/syberia/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
 
+# Substratum Key
+PRODUCT_COPY_FILES += \
+    vendor/syberia/prebuilt/common/apk/SubstratumKey.apk:system/priv-app/SubstratumKey/SubstratumKey.apk
+
 # Packages
 include vendor/syberia/config/packages.mk
 
