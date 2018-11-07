@@ -107,3 +107,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OmniJaws \
     WeatherIcons
+
+# Ambient Play
+PRODUCT_PACKAGES += \
+    AmbientPlayHistoryProvider
