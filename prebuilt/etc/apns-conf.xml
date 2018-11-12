@@ -32855,4 +32855,25 @@
       port="8080"
       type="default"
   />
+  <apn carrier="Smartfren4G" 
+        mcc="510" 
+	mnc="09" 
+	apn="Smartfren4G" 
+	user="smartfren" 
+	password="smartfren" 
+	authtype="3" 
+	type="default,supl" 
+	protocol="IPV4V6" 
+  />
+
+  <apn carrier="Smartfren4G" 
+	mcc="510" 
+	mnc="28" 
+	apn="Smartfren4G" 
+	user="smartfren" 
+	password="smartfren" 
+	authtype="3" 
+	type="default,supl" 
+	protocol="IPV4V6" 
+  />
 </apns>
