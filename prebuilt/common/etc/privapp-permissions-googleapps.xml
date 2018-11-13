@@ -968,7 +968,6 @@ It allows additional grants on top of privapp-permissions-platform.xml
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.wellbeing">
-        <permission name="android.permission.MODIFY_PHONE_STATE"/>
         <permission name="android.permission.CONTROL_DISPLAY_SATURATION"/>
         <permission name="android.permission.OBSERVE_APP_USAGE"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
