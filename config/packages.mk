@@ -124,3 +124,8 @@ PRODUCT_PACKAGES += \
 #OmniStyle
 PRODUCT_PACKAGES += \
     OmniStyle
+
+# JamesDSP
+PRODUCT_PACKAGES += \
+   MusicFX \
+   libjamesdsp
