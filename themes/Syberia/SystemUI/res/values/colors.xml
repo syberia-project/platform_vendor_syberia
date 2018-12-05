@@ -10,6 +10,5 @@
     <!-- Zen QS panel -->
     <color name="zen_introduction">#ff000000</color>
     <color name="zen_qs_panel_close_button_color">@android:color/black</color>
-    <color name="qs_edit_item_decoration_bg">@*android:color/black</color>
 
 </resources>
