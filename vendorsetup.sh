@@ -15,3 +15,5 @@
 #
 add_lunch_combo syberia_gemini-userdebug
 add_lunch_combo syberia_gemini-user
+add_lunch_combo syberia_oneplus6-userdebug
+add_lunch_combo syberia_oneplus6-user
