@@ -1,5 +1,3 @@
-#Overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/syberia/overlay/common
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -32,7 +30,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
     persist.service.adb.enable=1
 
-DEVICE_PACKAGE_OVERLAYS += \
+# Overlays
+PRODUCT_PACKAGE_OVERLAYS += \
     vendor/syberia/overlay/common \
     vendor/syberia/overlay/themes
 
