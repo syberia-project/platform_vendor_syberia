@@ -99,6 +99,12 @@ PRODUCT_PACKAGES += \
     QStilesSquare \
     QStilesRoundedSquare
 
+# Switch themes
+PRODUCT_PACKAGES += \
+    MD2Switch \
+    OnePlusSwitch \
+    StockSwitch
+
 #Textclassifier bundle
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
