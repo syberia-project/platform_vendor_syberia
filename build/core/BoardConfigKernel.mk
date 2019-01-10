@@ -26,9 +26,9 @@
 #   TARGET_KERNEL_ADDITIONAL_CONFIG    = Additional defconfig, optional
 #   TARGET_KERNEL_ARCH                 = Kernel Arch
 #   TARGET_KERNEL_CROSS_COMPILE_PREFIX = Compiler prefix (e.g. arm-eabi-)
-#                                          defaults to arm-linux-androidkernel- for arm
-#                                                      aarch64-linux-androidkernel- for arm64
-#                                                      x86_64-linux-androidkernel- for x86
+#                                          defaults to arm-linux-android- for arm
+#                                                      aarch64-linux-android- for arm64
+#                                                      x86_64-linux-android- for x86
 #
 #   TARGET_KERNEL_CLANG_COMPILE        = Compile kernel with clang, defaults to false
 #
@@ -199,11 +199,11 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(strip $(TARGET_KERNEL_CROSS_COMPILE_PREF
 ifneq ($(TARGET_KERNEL_CROSS_COMPILE_PREFIX),)
 KERNEL_TOOLCHAIN_PREFIX ?= $(TARGET_KERNEL_CROSS_COMPILE_PREFIX)
 else ifeq ($(KERNEL_ARCH),arm64)
-KERNEL_TOOLCHAIN_PREFIX ?= aarch64-linux-androidkernel-
+KERNEL_TOOLCHAIN_PREFIX ?= aarch64-linux-android-
 else ifeq ($(KERNEL_ARCH),arm)
-KERNEL_TOOLCHAIN_PREFIX ?= arm-linux-androidkernel-
+KERNEL_TOOLCHAIN_PREFIX ?= arm-linux-android-
 else ifeq ($(KERNEL_ARCH),x86)
-KERNEL_TOOLCHAIN_PREFIX ?= x86_64-linux-androidkernel-
+KERNEL_TOOLCHAIN_PREFIX ?= x86_64-linux-android-
 endif
 
 ifeq ($(KERNEL_TOOLCHAIN),)
@@ -247,8 +247,9 @@ endif
 
 ifeq ($(TARGET_KERNEL_CLANG_COMPILE),true)
     KERNEL_CROSS_COMPILE := CROSS_COMPILE="$(KERNEL_TOOLCHAIN_PATH)"
+    PATH_OVERRIDE := PATH=$(TARGET_KERNEL_CLANG_PATH):$$PATH LD_LIBRARY_PATH=$(BUILD_TOP)/prebuilts/clang/host/$(HOST_OS)-x86/$(KERNEL_CLANG_VERSION)/lib64:$$LD_LIBRARY_PATH
     ifeq ($(KERNEL_CC),)
-        KERNEL_CC := CC="$(ccache) $(TARGET_KERNEL_CLANG_PATH)/clang"
+        KERNEL_CC := CC="$(ccache) clang"
     endif
 else
     KERNEL_CROSS_COMPILE := CROSS_COMPILE="$(ccache) $(KERNEL_TOOLCHAIN_PATH)"
