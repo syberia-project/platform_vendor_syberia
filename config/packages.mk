@@ -133,4 +133,8 @@ PRODUCT_PACKAGES += \
 ifeq ($(TARGET_WANTS_FOD_ANIMATIONS),true)
 PRODUCT_PACKAGES += \
     FodAnimationResources
+
+PRODUCT_PACKAGES += \
+    CustomDoze
+
 endif
