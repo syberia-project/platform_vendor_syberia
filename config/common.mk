@@ -46,8 +46,9 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 
-PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/etc/init.local.rc:system/etc/init/syberia.rc
+# Vendor specific init files
+$(foreach f,$(wildcard vendor/syberia/prebuilt/common/etc/init/*.rc),\
+    $(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
 
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
