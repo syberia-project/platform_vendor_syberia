@@ -131,6 +131,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="com.google.android.partnersetup.permission.WRITE_APP_PROVIDER"/>
         <permission name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
         <permission name="com.google.android.providers.gsf.permission.WRITE_GSERVICES"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.REBOOT"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.gcs">
