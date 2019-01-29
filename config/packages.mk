@@ -117,3 +117,7 @@ PRODUCT_PACKAGES += \
 #Font package
 PRODUCT_PACKAGES += \
     Custom-Fonts
+
+#OmniStyle
+PRODUCT_PACKAGES += \
+    OmniStyle
