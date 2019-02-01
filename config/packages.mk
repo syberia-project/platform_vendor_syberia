@@ -49,7 +49,8 @@ PRODUCT_PACKAGES += \
     SettingsDarkTheme \
     SystemDarkTheme \
     SystemUIDarkTheme \
-    UpdaterDark
+    UpdaterDark \
+    WellbeingDark
 
 # Themes Black
 PRODUCT_PACKAGES += \
