@@ -99,7 +99,6 @@ PRODUCT_PACKAGES += \
 
 # Markup libs
 PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
     vendor/syberia/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
 
 #Sysconfig
