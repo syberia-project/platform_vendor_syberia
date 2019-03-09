@@ -32,5 +32,6 @@ $(call add_json_bool, 	Uses_qcom_um_3_18_family, 			$(filter true,$(TARGET_USES_
 $(call add_json_bool, 	Uses_qcom_um_4_4_family, 			$(filter true,$(TARGET_USES_QCOM_UM_4_4_FAMILY)))
 $(call add_json_bool, 	Uses_qcom_um_4_9_family, 			$(filter true,$(TARGET_USES_QCOM_UM_4_9_FAMILY)))
 $(call add_json_bool, 	Uses_qcom_um_4_14_family, 			$(filter true,$(TARGET_USES_QCOM_UM_4_14_FAMILY)))
+$(call add_json_bool, Uses_metadata_as_fde_key,				$(filter true,$(TARGET_USES_METADATA_AS_FDE_KEY)))
 
 $(eval _contents := $(subst $$(comma)$$(newline)__SV_END,$(newline),$$(_contents)__SV_END},$$(newline)))

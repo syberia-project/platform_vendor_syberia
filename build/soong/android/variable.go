@@ -63,6 +63,9 @@ type Product_variables struct {
 		Header_libs []string
 		Shared_libs []string
 	}
+	Uses_metadata_as_fde_key struct {
+		Cflags []string
+	}
 	Uses_qcom_um_3_18_family struct {
 		Header_libs []string
 		Shared_libs []string
@@ -107,4 +110,5 @@ type ProductVariables struct {
 	Uses_qcom_um_4_4_family  						*bool `json:",omitempty"`
 	Uses_qcom_um_4_9_family  						*bool `json:",omitempty"`
 	Uses_qcom_um_4_14_family  						*bool `json:",omitempty"`
+	Uses_metadata_as_fde_key  *bool `json:",omitempty"`
 }
