@@ -44,6 +44,10 @@ PRODUCT_PACKAGES += \
     start-ssh
 endif
 
+# Cutout control overlay
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay
+
 # Themes Dark
 PRODUCT_PACKAGES += \
     SettingsDarkTheme \
