@@ -1,0 +1,118 @@
+{
+  "OnePlus6": {
+    "maintainer": "DennySPb",
+    "device_type": "ab",
+    "device_brand": "OnePlus",
+    "device_model": "OnePlus 6",
+    "device_codename": "enchilada"
+  },
+  "X00T": {
+    "maintainer": "thetoymaker",
+    "device_type": "a-only",
+    "device_brand": "Asus",
+    "device_model": "X00T",
+    "device_codename": "X00T",
+    "forum_url": "https://forum.xda-developers.com/asus-zenfone-max-pro-m1/development/rom-syberia-project-t3848146"
+  },
+  "beryllium": {
+    "maintainer": "Ethan Halsall",
+    "device_type": "a-only",
+    "device_brand": "Xiaomi",
+    "device_model": "Poco F1",
+    "device_codename": "beryllium",
+    "forum_url": ""
+  },
+  "capricorn": {
+    "maintainer": "mesziman",
+    "device_type": "a-only",
+    "device_brand": "Xiaomi",
+    "device_model": "Mi 5S",
+    "device_codename": "capricorn",
+    "forum_url": ""
+  },
+  "chiron": {
+    "maintainer": "AleD219",
+    "device_type": "a-only",
+    "device_brand": "Xiaomi",
+    "device_model": "Mi MiX 2",
+    "device_codename": "chiron",
+    "forum_url": "https://forum.xdadevelopers.com/mi-mix-2/development/rom-syberia-project-t3847007"
+  },
+  "dipper": {
+    "maintainer": "Ethan Halsall",
+    "device_type": "a-only",
+    "device_brand": "Xiaomi",
+    "device_model": "Mi 8",
+    "device_codename": "dipper",
+    "forum_url": "https://forum.xda-developers.com/mi-8/development/9-0-rom-syberia-project-t3881271"
+  },
+  "land": {
+    "maintainer": "weritos",
+    "device_type": "a-only",
+    "device_brand": "Xiaomi",
+    "device_model": "Redmi 3S/3X",
+    "device_codename": "land",
+    "forum_url": "https://forum.xda-developers.com/xiaomi-redmi-3s/development/9-0-syberia-os-9-0-t3837103"
+  },
+  "mido": {
+    "maintainer": "NATO66613",
+    "device_type": "a-only",
+    "device_brand": "Xiaomi",
+    "device_model": "Redmi Note 4X Snapdragon",
+    "device_codename": "mido",
+    "forum_url": ""
+  },
+  "natrium": {
+    "maintainer": "cfdddd",
+    "device_type": "a-only",
+    "device_brand": "Xiaomi",
+    "device_model": "Mi 5s Plus",
+    "device_codename": "natrium",
+    "forum_url": "https://forum.xda-developers.com/mi-5s-plus/development/rom-syberia-project-t3869145"
+  },
+  "santoni": {
+    "maintainer": "HarukeyUA",
+    "device_type": "a-only",
+    "device_brand": "Xiaomi",
+    "device_model": "Redmi 4X",
+    "device_codename": "santoni",
+    "forum_url": "https://forum.xda-developers.com/xiaomi-redmi-4x/development/rom-syberia-project-t3890225"
+  },
+  "vince": {
+    "maintainer": "mdeejay",
+    "device_type": "a-only",
+    "device_brand": "Xiaomi",
+    "device_model": "Redmi 5 Plus",
+    "device_codename": "vince",
+    "forum_url": "https://forum.xda-developers.com/redmi-note-5/development/rom-syberia-project-t3884842"
+  },
+  "whyred": {
+    "maintainer": "Rashed Sahaji",
+    "device_type": "a-only",
+    "device_brand": "Xiaomi",
+    "device_model": "Redmi Note 5 Pro",
+    "device_codename": "whyred",
+    "forum_url": "https://forum.xda-developers.com/redmi-note-5-pro/development/rom-syberia-project-t3862355"
+  },
+  "OnePlus6T": {
+    "maintainer": "coderzstas",
+    "device_type": "ab",
+    "device_brand": "OnePlus",
+    "device_model": "OnePlus 6T",
+    "device_codename": "fajita"
+  },
+  "jasmine_sprout": {
+    "maintainer": "coderzstas",
+    "device_type": "ab",
+    "device_brand": "Xiaomi",
+    "device_model": "Mi A2",
+    "device_codename": "jasmine_sprout"
+  },
+  "tissot": {
+    "maintainer": "mdeejay",
+    "device_type": "ab",
+    "device_brand": "Xiaomi",
+    "device_model": "Mi A1",
+    "device_codename": "tissot"
+  }
+}
