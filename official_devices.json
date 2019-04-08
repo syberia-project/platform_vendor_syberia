@@ -114,5 +114,13 @@
     "device_brand": "Xiaomi",
     "device_model": "Mi A1",
     "device_codename": "tissot"
+  },
+  "wayne": {
+    "maintainer": "rebenok90x",
+    "device_type": "a-only",
+    "device_brand": "Xiaomi",
+    "device_model": "6X",
+    "device_codename": "wayne",
+    "forum_url": "https://forum.xda-developers.com/mi-a2/xiaomi-6x-wayne/rom-syberia-project-t3914657"
   }
 }
