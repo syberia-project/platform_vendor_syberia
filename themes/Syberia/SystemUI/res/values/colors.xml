@@ -11,4 +11,8 @@
     <color name="zen_introduction">#ff000000</color>
     <color name="zen_qs_panel_close_button_color">@android:color/black</color>
 
+    <!-- Lockscreen clock styles -->
+    <color name="analog_clock_border_color_dark">#FF473E38</color>
+    <color name="analog_clock_face_color_dark">@*android:color/black</color>
+
 </resources>
