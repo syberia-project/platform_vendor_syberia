@@ -6,6 +6,14 @@
     "device_model": "OnePlus 6",
     "device_codename": "enchilada"
   },
+  "gemini": {
+    "maintainer": "blinoff82",
+    "device_type": "a-only",
+    "device_brand": "Xiaomi",
+    "device_model": "Mi 5",
+    "device_codename": "gemini",
+    "forum_url": "https://forum.xda-developers.com/mi-5/development/rom-syberia-project-t3833868"
+  },
   "X00T": {
     "maintainer": "thetoymaker",
     "device_type": "a-only",
