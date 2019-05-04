@@ -80,6 +80,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/etc/privapp-permissions-syberia.xml:system/etc/permissions/privapp-permissions-syberia.xml \
     vendor/syberia/prebuilt/common/etc/privapp-permissions-googleapps.xml:system/etc/permissions/privapp-permissions-googleapps.xml \
+    vendor/syberia/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml \
     vendor/syberia/prebuilt/common/etc/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml
 
 # Keyboard libs
