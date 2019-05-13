@@ -44,6 +44,14 @@ PRODUCT_PACKAGES += \
     start-ssh
 endif
 
+# Shapes
+PRODUCT_PACKAGES += \
+    ShapeCircle \
+    ShapeSquare \
+    ShapeRoundedRect \
+    ShapeSquircle \
+    ShapeTeardrop
+
 # Cutout control overlay
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
