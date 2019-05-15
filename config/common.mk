@@ -86,7 +86,9 @@ PRODUCT_COPY_FILES += \
 # Keyboard libs
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so \
-    vendor/syberia/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
+
+PRODUCT_PACKAGES += \
+    libjni_latinime
 
 # Include Lineage LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/syberia/overlay/dictionaries
