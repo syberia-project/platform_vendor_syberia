@@ -270,6 +270,13 @@ ifeq ($(HOST_OS),darwin)
   KERNEL_MAKE_FLAGS += LIBRARY_PATH=/usr/local/opt/openssl/lib
 endif
 
+# Set DTBO image locations so the build system knows to build them
+ifeq ($(TARGET_NEEDS_DTBOIMAGE),true)
+BOARD_PREBUILT_DTBOIMAGE ?= $(PRODUCT_OUT)/dtbo/arch/$(KERNEL_ARCH)/boot/dtbo.img
+else ifeq ($(BOARD_KERNEL_SEPARATED_DTBO),true)
+BOARD_PREBUILT_DTBOIMAGE ?= $(PRODUCT_OUT)/dtbo-pre.img
+endif
+
 ifeq ($(TARGET_KERNEL_MODULES),)
     TARGET_KERNEL_MODULES := INSTALLED_KERNEL_MODULES
 endif
