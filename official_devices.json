@@ -70,14 +70,6 @@
     "device_codename": "mido",
     "forum_url": ""
   },
-  "natrium": {
-    "maintainer": "cfdddd",
-    "device_type": "a-only",
-    "device_brand": "Xiaomi",
-    "device_model": "Mi 5s Plus",
-    "device_codename": "natrium",
-    "forum_url": "https://forum.xda-developers.com/mi-5s-plus/development/rom-syberia-project-t3869145"
-  },
   "santoni": {
     "maintainer": "HarukeyUA",
     "device_type": "a-only",
