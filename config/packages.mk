@@ -85,6 +85,10 @@ PRODUCT_PACKAGES += \
     PinkAccent \
     PurpleAccent \
     QPurpleAccent \
+    PastelRedAccent \
+    PastelGreenAccent \
+    PastelDarkBlueAccent \
+    PastelEtonBlueAccent \
     RedAccent \
     RosyAccent \
     SettingsDark \
