@@ -94,6 +94,14 @@
     "device_codename": "vince",
     "forum_url": "https://forum.xda-developers.com/redmi-note-5/development/rom-syberia-project-t3884842"
   },
+  "lavender": {
+    "maintainer": "mdeejay",
+    "device_type": "a-only",
+    "device_brand": "Xiaomi",
+    "device_model": "Redmi Note 7",
+    "device_codename": "lavender",
+    "forum_url": "https://forum.xda-developers.com/redmi-note-7/development/rom-syberia-project-t3940835"
+  },
   "whyred": {
     "maintainer": "Rashed Sahaji",
     "device_type": "a-only",
