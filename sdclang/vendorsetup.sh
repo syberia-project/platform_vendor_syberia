@@ -4,7 +4,8 @@ export SDCLANG_PATH=vendor/qcom/sdclang-8.0/bin
 export SDCLANG_LTO_DEFS=vendor/syberia/sdclang/sdllvm-lto-defs.mk
 export SDCLANG_COMMON_FLAGS="-O3 -fvectorize -Wno-user-defined-warnings -Wno-vectorizer-no-neon -Wno-unknown-warning-option \
 -Wno-deprecated-register -Wno-tautological-type-limit-compare -Wno-sign-compare -Wno-gnu-folding-constant \
--mllvm -arm-implicit-it=always -Wno-inline-asm -Wno-unused-command-line-argument -Wno-unused-variable"
+-mllvm -arm-implicit-it=always -Wno-inline-asm -Wno-unused-command-line-argument -Wno-unused-variable \
+-Wno-c++98-compat-extra-semi -Wno-atomic-implicit-seq-cst -Wno-defaulted-function-deleted"
 
 # Enable based on host OS/availablitiy
 case $(uname -s) in
