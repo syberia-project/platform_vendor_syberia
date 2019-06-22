@@ -14,6 +14,14 @@
     "device_codename": "gemini",
     "forum_url": "https://forum.xda-developers.com/mi-5/development/rom-syberia-project-t3833868"
   },
+  "bacon": {
+    "maintainer": "blinoff82",
+    "device_type": "a-only",
+    "device_brand": "OnePlus",
+    "device_model": "OnePlus One",
+    "device_codename": "bacon",
+    "forum_url": "https://forum.xda-developers.com/oneplus-one/orig-development/rom-syberia-project-t3942046"
+  },
   "X00T": {
     "maintainer": "thetoymaker",
     "device_type": "a-only",
