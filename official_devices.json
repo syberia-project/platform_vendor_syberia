@@ -146,5 +146,13 @@
     "device_model": "6X",
     "device_codename": "wayne",
     "forum_url": "https://forum.xda-developers.com/mi-a2/xiaomi-6x-wayne/rom-syberia-project-t3914657"
+  },
+  "z2_plus": {
+    "maintainer": "Kanishk",
+    "device_type": "a-only",
+    "device_brand": "Lenovo",
+    "device_model": "Zuk Z2 Plus",
+    "device_codename": "z2_plus",
+    "forum_url": "https://forum.xda-developers.com/lenovo-zuk-z2/development/rom-syberia-project-t3916546"
   }
 }
