@@ -154,5 +154,13 @@
     "device_model": "Zuk Z2 Plus",
     "device_codename": "z2_plus",
     "forum_url": "https://forum.xda-developers.com/lenovo-zuk-z2/development/rom-syberia-project-t3916546"
+  },
+  "sanders": {
+    "maintainer": "Ashwatthama",
+    "device_type": "a-only",
+    "device_brand": "Motorola",
+    "device_model": "Moto G5S Plus",
+    "device_codename": "sanders",
+    "forum_url": "https://forum.xda-developers.com/moto-g5s-plus/development/rom-syberia-project-t3947216"
   }
 }
