@@ -130,6 +130,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Custom-Fonts
 
+#Syberia wallpapers
+PRODUCT_PACKAGES += \
+    SyberiaPapers
+
 #OmniStyle
 PRODUCT_PACKAGES += \
     OmniStyle
