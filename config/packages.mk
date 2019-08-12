@@ -142,3 +142,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    MusicFX \
    libjamesdsp
+
+# Long screenshot
+PRODUCT_PACKAGES += \
+    Longshot
