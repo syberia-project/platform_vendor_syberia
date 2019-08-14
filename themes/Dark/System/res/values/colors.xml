@@ -15,10 +15,6 @@
     <color name="immersive_cling_bg_color">@*android:color/background_material_dark</color>
     <color name="immersive_cling_text_color">@android:color/white</color>
     <color name="immersive_cling_button_text_color">@android:color/white</color>
-    
-    <!-- Autofill save dialog -->
-    <color name="autofill_save_title_color">@*android:color/primary_device_default_dark</color>
-    <color name="autofill_autofill_save_custom_subtitle_color">@*android:color/primary_device_default_dark</color>
 
     <!-- Resolver -->
     <color name="resolver_list_bg">@*android:color/background_material_dark</color>
