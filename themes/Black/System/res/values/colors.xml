@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Device default colors -->
+    <color name="primary_device_default_dark">@*android:color/black</color>
+    <color name="primary_device_default_settings">@*android:color/black</color>
+    <color name="primary_dark_device_default_settings">@*android:color/black</color>
+    <color name="secondary_device_default_settings">@*android:color/black</color>
+    <color name="background_material_dark">@*android:color/black</color>
+    <color name="material_grey_900">@*android:color/black</color>
+    <color name="material_grey_850">@*android:color/black</color>
+    <color name="material_grey_800">@*android:color/black</color>
+    <color name="background_floating_material_dark">#ff313235</color>
+
     <!-- Immersive cling -->
-    <color name="immersive_cling_bg_color">@*android:color/black</color>
+    <color name="immersive_cling_bg_color">#ff313235</color>
     <color name="immersive_cling_text_color">@android:color/white</color>
     <color name="immersive_cling_button_text_color">@android:color/white</color>
 
     <!-- Resolver -->
-    <color name="resolver_list_bg">@*android:color/black</color>
-    <color name="chooser_service_row_background_color">@*android:color/white</color>
+    <color name="resolver_list_bg">#ff313235</color>
+    <color name="chooser_service_row_background_color">#ff313235</color>
 
     <!-- Color for the background of the shortcut icons.-->
     <color name="shortcut_background">@*android:color/primary_device_default_dark</color>
@@ -28,6 +39,7 @@
     <!-- Auto fill -->
     <color name="autofill_save_title_color">@android:color/black</color>
     <color name="autofill_autofill_save_custom_subtitle_color">@android:color/black</color>
+    <color name="autofill_save_background_color">#ff313235</color>
 
     <!-- Color Constants -->
     <color name="theme_text1">#ffe5e5e5</color> <!-- text primary -->
