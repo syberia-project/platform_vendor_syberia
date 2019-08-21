@@ -146,3 +146,12 @@ PRODUCT_PACKAGES += \
 # Long screenshot
 PRODUCT_PACKAGES += \
     Longshot
+
+# Recorder app
+PRODUCT_PACKAGES += \
+    Recorder
+
+# Some permissions
+PRODUCT_COPY_FILES += \
+    vendor/syberia/config/permissions/privapp-permissions-recorder.xml:system/etc/permissions/privapp-permissions-recorder.xml \
+    vendor/syberia/config/permissions/org.pixelexperience.recorder.xml:system/etc/permissions/org.pixelexperience.recorder.xml
