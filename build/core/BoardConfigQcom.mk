@@ -51,6 +51,8 @@ MASTER_SIDE_CP_TARGET_LIST := msm8996 msm8998 sdm660 sm6150 sm8150 sdm845
 ifeq ($(call is-board-platform-in-list, $(B_FAMILY)),true)
     MSM_VIDC_TARGET_LIST := $(B_FAMILY)
     QCOM_HARDWARE_VARIANT := msm8974
+    TARGET_USES_QCOM_UM_FAMILY := true
+    TARGET_USES_QCOM_UM_3_4_FAMILY := true
 else ifeq ($(call is-board-platform-in-list, $(B64_FAMILY)),true)
     MSM_VIDC_TARGET_LIST := $(B64_FAMILY)
     QCOM_HARDWARE_VARIANT := msm8994
