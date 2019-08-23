@@ -93,15 +93,9 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/syberia/overlay/dictionaries
 
 #Google prebuilts
 PRODUCT_PACKAGES += \
-    MarkupGoogle \
     WallpaperPickerGoogle \
     WellbeingPrebuilt \
     Turbo
-
-# Markup libs
-PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so \
-    vendor/syberia/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so
 
 #Sysconfig
 PRODUCT_COPY_FILES += \
