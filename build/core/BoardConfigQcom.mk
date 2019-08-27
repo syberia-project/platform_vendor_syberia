@@ -74,7 +74,7 @@ else ifeq ($(call is-board-platform-in-list, $(UM_4_9_FAMILY)),true)
     QCOM_HARDWARE_VARIANT := sdm845
     TARGET_USES_QCOM_UM_FAMILY := true
     TARGET_USES_QCOM_UM_4_9_FAMILY := true
-ifeq ($(call is-board-platform-in-list, $(UM_4_14_FAMILY)),true)
+else ifeq ($(call is-board-platform-in-list, $(UM_4_14_FAMILY)),true)
     MSM_VIDC_TARGET_LIST := $(UM_4_14_FAMILY)
     QCOM_HARDWARE_VARIANT := sm8150
     TARGET_USES_QCOM_UM_FAMILY := true
@@ -82,7 +82,6 @@ ifeq ($(call is-board-platform-in-list, $(UM_4_14_FAMILY)),true)
 else
     MSM_VIDC_TARGET_LIST := $(TARGET_BOARD_PLATFORM)
     QCOM_HARDWARE_VARIANT := $(TARGET_BOARD_PLATFORM)
-endif
 endif
 
 PRODUCT_SOONG_NAMESPACES += \
