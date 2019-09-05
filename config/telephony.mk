@@ -8,7 +8,7 @@ PRODUCT_COPY_FILES += \
 # World APN list
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
-    
+
 # World SPN overrides list
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/etc/spn-conf.xml:system/etc/spn-conf.xml

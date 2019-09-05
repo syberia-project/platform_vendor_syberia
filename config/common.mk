@@ -32,8 +32,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/syberia/overlay/common \
-    vendor/syberia/overlay/themes
+    vendor/syberia/overlay/common
 
 BUILD_RRO_SYSTEM_PACKAGE := $(TOPDIR)vendor/syberia/build/core/system_rro.mk
 
@@ -50,10 +49,6 @@ PRODUCT_COPY_FILES += \
 $(foreach f,$(wildcard vendor/syberia/prebuilt/common/etc/init/*.rc),\
     $(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
 
-# Don't export PS1 in /system/etc/mkshrc.
-PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/etc/mkshrc:system/etc/mkshrc
-
 # Init files
 ifeq ($(AB_OTA_UPDATER),true)
 PRODUCT_COPY_FILES += \
@@ -68,7 +63,7 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/build/tools/backuptool.sh:install/bin/backuptool.sh \
     vendor/syberia/build/tools/backuptool.functions:install/bin/backuptool.functions \
     vendor/syberia/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
-    
+
 # Bootanimation
 $(call inherit-product, vendor/syberia/config/bootanimation.mk)
 
@@ -83,25 +78,9 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml \
     vendor/syberia/prebuilt/common/etc/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml
 
-# Keyboard libs
-PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so \
-    vendor/syberia/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
-
 # Include Lineage LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/syberia/overlay/dictionaries
+#PRODUCT_PACKAGE_OVERLAYS += vendor/syberia/overlay/dictionaries
 
-#Google prebuilts
-PRODUCT_PACKAGES += \
-    MarkupGoogle \
-    WallpaperPickerGoogle \
-    WellbeingPrebuilt \
-    Turbo
-
-# Markup libs
-PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so \
-    vendor/syberia/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so
 
 #Sysconfig
 PRODUCT_COPY_FILES += \
@@ -109,7 +88,7 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
 
 # Substratum Key
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/apk/SubstratumKey.apk:system/priv-app/SubstratumKey/SubstratumKey.apk
 
 # Packages

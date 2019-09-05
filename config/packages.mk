@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Additional tools
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     e2fsck \
     fsck.exfat \
     fsck.ntfs \
@@ -23,7 +23,7 @@ PRODUCT_PACKAGES += \
     mount.exfat \
     mount.ntfs \
     vim
-    
+
 ifeq ($(BOARD_INCLUDE_CMDLINE_TOOLS),true)
 PRODUCT_PACKAGES += \
     bash \
@@ -45,112 +45,23 @@ PRODUCT_PACKAGES += \
 endif
 
 # Cutout control overlay
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     NoCutoutOverlay
 
-# Themes Dark
-PRODUCT_PACKAGES += \
-    SettingsDarkTheme \
-    SystemDarkTheme \
-    SystemUIDarkTheme \
-    UpdaterDark \
-    WellbeingDark
-
-# Themes Black
-PRODUCT_PACKAGES += \
-    SettingsBlackTheme \
-    SystemBlackTheme \
-    SystemUIBlackTheme \
-    UpdaterBlackAF
-
-# Syberia theme
-PRODUCT_PACKAGES += \
-    SystemSyberiaTheme \
-    SystemUISyberiaTheme \
-    SettingsSyberiaTheme 
-
-# Overlays
-PRODUCT_PACKAGES += \
-    AmberAccent \
-    BlueAccent \
-    BlueGreyAccent \
-    BrownAccent \
-    CyanAccent \
-    DeepOrangeAccent \
-    DeepPurpleAccent \
-    DuiDark \
-    GreenAccent \
-    GreyAccent \
-    IndigoAccent \
-    LightBlueAccent \
-    LightGreenAccent \
-    LimeAccent \
-    OrangeAccent \
-    PinkAccent \
-    PurpleAccent \
-    QPurpleAccent \
-    PastelRedAccent \
-    PastelGreenAccent \
-    PastelDarkBlueAccent \
-    PastelEtonBlueAccent \
-    RedAccent \
-    RosyAccent \
-    SettingsDark \
-    SystemDark \
-    TealAccent \
-    YellowAccent \
-    
-# QS tile styles
-PRODUCT_PACKAGES += \
-    QStilesDefault \
-    QStilesCircleTrim \
-    QStilesSquircleTrim \
-    QStilesTwoToneCircle \
-    QStilesSquircle \
-    QStilesTearDrop \
-    QStilesSquare \
-    QStilesRoundedSquare
-
-# Switch themes
-PRODUCT_PACKAGES += \
-    MD2Switch \
-    OnePlusSwitch \
-    StockSwitch
 
 #Textclassifier bundle
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
 #OmniJaws
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     OmniJaws \
     WeatherIcons
-
-#Font package
-PRODUCT_PACKAGES += \
-    Custom-Fonts
 
 #Syberia wallpapers
 PRODUCT_PACKAGES += \
     SyberiaPapers
 
 #OmniStyle
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     OmniStyle
-
-# JamesDSP
-PRODUCT_PACKAGES += \
-   MusicFX \
-   libjamesdsp
-
-# Long screenshot
-PRODUCT_PACKAGES += \
-    Longshot
-
-# Recorder app
-PRODUCT_PACKAGES += \
-    Recorder
-
-# Some permissions
-PRODUCT_COPY_FILES += \
-    vendor/syberia/config/permissions/privapp-permissions-recorder.xml:system/etc/permissions/privapp-permissions-recorder.xml

@@ -6,7 +6,7 @@
 export S=/system
 export C=/postinstall/tmp/backupdir
 
-export ADDOND_VERSION=2
+export ADDOND_VERSION=3
 
 # Scripts in /system/addon.d expect to find backuptool.functions in /tmp
 mkdir -p /postinstall/tmp/
