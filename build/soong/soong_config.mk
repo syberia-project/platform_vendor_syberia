@@ -1,6 +1,6 @@
 add_json_str_omitempty = $(if $(strip $(2)),$(call add_json_str, $(1), $(2)))
 
-$(eval _contents := $$(_contents)"Syberia": {$$(newline))
+_json_contents := $(_json_contents)    "Syberia":{$(newline)
 
 $(call add_json_str_omitempty, Additional_gralloc_10_usage_bits, $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS))
 $(call add_json_bool,	Has_legacy_camera_hal1,				$(filter true,$(TARGET_HAS_LEGACY_CAMERA_HAL1)))
@@ -33,4 +33,7 @@ $(call add_json_bool, 	Uses_qcom_um_4_4_family, 			$(filter true,$(TARGET_USES_Q
 $(call add_json_bool, 	Uses_qcom_um_4_9_family, 			$(filter true,$(TARGET_USES_QCOM_UM_4_9_FAMILY)))
 $(call add_json_bool, 	Uses_qcom_um_4_14_family, 			$(filter true,$(TARGET_USES_QCOM_UM_4_14_FAMILY)))
 
-$(eval _contents := $(subst $$(comma)$$(newline)__SV_END,$(newline),$$(_contents)__SV_END},$$(newline)))
+# This causes the build system to strip out the last comma in our nested struct, to keep the JSON valid.
+_json_contents := $(_json_contents)__SV_END
+
+_json_contents := $(_json_contents)    },$(newline)
