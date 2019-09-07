@@ -85,6 +85,10 @@ type Product_variables struct {
 	Target_init_vendor_lib struct {
 		Whole_static_libs []string
 	}
+	Needs_camera_boottime_timestamp struct {
+		Cppflags []string
+		Srcs []string
+	}
 }
 
 type ProductVariables struct {
@@ -115,4 +119,5 @@ type ProductVariables struct {
 	Uses_qcom_um_4_14_family  						*bool `json:",omitempty"`
 	Target_camera_needs_client_info  					*bool `json:",omitempty"`
 	Target_init_vendor_lib							*string `json:",omitempty"`
+	Needs_camera_boottime_timestamp  					*bool `json:",omitempty"`
 }
