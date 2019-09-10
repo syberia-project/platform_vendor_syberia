@@ -51,6 +51,10 @@ type Product_variables struct {
 		Shared_libs []string
 		Required []string
 	}
+	
+	Target_init_vendor_lib struct {
+		Whole_static_libs []string
+	}
 
 	Target_shim_libs struct {
 		Cppflags []string
@@ -102,6 +106,7 @@ type ProductVariables struct {
 	Qti_flac_decoder							*bool `json:",omitempty"`
 	Target_uses_qsml							*bool `json:",omitempty"`
 	Target_uses_eigen							*bool `json:",omitempty"`
+	Target_init_vendor_lib							*string `json:",omitempty"`
 	Target_use_sdclang							*bool `json:",omitempty"`
 	Target_shim_libs							*string `json:",omitempty"`
 	Uses_qcom_um_family  							*bool `json:",omitempty"`

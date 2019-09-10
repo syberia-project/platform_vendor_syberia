@@ -17,6 +17,7 @@ $(call add_json_bool,	Qti_flac_decoder,				$(filter true,$(AUDIO_FEATURE_ENABLED
 $(call add_json_bool,	TargetUsesProprietaryLibs,			$(filter true,$(TARGET_USES_PROPRIETARY_LIBS)))
 $(call add_json_bool,	Target_uses_qsml,				$(filter true,$(TARGET_USES_QSML)))
 $(call add_json_bool,	Target_uses_eigen,				$(filter true,$(if $(strip $(TARGET_USES_QSML)),false,true)))
+$(call add_json_str_omitempty, Target_init_vendor_lib,			$(TARGET_INIT_VENDOR_LIB))
 $(call add_json_bool,	Target_use_sdclang,				$(filter true,$(TARGET_USE_SDCLANG)))
 $(call add_json_str_omitempty,	Additional_gralloc_10_usage_bits,	$(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS))
 
