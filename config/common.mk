@@ -78,6 +78,12 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml \
     vendor/syberia/prebuilt/common/etc/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml
 
+
+# Markup libs
+PRODUCT_COPY_FILES += \
+    vendor/syberia/prebuilt/google/lib/libsketchology_native.so:system/product/lib/libsketchology_native.so \
+    vendor/syberia/prebuilt/google/lib64/libsketchology_native.so:system/product/lib64/libsketchology_native.so
+
 # Include Lineage LatinIME dictionaries
 #PRODUCT_PACKAGE_OVERLAYS += vendor/syberia/overlay/dictionaries
 

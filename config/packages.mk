@@ -83,3 +83,9 @@ PRODUCT_PACKAGES += \
     AccentColorFlatPinkOverlay \
     AccentColorCyanOverlay \
     AccentColorBlueGrayOverlay
+
+# Google
+PRODUCT_PACKAGES += \
+    MarkupGoogle \
+    SoundPickerPrebuilt \
+    WellbeingPrebuilt
