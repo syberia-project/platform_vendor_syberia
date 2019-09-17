@@ -96,3 +96,17 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/product/fonts/ZillaSlab-Medium.ttf:$(TARGET_COPY_OUT_PRODUCT)/fonts/ZillaSlab-Medium.ttf \
     vendor/syberia/prebuilt/product/fonts/ZillaSlab-SemiBoldItalic.ttf:$(TARGET_COPY_OUT_PRODUCT)/fonts/ZillaSlab-SemiBoldItalic.ttf \
     vendor/syberia/prebuilt/product/fonts/ZillaSlab-SemiBold.ttf:$(TARGET_COPY_OUT_PRODUCT)/fonts/ZillaSlab-SemiBold.ttf
+
+# Accents
+PRODUCT_PACKAGES += \
+    AccentColorYellowOverlay \
+    AccentColorVioletOverlay \
+    AccentColorTealOverlay \
+    AccentColorRedOverlay \
+    AccentColorQGreenOverlay \
+    AccentColorPinkOverlay \
+    AccentColorLightPurpleOverlay \
+    AccentColorIndigoOverlay \
+    AccentColorFlatPinkOverlay \
+    AccentColorCyanOverlay \
+    AccentColorBlueGrayOverlay
