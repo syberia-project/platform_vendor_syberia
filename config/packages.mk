@@ -44,6 +44,10 @@ PRODUCT_PACKAGES += \
     start-ssh
 endif
 
+# ThemePicker
+PRODUCT_PACKAGES += \
+    ThemePicker
+
 # Cutout control overlay
 #PRODUCT_PACKAGES += \
     NoCutoutOverlay
