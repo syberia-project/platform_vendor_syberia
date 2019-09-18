@@ -79,6 +79,9 @@ type Product_variables struct {
 		Header_libs []string
 		Shared_libs []string
 	}
+	Target_camera_needs_client_info struct {
+		Cppflags []string
+	}
 }
 
 type ProductVariables struct {
@@ -107,4 +110,5 @@ type ProductVariables struct {
 	Uses_qcom_um_4_4_family  						*bool `json:",omitempty"`
 	Uses_qcom_um_4_9_family  						*bool `json:",omitempty"`
 	Uses_qcom_um_4_14_family  						*bool `json:",omitempty"`
+	Target_camera_needs_client_info  					*bool `json:",omitempty"`
 }
