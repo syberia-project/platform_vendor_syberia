@@ -37,6 +37,7 @@ $(call add_json_bool, 	Target_camera_needs_client_info, 		$(filter true,$(TARGET
 $(call add_json_str_omitempty, Target_init_vendor_lib, 			$(TARGET_INIT_VENDOR_LIB))
 $(call add_json_bool, Uses_qti_camera_device, 				$(filter true,$(TARGET_USES_QTI_CAMERA_DEVICE)))
 $(call add_json_bool, Uses_motorized_camera, 				$(filter true,$(TARGET_USES_MOTORIZED_CAMERA)))
+$(call add_json_bool,	Supports_extended_compress_format, 		$(filter true,$(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)))
 
 # This causes the build system to strip out the last comma in our nested struct, to keep the JSON valid.
 _json_contents := $(_json_contents)__SV_END
