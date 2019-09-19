@@ -54,6 +54,6 @@ syberia: $(INTERNAL_OTA_PACKAGE_TARGET)
 	 @echo -e ${CL_RED}"===================================================================="${CL_RED}
 	 @echo -e ${CL_RST}"$(INTERNAL_BACON_TARGET)                                            "${CL_RST}
 	 @echo -e ${CL_BLD}${CL_YLW}"MD5: "${CL_YLW}" `cat $(INTERNAL_BACON_TARGET).md5sum | awk '{print $$1}' `"${CL_RST}
-	 @echo -e ${CL_BLD}${CL_YLW}"Size:"${CL_YLW}" `du -sb $(INTERNAL_BACON_TARGET) | awk '{print $$1}' `"${CL_RST}
+	 @echo -e ${CL_BLD}${CL_YLW}"Size:"${CL_YLW}" `du -sh $(INTERNAL_BACON_TARGET) | awk '{print $$1}' `"${CL_RST}
 	 @echo -e ${CL_RED}"===================================================================="${CL_RED}
 	 @echo -e ${CL_RST}"                                                                    "${CL_RST}
