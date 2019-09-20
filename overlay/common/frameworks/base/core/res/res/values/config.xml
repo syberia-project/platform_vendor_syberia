@@ -76,8 +76,10 @@
     <bool name="config_buttonTextAllCaps">false</bool>
     <bool name="config_unplugTurnsOnScreen">true</bool>
     <bool name="config_sendPackageName">true</bool>
-    <dimen name="config_dialogCornerRadius">8.0dip</dimen>
+    <dimen name="config_bottomDialogCornerRadius">16.0dip</dimen>
     <dimen name="config_buttonCornerRadius">4.0dip</dimen>
+    <dimen name="config_dialogCornerRadius">8.0dip</dimen>
+    <dimen name="config_fullTaskSnapshotScale">0.8</dimen>
     <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
 
     <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
@@ -116,4 +118,12 @@
 
     <!-- If this is true, long press on power button will be available from the non-interactive state -->
     <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
+
+    <!-- The package name for the default wellbeing app.
+         This package must be trusted, as it has the permissions to control other applications
+         on the device.
+         Example: "com.android.wellbeing"
+     -->
+    <string name="config_defaultWellbeingPackage">com.google.android.apps.wellbeing</string>
+
 </resources>
