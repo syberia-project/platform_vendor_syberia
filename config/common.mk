@@ -68,6 +68,10 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/build/tools/backuptool.functions:install/bin/backuptool.functions \
     vendor/syberia/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
 
+# system mount
+PRODUCT_COPY_FILES += \
+    vendor/syberia/prebuilt/common/bin/system-mount.sh:install/bin/system-mount.sh
+
 # Bootanimation
 $(call inherit-product, vendor/syberia/config/bootanimation.mk)
 
