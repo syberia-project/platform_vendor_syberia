@@ -29,6 +29,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
     ro.secure=0 \
     persist.service.adb.enable=1
+    
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Settings \
+    SystemUI
 
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
