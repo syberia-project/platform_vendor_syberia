@@ -16,3 +16,16 @@ PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed-profile
 PRODUCT_DEXPREOPT_SPEED_APPS += \
   SystemUI \
   Settings
+
+# Dexopt boot types
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    pm.dexopt.first-boot=extract \
+    pm.dexopt.boot=verify
+
+# Dexopt filters
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    pm.dexopt.install=speed-profile \
+    pm.dexopt.bg-dexopt=speed-profile \
+    pm.dexopt.ab-ota=speed-profile \
+    pm.dexopt.inactive=verify \
+    pm.dexopt.shared=speed
