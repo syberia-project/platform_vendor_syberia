@@ -79,6 +79,10 @@ $(call inherit-product, vendor/syberia/config/bootanimation.mk)
 PRODUCT_COPY_FILES += \
     vendor/syberia/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
+# Enable Android Beam on all targets
+PRODUCT_COPY_FILES += \
+    vendor/syberia/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
+
 # Default and google apps privapp permissions
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/etc/privapp-permissions-syberia.xml:system/etc/permissions/privapp-permissions-syberia.xml \
