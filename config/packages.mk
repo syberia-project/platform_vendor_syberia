@@ -92,7 +92,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MarkupGoogle \
     SoundPickerPrebuilt \
-    WellbeingPrebuilt
+    WellbeingPrebuilt \
+    MatchmakerPrebuilt
 
 # Recorder app
 PRODUCT_PACKAGES += \
