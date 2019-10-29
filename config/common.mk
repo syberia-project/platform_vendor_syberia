@@ -86,6 +86,11 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/config/permissions/privapp-permissions-custom.xml:system/product/etc/permissions/privapp-permissions-custom.xml \
     vendor/syberia/prebuilt/common/etc/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml
 
+# Fonts
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/syberia/prebuilt/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
+    vendor/syberia/prebuilt/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
+
 
 # Markup libs
 PRODUCT_COPY_FILES += \

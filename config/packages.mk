@@ -87,6 +87,7 @@ PRODUCT_PACKAGES += \
 # Themes
 PRODUCT_PACKAGES += \
     SyberiaThemesStub \
+    FontGoogleSansOverlay
 
 # Google
 PRODUCT_PACKAGES += \
