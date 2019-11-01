@@ -84,6 +84,10 @@ PRODUCT_PACKAGES += \
     AccentColorCyanOverlay \
     AccentColorBlueGrayOverlay
 
+# Themes
+PRODUCT_PACKAGES += \
+    SyberiaThemesStub \
+
 # Google
 PRODUCT_PACKAGES += \
     MarkupGoogle \
