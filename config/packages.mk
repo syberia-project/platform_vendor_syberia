@@ -82,7 +82,17 @@ PRODUCT_PACKAGES += \
     AccentColorIndigoOverlay \
     AccentColorFlatPinkOverlay \
     AccentColorCyanOverlay \
-    AccentColorBlueGrayOverlay
+    AccentColorBlueGrayOverlay \
+    AmberAccent \
+    BlueAccent \
+    BrownAccent \
+    DeepOrangeAccent \
+    DeepPurpleAccent \
+    LimeAccent \
+    PastelDarkBlueAccent \
+    PastelEtonBlueAccent \
+    PastelGreenAccent \
+    PastelRedAccent
 
 # Themes
 PRODUCT_PACKAGES += \
