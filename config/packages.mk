@@ -93,7 +93,8 @@ PRODUCT_PACKAGES += \
     PastelEtonBlueAccent \
     PastelGreenAccent \
     PastelRedAccent \
-    AccentColorMintOverlay
+    AccentColorMintOverlay \
+    AccentColorBloodyRedOverlay
 
 # Themes
 PRODUCT_PACKAGES += \
