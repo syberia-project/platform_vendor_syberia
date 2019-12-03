@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Additional tools
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     e2fsck \
     fsck.exfat \
     fsck.ntfs \
@@ -21,8 +21,7 @@
     mkfs.exfat \
     mkfs.ntfs \
     mount.exfat \
-    mount.ntfs \
-    vim
+    mount.ntfs
 
 ifeq ($(BOARD_INCLUDE_CMDLINE_TOOLS),true)
 PRODUCT_PACKAGES += \
