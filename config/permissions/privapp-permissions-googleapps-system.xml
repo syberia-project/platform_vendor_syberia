@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2019 Benzo Rom
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<permissions>
+
+    <privapp-permissions package="com.google.android.ext.services">
+        <permission name="android.permission.ACCESS_NETWORK_STATE"/>
+        <permission name="android.permission.MONITOR_DEFAULT_SMS_PACKAGE"/>
+        <permission name="android.permission.PROVIDE_RESOLVER_RANKER_SERVICE"/>
+        <permission name="android.permission.READ_DEVICE_CONFIG"/>
+        <permission name="android.permission.REQUEST_NOTIFICATION_ASSISTANT_SERVICE"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.google.android.networkstack">
+        <permission name="android.permission.ACCESS_COARSE_LOCATION"/>
+        <permission name="android.permission.ACCESS_NETWORK_STATE"/>
+        <permission name="android.permission.ACCESS_WIFI_STATE"/>
+        <permission name="android.permission.CONNECTIVITY_INTERNAL"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.INTERNET"/>
+        <permission name="android.permission.MAINLINE_NETWORK_STACK"/>
+        <permission name="android.permission.READ_DEVICE_CONFIG"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.WAKE_LOCK"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.google.android.packageinstaller">
+        <permission name="android.permission.DELETE_PACKAGES"/>
+        <permission name="android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS"/>
+        <permission name="android.permission.INSTALL_PACKAGES"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+        <permission name="android.permission.MANAGE_APP_OPS_MODES"/>
+        <permission name="android.permission.MANAGE_USERS"/>
+        <permission name="android.permission.PACKAGE_USAGE_STATS"/>
+        <permission name="android.permission.READ_INSTALL_SESSIONS"/>
+        <permission name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+        <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME"/>
+        <permission name="android.permission.UPDATE_APP_OPS_STATS"/>
+        <permission name="android.permission.USE_RESERVED_DISK"/>
+        <permission name="com.google.android.permission.INSTALL_WEARABLE_PACKAGES"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.google.android.permissioncontroller">
+        <permission name="android.permission.ACCESS_INSTANT_APPS"/>
+        <permission name="android.permission.ACCESS_SHARED_LIBRARIES"/>
+        <permission name="android.permission.ADJUST_RUNTIME_PERMISSIONS_POLICY"/>
+        <permission name="android.permission.APPROVE_INCIDENT_REPORTS"/>
+        <permission name="android.permission.GET_APP_OPS_STATS"/>
+        <permission name="android.permission.GRANT_RUNTIME_PERMISSIONS"/>
+        <permission name="android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+        <permission name="android.permission.KILL_UID"/>
+        <permission name="android.permission.MANAGE_APP_OPS_MODES"/>
+        <permission name="android.permission.MANAGE_APP_OPS_RESTRICTIONS"/>
+        <permission name="android.permission.MANAGE_ROLE_HOLDERS"/>
+        <permission name="android.permission.MANAGE_USERS"/>
+        <permission name="android.permission.OBSERVE_GRANT_REVOKE_PERMISSIONS"/>
+        <permission name="android.permission.OBSERVE_ROLE_HOLDERS"/>
+        <permission name="android.permission.OPEN_ACCESSIBILITY_DETAILS_SETTINGS"/>
+        <permission name="android.permission.READ_DEVICE_CONFIG"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+        <permission name="android.permission.REQUEST_INCIDENT_REPORT_APPROVAL"/>
+        <permission name="android.permission.REVOKE_RUNTIME_PERMISSIONS"/>
+        <permission name="android.permission.SET_PREFERRED_APPLICATIONS"/>
+        <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME"/>
+        <permission name="android.permission.UPDATE_APP_OPS_STATS"/>
+        <permission name="android.permission.WHITELIST_RESTRICTED_PERMISSIONS"/>
+        <permission name="com.android.permissioncontroller.permission.MANAGE_ROLES_FROM_CONTROLLER"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.google.android.tag">
+        <permission name="android.permission.CALL_PHONE"/>
+        <permission name="android.permission.NFC"/>
+        <permission name="android.permission.READ_CONTACTS"/>
+        <permission name="android.permission.READ_EXTERNAL_STORAGE"/>
+        <permission name="android.permission.WAKE_LOCK"/>
+    </privapp-permissions>
+
+</permissions>
