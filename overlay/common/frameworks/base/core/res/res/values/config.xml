@@ -123,6 +123,7 @@
     <string name="config_defaultSystemCaptionsService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.CaptionsService</string>
     <string name="config_defaultTextClassifierPackage">com.google.android.as</string>
     <string name="config_defaultListenerAccessPackages">com.android.launcher3:com.google.android.as</string>
+    <string name="config_defaultAttentionService">com.google.android.as/com.google.android.apps.miphone.aiai.attention.service.AiAiAttentionService</string>
 
     <!-- Enable lockscreen rotation by default -->
     <bool name="config_enableLockScreenRotation">true</bool>
