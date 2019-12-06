@@ -105,7 +105,9 @@ PRODUCT_PACKAGES += \
     MarkupGoogle \
     SoundPickerPrebuilt \
     WellbeingPrebuilt \
-    MatchmakerPrebuilt
+    MatchmakerPrebuilt \
+    SettingsIntelligenceGooglePrebuilt \
+    TurboPrebuilt
 
 # Recorder app
 PRODUCT_PACKAGES += \
