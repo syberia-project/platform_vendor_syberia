@@ -48,7 +48,7 @@ PRODUCT_PACKAGES += \
     ThemePicker
 
 # Cutout control overlay
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     NoCutoutOverlay
 
 
