@@ -107,7 +107,9 @@ PRODUCT_PACKAGES += \
     WellbeingPrebuilt \
     MatchmakerPrebuilt \
     SettingsIntelligenceGooglePrebuilt \
-    TurboPrebuilt
+    TurboPrebuilt \
+    CalendarGooglePrebuilt \
+    CalculatorGooglePrebuilt
 
 # Recorder app
 PRODUCT_PACKAGES += \
