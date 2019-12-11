@@ -57,7 +57,7 @@ type Product_variables struct {
 	}
 	Uses_qcom_um_family struct {
 		Cflags []string
-		Srcs []string
+		Shared_libs []string
 	}
 	Uses_qcom_um_3_4_family struct {
 		Header_libs []string
