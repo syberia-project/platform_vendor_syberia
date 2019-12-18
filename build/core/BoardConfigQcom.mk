@@ -89,5 +89,11 @@ PRODUCT_SOONG_NAMESPACES += \
   hardware/qcom/display-caf/$(QCOM_HARDWARE_VARIANT) \
   hardware/qcom/media-caf/$(QCOM_HARDWARE_VARIANT)
 
+ifneq ($(TARGET_USES_PREBUILT_CAMERA_SERVICE), true)
+PRODUCT_SOONG_NAMESPACES += \
+    frameworks/av/camera/cameraserver \
+    frameworks/av/services/camera/libcameraservice
+endif
+
 include vendor/syberia/build/core/BoardConfigKernel.mk
 include vendor/syberia/build/core/BoardConfigSoong.mk
