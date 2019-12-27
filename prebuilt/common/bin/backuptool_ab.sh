@@ -57,8 +57,7 @@ check_blacklist() {
       cd /$1/addon.d/
       for f in *sh; do
           [ -f $f ] || continue
-          s=$(md5sum $f | cut -c-32)
-          grep -q $s /system/addon.d/blacklist && rm -f $f
+          grep -q $f /system/addon.d/blacklist && rm -f $f
       done
   fi
 }
