@@ -97,7 +97,6 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/syberia/prebuilt/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
     vendor/syberia/prebuilt/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
-
 # Markup libs
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/google/lib/libsketchology_native.so:system/product/lib/libsketchology_native.so \
