@@ -59,9 +59,6 @@ KERNEL_TOOLCHAIN_PREFIX_arm64 := aarch64-linux-android-
 # arm toolchain
 KERNEL_TOOLCHAIN_arm := $(GCC_PREBUILTS)/arm/arm-linux-androideabi-4.9/bin
 KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-androidkernel-
-# x86 toolchain
-KERNEL_TOOLCHAIN_x86 := $(GCC_PREBUILTS)/x86/x86_64-linux-android-4.9/bin
-KERNEL_TOOLCHAIN_PREFIX_x86 := x86_64-linux-android-
 
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(strip $(TARGET_KERNEL_CROSS_COMPILE_PREFIX))
 ifneq ($(TARGET_KERNEL_CROSS_COMPILE_PREFIX),)
