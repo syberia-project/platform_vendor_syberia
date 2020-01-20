@@ -89,6 +89,10 @@ type Product_variables struct {
 		Cppflags []string
 		Shared_libs []string
 	}
+	Uses_motorized_camera struct {
+		Cppflags []string
+		Shared_libs []string
+	}
 }
 
 type ProductVariables struct {
@@ -120,5 +124,6 @@ type ProductVariables struct {
 	Target_camera_needs_client_info  					*bool `json:",omitempty"`
 	Target_init_vendor_lib							*string `json:",omitempty"`
 	Uses_qti_camera_device  						*bool `json:",omitempty"`
+	Uses_motorized_camera  							*bool `json:",omitempty"`
 }
 
