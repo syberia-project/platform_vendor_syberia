@@ -7,7 +7,7 @@ BR_FAMILY := msm8909 msm8916
 UM_3_18_FAMILY := msm8937 msm8953 msm8996
 UM_4_4_FAMILY := msm8998 sdm660
 UM_4_9_FAMILY := sdm845 sdm710
-UM_4_14_FAMILY := sm8150 sm6150
+UM_4_14_FAMILY := sm8150 sm6150 $(TRINKET)
 UM_PLATFORMS := $(UM_3_18_FAMILY) $(UM_4_4_FAMILY) $(UM_4_9_FAMILY) $(UM_4_14_FAMILY)
 
 BOARD_USES_ADRENO := true
@@ -47,7 +47,7 @@ ifeq ($(call is-board-platform-in-list, $(UM_4_9_FAMILY)),true)
 endif
 
 # List of targets that use master side content protection
-MASTER_SIDE_CP_TARGET_LIST := msm8996 msm8998 sdm660 sm6150 sm8150 sdm845
+MASTER_SIDE_CP_TARGET_LIST := msm8996 msm8998 sdm660 sm6150 sm8150 sdm845 $(TRINKET)
 ifeq ($(call is-board-platform-in-list, $(B_FAMILY)),true)
     MSM_VIDC_TARGET_LIST := $(B_FAMILY)
     QCOM_HARDWARE_VARIANT := msm8974

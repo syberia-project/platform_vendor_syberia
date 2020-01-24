@@ -1,6 +1,8 @@
 # Board platforms lists to be used for
 # TARGET_BOARD_PLATFORM specific featurization
 
+TRINKET := trinket
+
 # A Family
 QCOM_BOARD_PLATFORMS += msm7x27a
 QCOM_BOARD_PLATFORMS += msm7x30
@@ -38,6 +40,8 @@ QCOM_BOARD_PLATFORMS += sdm660
 
 QCOM_BOARD_PLATFORMS += sdm710
 QCOM_BOARD_PLATFORMS += sdm845
+
+QCOM_BOARD_PLATFORMS += $(TRINKET)
 
 MSM7K_BOARD_PLATFORMS := msm7x30
 MSM7K_BOARD_PLATFORMS += msm7x27
