@@ -16,5 +16,11 @@
     "device_brand": "Xiaomi",
     "device_model": "Redmi 3S/3X",
     "device_codename": "land"
+  },
+  "ginkgo": {
+    "maintainer": "TheHitMan",
+    "device_brand": "Xiaomi",
+    "device_model": "Redmi Note 8",
+    "device_codename": "ginkgo"
   }
 }
