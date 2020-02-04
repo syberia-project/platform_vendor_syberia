@@ -115,6 +115,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Recorder
 
+# LongShot
+PRODUCT_PACKAGES += \
+    Longshot
+
 # Some permissions
 PRODUCT_COPY_FILES += \
     vendor/syberia/config/permissions/privapp-permissions-recorder.xml:system/etc/permissions/privapp-permissions-recorder.xml

@@ -61,5 +61,9 @@
         <permission name="android.permission.READ_EXTERNAL_STORAGE" />
     </privapp-permissions>
 
+    <privapp-permissions package="org.mokee.screenshot">
+        <permission name="android.permission.READ_FRAME_BUFFER"/>
+    </privapp-permissions>
+
 </permissions>
  
