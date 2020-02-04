@@ -87,6 +87,7 @@ PRODUCT_COPY_FILES += \
 # Default and google apps privapp permissions
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/etc/privapp-permissions-syberia.xml:system/etc/permissions/privapp-permissions-syberia.xml \
+    vendor/syberia/prebuilt/common/etc/syberia-hiddenapi-package-whitelist.xml:system/etc/permissions/syberia-hiddenapi-package-whitelist.xml \
     vendor/syberia/config/permissions/privapp-permissions-custom.xml:system/product/etc/permissions/privapp-permissions-custom.xml \
     vendor/syberia/config/permissions/privapp-permissions-googleapps-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-googleapps-product.xml \
     vendor/syberia/config/permissions/privapp-permissions-googleapps-system.xml:system/etc/permissions/privapp-permissions-googleapps-system.xml \
