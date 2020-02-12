@@ -22,5 +22,11 @@
     "device_brand": "Xiaomi",
     "device_model": "Redmi Note 8",
     "device_codename": "ginkgo"
+  },
+  "laurel_sprout": {
+    "maintainer": "HarukeyUA",
+    "device_brand": "Xiaomi",
+    "device_model": "Mi A3",
+    "device_codename": "laurel_sprout"
   }
 }
