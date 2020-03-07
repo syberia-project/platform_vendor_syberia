@@ -66,11 +66,11 @@ ifeq ($(TARGET_KERNEL_NEW_GCC_COMPILE),true)
     KERNEL_TOOLCHAIN_PREFIX_arm := arm-eabi-
 else
     # arm64 toolchain
-    KERNEL_TOOLCHAIN_arm64 := $(GCC_PREBUILTS)/aarch64/aarch64-linux-android-4.9/bin
-    KERNEL_TOOLCHAIN_PREFIX_arm64 := aarch64-linux-android-
+    KERNEL_TOOLCHAIN_arm64 := $(BUILD_TOP)/prebuilts/clang/host/linux-x86/clang-11/bin
+    KERNEL_TOOLCHAIN_PREFIX_arm64 := aarch64-linux-gnu-
     # arm toolchain
-    KERNEL_TOOLCHAIN_arm := $(GCC_PREBUILTS)/arm/arm-linux-androideabi-4.9/bin
-    KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-androidkernel-
+    KERNEL_TOOLCHAIN_arm := $(BUILD_TOP)/prebuilts/clang/host/linux-x86/clang-11/bin
+    KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-gnueabi-
 endif
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(strip $(TARGET_KERNEL_CROSS_COMPILE_PREFIX))
 ifneq ($(TARGET_KERNEL_CROSS_COMPILE_PREFIX),)
@@ -136,7 +136,7 @@ endif
 
 TOOLS_PATH_OVERRIDE := \
     PATH=$(BUILD_TOP)/prebuilts/tools-lineage/$(HOST_OS)-x86/bin:$$PATH \
-    LD_LIBRARY_PATH=$(BUILD_TOP)/prebuilts/tools-lineage/$(HOST_OS)-x86/lib:$$LD_LIBRARY_PATH \
+    LD_LIBRARY_PATH=$(BUILD_TOP)/prebuilts/clang/host/linux-x86/clang-11/lib:$(BUILD_TOP)/prebuilts/tools-lineage/$(HOST_OS)-x86/lib:$$LD_LIBRARY_PATH \
     PERL5LIB=$(BUILD_TOP)/prebuilts/tools-lineage/common/perl-base
 
 # Set DTBO image locations so the build system knows to build them
