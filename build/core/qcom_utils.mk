@@ -1,6 +1,11 @@
 # Board platforms lists to be used for
 # TARGET_BOARD_PLATFORM specific featurization
 
+# Platform name variables - used in makefiles everywhere
+MSMNILE := msmnile #SM8150
+MSMSTEPPE := sm6150
+TRINKET := trinket #SM6125
+
 # A Family
 QCOM_BOARD_PLATFORMS += msm7x27a
 QCOM_BOARD_PLATFORMS += msm7x30
@@ -31,8 +36,9 @@ QCOM_BOARD_PLATFORMS += msm8953
 QCOM_BOARD_PLATFORMS += msm8996
 QCOM_BOARD_PLATFORMS += msm8998
 
-QCOM_BOARD_PLATFORMS += sm6150
-QCOM_BOARD_PLATFORMS += sm8150
+QCOM_BOARD_PLATFORMS += $(TRINKET)
+QCOM_BOARD_PLATFORMS += $(MSMSTEPPE)
+QCOM_BOARD_PLATFORMS += $(MSMNILE)
 
 QCOM_BOARD_PLATFORMS += sdm660
 
