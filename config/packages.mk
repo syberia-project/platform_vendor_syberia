@@ -106,6 +106,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Etar
 
+# Seedvault
+PRODUCT_PACKAGES += \
+    Seedvault
+
 # Matlog
 PRODUCT_PACKAGES += \
     MatLog
