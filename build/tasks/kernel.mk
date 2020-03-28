@@ -183,6 +183,9 @@ ifeq ($(TARGET_KERNEL_CLANG_COMPILE),true)
     ifeq ($(KERNEL_CC),)
         KERNEL_CC := CC="$(CCACHE_BIN) clang"
     endif
+    ifeq ($(TARGET_KERNEL_USE_LLD),true)
+        KERNEL_CC += LD=$(TARGET_KERNEL_CLANG_PATH)/bin/ld.lld
+    endif
     ifneq ($(TARGET_KERNEL_NO_LLVM_BINUTILS),true)
         KERNEL_CC += AS=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-as
         KERNEL_CC += AR=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-ar
