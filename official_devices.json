@@ -28,5 +28,11 @@
     "device_brand": "Xiaomi",
     "device_model": "Mi A3",
     "device_codename": "laurel_sprout"
+  },
+  "cepheus": {
+    "maintainer": "Evasi0nXiao",
+    "device_brand": "Xiaomi",
+    "device_model": "Mi 9",
+    "device_codename": "cepheus"
   }
 }
