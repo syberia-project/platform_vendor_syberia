@@ -24,7 +24,11 @@ export Until_Date=`date --date="$k days ago" +%F`
 echo "=============" >> $Changelog;
 echo "   $Until_Date" >> $Changelog;
 echo "=============" >> $Changelog;
-repo forall -pc 'git log --after=$After_Date --until=$Until_Date --pretty=tformat:"%h  %s  [%an]" --abbrev-commit --abbrev=7' >> $Changelog
+while read path;
+    do
+    git --git-dir ./${path}/.git log --after=$After_Date --until=$Until_Date --pretty=tformat:"%h  %s  [%an]" --abbrev-commit --abbrev=7 >> $Changelog
+done < ./.repo/project.list;
+
 echo "" >> $Changelog;
 done
 
