@@ -34,5 +34,17 @@
     "device_brand": "Xiaomi",
     "device_model": "Mi 9",
     "device_codename": "cepheus"
+  },
+  "mido": {
+    "maintainer": "hnaamdev41",
+    "device_brand": "Xiaomi",
+    "device_model": "Redmi Note 4",
+    "device_codename": "mido"
+  },
+  "kenzo": {
+    "maintainer": "Sagar Rokade",
+    "device_brand": "Xiaomi",
+    "device_model": "Redmi Note 3",
+    "device_codename": "kenzo"
   }
 }
