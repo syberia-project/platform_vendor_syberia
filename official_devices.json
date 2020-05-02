@@ -46,5 +46,17 @@
     "device_brand": "Xiaomi",
     "device_model": "Redmi Note 3",
     "device_codename": "kenzo"
+  },
+  "jasmine_sprout": {
+    "maintainer": "ctwoon",
+    "device_brand": "Xiaomi",
+    "device_model": "Mi A2",
+    "device_codename": "jasmine_sprout"
+  },
+  "wayne": {
+    "maintainer": "ctwoon",
+    "device_brand": "Xiaomi",
+    "device_model": "6X",
+    "device_codename": "wayne"
   }
 }
