@@ -17,15 +17,15 @@
 TARGET_BOOT_ANIMATION_RES ?= undefined
 
 ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
-     PRODUCT_COPY_FILES += vendor/syberia/prebuilt/common/media/SYB-720.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/syberia/prebuilt/common/media/SYB-720.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
-     PRODUCT_COPY_FILES += vendor/syberia/prebuilt/common/media/SYB-1080.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/syberia/prebuilt/common/media/SYB-1080.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),2160)
-     PRODUCT_COPY_FILES += vendor/syberia/prebuilt/common/media/SYB-2160.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/syberia/prebuilt/common/media/SYB-2160.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),undefined)
      $(warning Target bootanimation res is undefined, using generic bootanimation )
-     PRODUCT_COPY_FILES += vendor/syberia/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/syberia/prebuilt/common/media/bootanimation.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
 else
      $(warning Defined bootanimation res is wrong, using generic bootanimation )
-     PRODUCT_COPY_FILES += vendor/syberia/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/syberia/prebuilt/common/media/bootanimation.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
 endif

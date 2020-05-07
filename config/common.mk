@@ -46,28 +46,28 @@ SELINUX_IGNORE_NEVERALLOWS := true
 endif
 
 PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/syberia/prebuilt/common/bin/sysinit:$(TARGET_COPY_OUT_SYSTEM)/bin/sysinit
 
 
 # Vendor specific init files
 $(foreach f,$(wildcard vendor/syberia/prebuilt/common/etc/init/*.rc),\
-    $(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
+    $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
 
 # Init files
 ifeq ($(AB_OTA_UPDATER),true)
 PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
-    vendor/syberia/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
-    vendor/syberia/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh \
-    vendor/syberia/prebuilt/common/etc/addon.d/blacklist:system/addon.d/blacklist
+    vendor/syberia/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
+    vendor/syberia/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
+    vendor/syberia/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh \
+    vendor/syberia/prebuilt/common/etc/addon.d/blacklist:$(TARGET_COPY_OUT_SYSTEM)/addon.d/blacklist
 endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/syberia/build/tools/50-syberia.sh:system/addon.d/50-syberia.sh \
+    vendor/syberia/build/tools/50-syberia.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-syberia.sh \
     vendor/syberia/build/tools/backuptool.sh:install/bin/backuptool.sh \
     vendor/syberia/build/tools/backuptool.functions:install/bin/backuptool.functions \
-    vendor/syberia/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
+    vendor/syberia/prebuilt/common/bin/clean_cache.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/clean_cache.sh
 
 # system mount
 PRODUCT_COPY_FILES += \
@@ -78,7 +78,7 @@ $(call inherit-product, vendor/syberia/config/bootanimation.mk)
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/syberia/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/syberia/config/permissions/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml
 
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
@@ -86,12 +86,12 @@ PRODUCT_COPY_FILES += \
 
 # Default and google apps privapp permissions
 PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/etc/privapp-permissions-syberia.xml:system/etc/permissions/privapp-permissions-syberia.xml \
-    vendor/syberia/prebuilt/common/etc/syberia-hiddenapi-package-whitelist.xml:system/etc/permissions/syberia-hiddenapi-package-whitelist.xml \
-    vendor/syberia/config/permissions/privapp-permissions-custom.xml:system/product/etc/permissions/privapp-permissions-custom.xml \
+    vendor/syberia/prebuilt/common/etc/privapp-permissions-syberia.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-syberia.xml \
+    vendor/syberia/prebuilt/common/etc/syberia-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/syberia-hiddenapi-package-whitelist.xml \
+    vendor/syberia/config/permissions/privapp-permissions-custom.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-custom.xml \
     vendor/syberia/config/permissions/privapp-permissions-googleapps-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-googleapps-product.xml \
-    vendor/syberia/config/permissions/privapp-permissions-googleapps-system.xml:system/etc/permissions/privapp-permissions-googleapps-system.xml \
-    vendor/syberia/prebuilt/common/etc/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml
+    vendor/syberia/config/permissions/privapp-permissions-googleapps-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-googleapps-system.xml \
+    vendor/syberia/prebuilt/common/etc/privapp-permissions-turbo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-turbo.xml
 
 # Fonts
 PRODUCT_COPY_FILES += \
@@ -100,8 +100,8 @@ PRODUCT_COPY_FILES += \
 
 # Markup libs
 PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/google/lib/libsketchology_native.so:system/product/lib/libsketchology_native.so \
-    vendor/syberia/prebuilt/google/lib64/libsketchology_native.so:system/product/lib64/libsketchology_native.so
+    vendor/syberia/prebuilt/google/lib/libsketchology_native.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libsketchology_native.so \
+    vendor/syberia/prebuilt/google/lib64/libsketchology_native.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libsketchology_native.so
 
 # Include Lineage LatinIME dictionaries
 #PRODUCT_PACKAGE_OVERLAYS += vendor/syberia/overlay/dictionaries
@@ -119,8 +119,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 #Sysconfig
 PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml \
-    vendor/syberia/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
+    vendor/syberia/prebuilt/common/etc/sysconfig/pixel.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel.xml \
+    vendor/syberia/prebuilt/common/etc/sysconfig/turbo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/turbo.xml
 
 # Substratum Key
 #PRODUCT_COPY_FILES += \
