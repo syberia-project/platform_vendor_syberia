@@ -116,6 +116,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Recorder
 
+PRODUCT_PACKAGES += \
+    ANGLE
+
 # LongShot
 PRODUCT_PACKAGES += \
     Longshot
