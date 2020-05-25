@@ -94,7 +94,8 @@ PRODUCT_PACKAGES += \
     PastelRedAccent \
     AccentColorMintOverlay \
     AccentColorBloodyRedOverlay \
-    AccentColorSyberiaOverlay
+    AccentColorSyberiaOverlay \
+    PrimaryColorSyberiaOverlay
 
 # Themes
 PRODUCT_PACKAGES += \
