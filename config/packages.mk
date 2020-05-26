@@ -109,12 +109,15 @@ PRODUCT_PACKAGES += \
     MatchmakerPrebuilt \
     SettingsIntelligenceGooglePrebuilt \
     TurboPrebuilt \
-    CalendarGooglePrebuilt \
     CalculatorGooglePrebuilt
 
 # Recorder app
 PRODUCT_PACKAGES += \
     Recorder
+
+# Etar
+PRODUCT_PACKAGES += \
+    Etar
 
 PRODUCT_PACKAGES += \
     ANGLE
