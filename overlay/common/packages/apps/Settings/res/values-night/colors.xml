@@ -15,12 +15,12 @@
 -->
 
 <resources>
-    <color name="switchbar_switch_thumb_tint">@android:color/black</color>
-    <color name="homepage_card_dismissal_background">@*android:color/black</color>
-    <color name="contextual_card_background">@*android:color/black</color>
+    <color name="switchbar_switch_thumb_tint">@*android:color/primary_dark_device_default_settings</color>
+    <color name="homepage_card_dismissal_background">@*android:color/primary_dark_device_default_settings</color>
+    <color name="contextual_card_background">@*android:color/primary_dark_device_default_settings</color>
     <color name="search_bar_background">@*android:color/material_grey_900</color>
     <!-- Dialog background color -->
     <color name="dialog_background">@*android:color/material_grey_900</color>
-    <color name="notification_importance_selection_bg">@*android:color/black</color>
+    <color name="notification_importance_selection_bg">@*android:color/primary_dark_device_default_settings</color>
 </resources>
 
