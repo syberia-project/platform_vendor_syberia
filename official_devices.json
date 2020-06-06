@@ -40,5 +40,11 @@
     "device_brand": "Xiaomi",
     "device_model": "Redmi Note 7",
     "device_codename": "lavender"
+  },
+  "tulip": {
+    "maintainer": "Niteshkumar15",
+    "device_brand": "Xiaomi",
+    "device_model": "Redmi Note 6 Pro",
+    "device_codename": "tulip"
   }
 }
