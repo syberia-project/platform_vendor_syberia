@@ -11,23 +11,11 @@
     "device_model": "Redmi K20 Pro",
     "device_codename": "raphael"
   },
-  "land": {
-    "maintainer": "Weritos666",
-    "device_brand": "Xiaomi",
-    "device_model": "Redmi 3S/3X",
-    "device_codename": "land"
-  },
   "ginkgo": {
     "maintainer": "TheHitMan",
     "device_brand": "Xiaomi",
     "device_model": "Redmi Note 8",
     "device_codename": "ginkgo"
-  },
-  "laurel_sprout": {
-    "maintainer": "HarukeyUA",
-    "device_brand": "Xiaomi",
-    "device_model": "Mi A3",
-    "device_codename": "laurel_sprout"
   },
   "cepheus": {
     "maintainer": "Evasi0nXiao",
@@ -46,17 +34,5 @@
     "device_brand": "Xiaomi",
     "device_model": "Redmi Note 3",
     "device_codename": "kenzo"
-  },
-  "jasmine_sprout": {
-    "maintainer": "ctwoon",
-    "device_brand": "Xiaomi",
-    "device_model": "Mi A2",
-    "device_codename": "jasmine_sprout"
-  },
-  "wayne": {
-    "maintainer": "ctwoon",
-    "device_brand": "Xiaomi",
-    "device_model": "6X",
-    "device_codename": "wayne"
   }
 }
