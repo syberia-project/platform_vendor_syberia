@@ -58,5 +58,11 @@
     "device_brand": "Xiaomi",
     "device_model": "6X",
     "device_codename": "wayne"
+  },
+  "lavender": {
+    "maintainer": "z3nitsu",
+    "device_brand": "Xiaomi",
+    "device_model": "Redmi Note 7",
+    "device_codename": "lavender"
   }
 }
