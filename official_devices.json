@@ -46,5 +46,11 @@
     "device_brand": "Xiaomi",
     "device_model": "Redmi Note 6 Pro",
     "device_codename": "tulip"
+  },
+  "riva": {
+    "maintainer": "erwinabs",
+    "device_brand": "Xiaomi",
+    "device_model": "Redmi 5A",
+    "device_codename": "riva"
   }
 }
