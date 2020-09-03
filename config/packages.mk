@@ -104,7 +104,6 @@ PRODUCT_PACKAGES += \
 
 # Google
 PRODUCT_PACKAGES += \
-    MarkupGoogle \
     SoundPickerPrebuilt \
     WellbeingPrebuilt \
     MatchmakerPrebuilt \
@@ -123,9 +122,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ANGLE
 
-# LongShot
+# StichImage
 PRODUCT_PACKAGES += \
-    Longshot
+    StitchImage
 
 # Some permissions
 PRODUCT_COPY_FILES += \
