@@ -11,29 +11,11 @@
     "device_model": "Redmi K20 Pro",
     "device_codename": "raphael"
   },
-  "ginkgo": {
-    "maintainer": "TheHitMan",
-    "device_brand": "Xiaomi",
-    "device_model": "Redmi Note 8",
-    "device_codename": "ginkgo"
-  },
   "cepheus": {
     "maintainer": "mesziman",
     "device_brand": "Xiaomi",
     "device_model": "Mi 9",
     "device_codename": "cepheus"
-  },
-  "kenzo": {
-    "maintainer": "Sagar Rokade",
-    "device_brand": "Xiaomi",
-    "device_model": "Redmi Note 3",
-    "device_codename": "kenzo"
-  },
-  "lavender": {
-    "maintainer": "z3nitsu",
-    "device_brand": "Xiaomi",
-    "device_model": "Redmi Note 7",
-    "device_codename": "lavender"
   },
   "tulip": {
     "maintainer": "Niteshkumar15",
