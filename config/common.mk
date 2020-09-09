@@ -1,7 +1,7 @@
 #Syberia OS
 #
 # Inherit art options
-include vendor/syberia/config/art.mk
+#include vendor/syberia/config/art.mk
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -99,7 +99,7 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
 # Markup libs
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/google/lib/libsketchology_native.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libsketchology_native.so \
     vendor/syberia/prebuilt/google/lib64/libsketchology_native.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libsketchology_native.so
 
@@ -127,7 +127,7 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/apk/SubstratumKey.apk:system/priv-app/SubstratumKey/SubstratumKey.apk
 
 # Packages
-include vendor/syberia/config/packages.mk
+#include vendor/syberia/config/packages.mk
 
 # Inherit common product build prop overrides
 -include vendor/syberia/config/versions.mk
