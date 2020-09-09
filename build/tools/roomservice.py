@@ -33,7 +33,7 @@ DEBUG = False
 default_manifest = ".repo/manifest.xml"
 
 custom_local_manifest = ".repo/local_manifests/roomservice.xml"
-custom_default_revision = "10.0"
+custom_default_revision = "11.0"
 custom_dependencies = "syberia.dependencies"
 org_manifest = "SyberiaProject-Devices"  # leave empty if org is provided in manifest
 org_display = "SyberiaProject-Devices"  # needed for displaying
