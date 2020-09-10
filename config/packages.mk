@@ -107,7 +107,6 @@ PRODUCT_PACKAGES += \
     SoundPickerPrebuilt \
     WellbeingPrebuilt \
     MatchmakerPrebuilt \
-    SettingsIntelligenceGooglePrebuilt \
     TurboPrebuilt \
     CalculatorGooglePrebuilt
 
