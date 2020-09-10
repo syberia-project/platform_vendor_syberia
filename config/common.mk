@@ -98,11 +98,6 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/syberia/prebuilt/fonts,$(TARGET_COPY_OUT_SYSTEM)/fonts) \
     vendor/syberia/prebuilt/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
-# Markup libs
-PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/google/lib/libsketchology_native.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libsketchology_native.so \
-    vendor/syberia/prebuilt/google/lib64/libsketchology_native.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libsketchology_native.so
-
 # Include Lineage LatinIME dictionaries
 #PRODUCT_PACKAGE_OVERLAYS += vendor/syberia/overlay/dictionaries
 
