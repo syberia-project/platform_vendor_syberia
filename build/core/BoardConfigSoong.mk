@@ -1,5 +1,5 @@
 # Add variables that we wish to make available to soong here.
-PATH_OVERRIDE_SOONG := $(shell echo $(TOOLS_PATH_OVERRIDE) | sed -e 's|$$|$$$$|g')
+PATH_OVERRIDE_SOONG := $(shell echo $(TOOLS_PATH_OVERRIDE))
 
 EXPORT_TO_SOONG := \
     KERNEL_ARCH \
