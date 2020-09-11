@@ -24,6 +24,8 @@ CL_MAG="\033[35m"
 CL_CYN="\033[36m"
 CL_RST="\033[0m"
 
+MD5 := prebuilts/build-tools/path/$(HOST_OS)-x86/md5sum
+
 ifeq ($(TARGET_BACON_NAME),)
     INTERNAL_BACON_NAME := $(TARGET_PRODUCT)-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)
 else
@@ -36,7 +38,7 @@ INTERNAL_BACON_TARGET := $(PRODUCT_OUT)/$(INTERNAL_BACON_NAME).zip
 bacon: syberia
 syberia: $(INTERNAL_OTA_PACKAGE_TARGET)
 	 $(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(INTERNAL_BACON_TARGET)
-	 $(hide) $(MD5SUM) $(INTERNAL_BACON_TARGET) | sed "s|$(PRODUCT_OUT)/||" > $(INTERNAL_BACON_TARGET).md5sum
+	 $(hide) $(MD5) $(INTERNAL_BACON_TARGET) | sed "s|$(PRODUCT_OUT)/||" > $(INTERNAL_BACON_TARGET).md5sum
 	 @echo "Package Complete: $(INTERNAL_BACON_TARGET)" >&2
 	 @echo -e ${CL_RST}"                                                                    "${CL_RST}
 	 @echo -e ${CL_RED}"                                                                    "${CL_RED}
