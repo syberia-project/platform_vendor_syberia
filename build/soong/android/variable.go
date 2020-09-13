@@ -23,6 +23,9 @@ type Product_variables struct {
 	Mtk_hardware struct {
 		Cflags []string
 	}
+	Supports_extended_compress_format struct {
+		Cflags []string
+	}
 
 	Cant_reallocate_omx_buffers struct {
 		Cflags []string
@@ -130,5 +133,6 @@ type ProductVariables struct {
 	Target_init_vendor_lib							*string `json:",omitempty"`
 	Uses_qti_camera_device  						*bool `json:",omitempty"`
 	Uses_motorized_camera  							*bool `json:",omitempty"`
+	Supports_extended_compress_format  *bool `json:",omitempty"`
 }
 

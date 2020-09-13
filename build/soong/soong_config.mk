@@ -2,6 +2,7 @@ add_json_str_omitempty = $(if $(strip $(2)),$(call add_json_str, $(1), $(2)))
 
 _json_contents := $(_json_contents)    "Syberia":{$(newline)
 
+$(call add_json_bool, Supports_extended_compress_format, $(filter true,$(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)))
 $(call add_json_str_omitempty, Additional_gralloc_10_usage_bits, $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS))
 $(call add_json_bool,	Has_legacy_camera_hal1,				$(filter true,$(TARGET_HAS_LEGACY_CAMERA_HAL1)))
 $(call add_json_str, 	Java_Source_Overlays, 				$(filter true,$(JAVA_SOURCE_OVERLAYS)))
