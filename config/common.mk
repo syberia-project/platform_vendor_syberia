@@ -89,19 +89,11 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/etc/privapp-permissions-syberia.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-syberia.xml \
     vendor/syberia/prebuilt/common/etc/syberia-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/syberia-hiddenapi-package-whitelist.xml \
     vendor/syberia/config/permissions/privapp-permissions-custom.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-custom.xml \
-    vendor/syberia/config/permissions/privapp-permissions-googleapps-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-googleapps-product.xml \
-    vendor/syberia/config/permissions/privapp-permissions-googleapps-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-googleapps-system.xml \
-    vendor/syberia/prebuilt/common/etc/privapp-permissions-turbo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-turbo.xml
 
 # Fonts
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/syberia/prebuilt/fonts,$(TARGET_COPY_OUT_SYSTEM)/fonts) \
     vendor/syberia/prebuilt/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
-
-# Markup libs
-PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/google/lib/libsketchology_native.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libsketchology_native.so \
-    vendor/syberia/prebuilt/google/lib64/libsketchology_native.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libsketchology_native.so
 
 # Include Lineage LatinIME dictionaries
 #PRODUCT_PACKAGE_OVERLAYS += vendor/syberia/overlay/dictionaries
@@ -116,11 +108,6 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 endif
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
-
-#Sysconfig
-PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/etc/sysconfig/pixel.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel.xml \
-    vendor/syberia/prebuilt/common/etc/sysconfig/turbo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/turbo.xml
 
 # Substratum Key
 #PRODUCT_COPY_FILES += \

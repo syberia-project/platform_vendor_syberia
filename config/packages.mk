@@ -102,15 +102,6 @@ PRODUCT_PACKAGES += \
     SyberiaThemesStub \
     FontGoogleSansOverlay
 
-# Google
-PRODUCT_PACKAGES += \
-    SoundPickerPrebuilt \
-    WellbeingPrebuilt \
-    MatchmakerPrebuilt \
-    SettingsIntelligenceGooglePrebuilt \
-    TurboPrebuilt \
-    CalculatorGooglePrebuilt
-
 # Recorder app
 PRODUCT_PACKAGES += \
     Recorder
