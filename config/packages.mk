@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Additional tools
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     e2fsck \
     fsck.exfat \
     fsck.ntfs \
@@ -24,7 +24,7 @@ PRODUCT_PACKAGES += \
     mount.ntfs
 
 ifeq ($(BOARD_INCLUDE_CMDLINE_TOOLS),true)
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     bash \
     htop \
     nano \
@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
     zip
 
 # Openssh
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     scp \
     sftp \
     ssh \
@@ -57,12 +57,12 @@ PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
 #OmniJaws
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     OmniJaws \
     WeatherIcons
 
 #Syberia wallpapers
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     SyberiaPapers
 
 #OmniStyle
@@ -102,21 +102,10 @@ PRODUCT_PACKAGES += \
     SyberiaThemesStub \
     FontGoogleSansOverlay
 
-# Recorder app
-PRODUCT_PACKAGES += \
-    Recorder
-
 # Etar
 PRODUCT_PACKAGES += \
     Etar
 
-PRODUCT_PACKAGES += \
-    ANGLE
-
 # StichImage
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     StitchImage
-
-# Some permissions
-PRODUCT_COPY_FILES += \
-    vendor/syberia/config/permissions/privapp-permissions-recorder.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-recorder.xml
