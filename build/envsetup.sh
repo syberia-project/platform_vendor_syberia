@@ -18,7 +18,7 @@ function mka() {
             make -j `sysctl hw.ncpu|cut -d" " -f2` "$@"
             ;;
         *)
-            time schedtool -B -n 1 -e ionice -n 1 make -j `cat /proc/cpuinfo | grep "^processor" | wc -l` "$@"
+            make -j `cat /proc/cpuinfo | grep "^processor" | wc -l` "$@"
             ;;
     esac
 }
@@ -28,8 +28,9 @@ function breakfast()
     target=$1
     SYBERIA_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
-    for f in `/bin/ls vendor/syberia/vendorsetup.sh 2> /dev/null`
-        do
+    add_lunch_combo full-eng
+       for f in $(test -d $ANDROID_BUILD_TOP/vendor/syberia && \
+            find -L $ANDROID_BUILD_TOP/vendor/syberia  -maxdepth 4 -name 'vendorsetup.sh' 2>/dev/null | sort); do
             echo "including $f"
             . $f
         done
