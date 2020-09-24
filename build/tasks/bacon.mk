@@ -1,4 +1,5 @@
 # Copyright (C) 2017 Unlegacy-Android
+# Copyright (C) 2017,2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,7 +25,7 @@ CL_MAG="\033[35m"
 CL_CYN="\033[36m"
 CL_RST="\033[0m"
 
-MD5 := prebuilts/build-tools/path/$(HOST_OS)-x86/md5sum
+MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
 
 ifeq ($(TARGET_BACON_NAME),)
     INTERNAL_BACON_NAME := $(TARGET_PRODUCT)-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)
