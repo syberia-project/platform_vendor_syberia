@@ -76,6 +76,10 @@ PRODUCT_COPY_FILES += \
 # Bootanimation
 $(call inherit-product, vendor/syberia/config/bootanimation.mk)
 
+# Rom-specific component overrides
+PRODUCT_COPY_FILES += \
+    vendor/syberia/config/component-overrides.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/component-overrides.xml
+
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
     vendor/syberia/config/permissions/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml
