@@ -106,6 +106,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Etar
 
+# Matlog
+PRODUCT_PACKAGES += \
+    MatLog
+
 # StichImage
 #PRODUCT_PACKAGES += \
     StitchImage
