@@ -29,6 +29,11 @@
     <!--Whether help links are defined. -->
     <bool name="config_has_help">true</bool>
 
+    <!-- Manufacturer backup settings to launch -->
+    <string name="config_backup_settings_intent" translatable="false">settings://com.android.settings.backup.transport</string>
+    <!-- Manufacturer backup settings label -->
+    <string name="config_backup_settings_label" translatable="true">@string/backup_transport_setting_label</string>
+
     <!-- Help Links -->
     <string name="help_uri_about">intent:#Intent;action=com.google.android.gms.googlehelp.LAUNCH;S.EXTRA_CONTEXT=android_about;end</string>
     <string name="help_uri_about_phone_v2">intent:#Intent;action=com.google.android.gms.googlehelp.LAUNCH;S.EXTRA_CONTEXT=android_about_device;end</string>
