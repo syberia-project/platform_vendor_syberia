@@ -113,3 +113,8 @@ PRODUCT_PACKAGES += \
 # StichImage
 #PRODUCT_PACKAGES += \
     StitchImage
+
+# Navbar
+PRODUCT_PACKAGES += \
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium
