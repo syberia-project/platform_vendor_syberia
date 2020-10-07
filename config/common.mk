@@ -133,3 +133,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # on supported devices with Deep Press input classifier HALs and models
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.input.video_enabled=false
+
+# Flatten APEXs for performance
+OVERRIDE_TARGET_FLATTEN_APEX := true
