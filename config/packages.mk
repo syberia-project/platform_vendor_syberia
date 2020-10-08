@@ -57,7 +57,7 @@ PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
 #OmniJaws
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     OmniJaws \
     WeatherIcons
 
