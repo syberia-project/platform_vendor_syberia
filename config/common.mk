@@ -65,8 +65,8 @@ endif
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/syberia/build/tools/50-syberia.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-syberia.sh \
-    vendor/syberia/build/tools/backuptool.sh:install/bin/backuptool.sh \
-    vendor/syberia/build/tools/backuptool.functions:install/bin/backuptool.functions \
+    vendor/syberia/build/tools/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.sh \
+    vendor/syberia/build/tools/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.functions \
     vendor/syberia/prebuilt/common/bin/clean_cache.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/clean_cache.sh
 
 # system mount
