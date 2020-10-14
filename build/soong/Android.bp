@@ -1,15 +1,6 @@
 bootstrap_go_package {
-    name: "soong-syberia",
-    pkgPath: "syberia/soong/android",
-    srcs: [
-        "android/config.go",
-        "android/variable.go",
-    ],
-}
-
-bootstrap_go_package {
-    name: "soong-syberia-generator",
-    pkgPath: "syberia/soong/generator",
+    name: "soong-aosp-generator",
+    pkgPath: "aosp/soong/generator",
     deps: [
         "blueprint",
         "blueprint-pathtools",
