@@ -6,12 +6,12 @@ import (
 	"android/soong/android"
 )
 
-func syberiaExpandVariables(ctx android.ModuleContext, in string) string {
-	syberiaVars := ctx.Config().VendorConfig("syberiaVarsPlugin")
+func aospExpandVariables(ctx android.ModuleContext, in string) string {
+	aospVars := ctx.Config().VendorConfig("aospVarsPlugin")
 
 	out, err := android.Expand(in, func(name string) (string, error) {
-		if syberiaVars.IsSet(name) {
-			return syberiaVars.String(name), nil
+		if aospVars.IsSet(name) {
+			return aospVars.String(name), nil
 		}
 		// This variable is not for us, restore what the original
 		// variable string will have looked like for an Expand
