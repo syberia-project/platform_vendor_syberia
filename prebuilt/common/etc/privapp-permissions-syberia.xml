@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' standalone='yes' ?>
 
-<!-- Copyright (C) Syberi Project 2018
+<!-- Copyright (C) Syberi Project 2018-2020
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -45,12 +45,6 @@
         <permission name="android.permission.INVOKE_CARRIER_SETUP"/>
         <permission name="android.permission.READ_LOGS"/>
         <permission name="android.permission.BACKUP"/>
-    </privapp-permissions>
-
-    <privapp-permissions package="com.syberia.ota">
-        <permission name="android.permission.ACCESS_CACHE_FILESYSTEM"/>
-        <permission name="android.permission.REBOOT"/>
-        <permission name="android.permission.RECOVERY"/>
     </privapp-permissions>
 
     <privapp-permissions package="org.lineageos.updater">
