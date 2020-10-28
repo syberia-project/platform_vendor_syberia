@@ -132,4 +132,8 @@
         <item>com.linkedin.android</item>
         <item>com.tencent.mm</item>
     </string-array>
+
+    <!-- Package name that will receive an explicit manifest broadcast for
+         android.os.action.POWER_SAVE_MODE_CHANGED. -->
+    <string name="config_powerSaveModeChangedListenerPackage">com.google.android.flipendo</string>
 </resources>

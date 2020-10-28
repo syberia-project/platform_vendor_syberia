@@ -119,3 +119,6 @@ PRODUCT_PACKAGES += \
     GesturalNavigationOverlayLong \
     GesturalNavigationOverlayMedium \
     GesturalNavigationOverlayHidden
+
+PRODUCT_PACKAGES += \
+    Flipendo
