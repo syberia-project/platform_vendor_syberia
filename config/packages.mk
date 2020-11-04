@@ -102,6 +102,10 @@ PRODUCT_PACKAGES += \
     SyberiaThemesStub \
     FontGoogleSansOverlay
 
+# Config
+PRODUCT_PACKAGES += \
+    SimpleDeviceConfig
+
 # Etar
 PRODUCT_PACKAGES += \
     Etar
