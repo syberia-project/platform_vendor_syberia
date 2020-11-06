@@ -194,6 +194,8 @@ ifeq ($(TARGET_KERNEL_CLANG_COMPILE),true)
         KERNEL_CC += OBJDUMP=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-objdump
         KERNEL_CC += STRIP=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-strip
     endif
+    # ThinLTO cache path for kernel
+    KERNEL_CC += KERNEL_THINLTO_CACHE_PATH="$(BUILD_TOP)/$(TARGET_OUT_INTERMEDIATES)/KERNEL_THINLTO-CACHE"
 endif
 
 ifneq ($(TARGET_KERNEL_MODULES),)
