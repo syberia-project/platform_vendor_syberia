@@ -122,3 +122,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     Flipendo
+
+PRODUCT_PACKAGES += \
+    QuickAccessWallet
