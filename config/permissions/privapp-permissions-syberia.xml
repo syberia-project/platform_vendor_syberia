@@ -55,5 +55,9 @@
         <permission name="android.permission.READ_EXTERNAL_STORAGE" />
     </privapp-permissions>
 
+    <privapp-permissions package="org.omnirom.logcat">
+        <permission name="android.permission.READ_LOGS"/>
+    </privapp-permissions>
+
 </permissions>
  
