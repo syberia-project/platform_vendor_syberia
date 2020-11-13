@@ -100,6 +100,17 @@ type Product_variables struct {
 	Supports_extended_compress_format struct {
 		Cflags []string
 	}
+	Should_wait_for_qsee struct {
+		Cflags []string
+	}
+    Supports_hw_fde struct {
+		Cflags []string
+		Header_libs []string
+		Shared_libs []string
+	}
+	Supports_hw_fde_perf struct {
+		Cflags []string
+	}
 }
 
 type ProductVariables struct {
@@ -122,17 +133,20 @@ type ProductVariables struct {
 	Target_uses_eigen							*bool `json:",omitempty"`
 	Target_use_sdclang							*bool `json:",omitempty"`
 	Target_shim_libs							*string `json:",omitempty"`
-        Target_surfaceflinger_fod_lib                                           *string `json:",omitempty"`
-	Uses_qcom_um_family  							*bool `json:",omitempty"`
-	Uses_qcom_um_3_4_family  						*bool `json:",omitempty"`
-	Uses_qcom_um_3_18_family  						*bool `json:",omitempty"`
-	Uses_qcom_um_4_4_family  						*bool `json:",omitempty"`
-	Uses_qcom_um_4_9_family  						*bool `json:",omitempty"`
-	Uses_qcom_um_4_14_family  						*bool `json:",omitempty"`
-	Target_camera_needs_client_info  					*bool `json:",omitempty"`
-	Target_init_vendor_lib							*string `json:",omitempty"`
-	Uses_qti_camera_device  						*bool `json:",omitempty"`
-	Uses_motorized_camera  							*bool `json:",omitempty"`
-	Supports_extended_compress_format					*bool `json:",omitempty"`
+    Target_surfaceflinger_fod_lib               *string `json:",omitempty"`
+	Uses_qcom_um_family  						*bool `json:",omitempty"`
+	Uses_qcom_um_3_4_family  					*bool `json:",omitempty"`
+	Uses_qcom_um_3_18_family  					*bool `json:",omitempty"`
+	Uses_qcom_um_4_4_family  					*bool `json:",omitempty"`
+	Uses_qcom_um_4_9_family  					*bool `json:",omitempty"`
+	Uses_qcom_um_4_14_family  					*bool `json:",omitempty"`
+	Target_camera_needs_client_info  			*bool `json:",omitempty"`
+	Target_init_vendor_lib						*string `json:",omitempty"`
+	Uses_qti_camera_device  					*bool `json:",omitempty"`
+	Uses_motorized_camera  						*bool `json:",omitempty"`
+	Supports_extended_compress_format			*bool `json:",omitempty"`
+	Should_wait_for_qsee  						*bool `json:",omitempty"`
+	Supports_hw_fde  							*bool `json:",omitempty"`
+	Supports_hw_fde_perf  						*bool `json:",omitempty"`
 }
 
