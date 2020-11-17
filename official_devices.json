@@ -28,5 +28,11 @@
     "device_brand": "Xiaomi",
     "device_model": "Redmi 5A",
     "device_codename": "riva"
+  },
+  "davinci": {
+    "maintainer": "svb22",
+    "device_brand": "Xiaomi",
+    "device_model": "MI 9T",
+    "device_codename": "davinci"
   }
 }
