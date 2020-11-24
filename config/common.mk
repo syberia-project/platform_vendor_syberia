@@ -48,6 +48,20 @@ PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/bin/sysinit:$(TARGET_COPY_OUT_SYSTEM)/bin/sysinit
 
 
+# SDClang
+ifneq ($(HOST_OS),linux)
+ifneq ($(sdclang_already_warned),true)
+$(warning **********************************************)
+$(warning * SDCLANG is not supported on non-linux hosts.)
+$(warning **********************************************)
+sdclang_already_warned := true
+endif
+else
+# include definitions for SDCLANG
+include vendor/syberia/sdclang/sdclang.mk
+endif
+
+
 # Vendor specific init files
 $(foreach f,$(wildcard vendor/syberia/prebuilt/common/etc/init/*.rc),\
     $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
