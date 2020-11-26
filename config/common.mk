@@ -128,3 +128,8 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 # IORap app launch prefetching using Perfetto traces and madvise
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.iorapd.enable=true
+
+# Disable touch video heatmap to reduce latency, motion jitter, and CPU usage
+# on supported devices with Deep Press input classifier HALs and models
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.input.video_enabled=false
