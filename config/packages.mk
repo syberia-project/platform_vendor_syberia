@@ -125,3 +125,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     QuickAccessWallet
+
+ifeq ($(TARGET_WANTS_FOD_ANIMATIONS),true)
+PRODUCT_PACKAGES += \
+    FodAnimationResources
+endif
