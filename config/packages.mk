@@ -125,3 +125,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     QuickAccessWallet
+
+ifneq ($(TARGET_SURFACEFLINGER_FOD_LIB),)
+PRODUCT_PACKAGES += \
+    FodAnimationResources
+endif
