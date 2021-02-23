@@ -118,6 +118,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     StitchImage
 
+# Switch styles
+PRODUCT_PACKAGES += \
+    SwitchAOSP \
+    SwitchTelegram \
+    SwitchMD2 \
+    SwitchOOS
+
 # Navbar
 PRODUCT_PACKAGES += \
     GesturalNavigationOverlayLong \
