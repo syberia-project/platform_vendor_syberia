@@ -115,7 +115,7 @@ PRODUCT_PACKAGES += \
     MatLog
 
 # StichImage
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     StitchImage
 
 # Navbar
