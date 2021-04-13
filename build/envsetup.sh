@@ -41,8 +41,7 @@ function breakfast()
         echo "Nothing to eat for breakfast?"
         lunch
     else
-        echo "z$target" | grep -q "-"
-        if [ $? -eq 0 ]; then
+        if [[ "$target" =~ -(user|userdebug|eng)$ ]]; then
             # A buildtype was specified, assume a full device name
             lunch $target
         else
