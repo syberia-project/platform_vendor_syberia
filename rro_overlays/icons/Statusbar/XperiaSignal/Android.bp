@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "XperiaSignalOverlay",
+    product_specific: true,
+}

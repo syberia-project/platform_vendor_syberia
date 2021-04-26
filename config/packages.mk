@@ -150,6 +150,15 @@ PRODUCT_PACKAGES += \
     MarkupGoogle \
     Turbo
 
+# StatusBar icons
+PRODUCT_PACKAGES += \
+    StrokeSignalOverlay \
+    SneakySignalOverlay \
+    XperiaSignalOverlay \
+    StrokeWiFiOverlay \
+    SneakyWiFiOverlay \
+    XperiaWiFiOverlay
+
 PRODUCT_PACKAGES += \
     QuickAccessWallet
 

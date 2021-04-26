@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "SneakyWiFiOverlay",
+    product_specific: true,
+}
