@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "InsideSignalOverlay",
+    product_specific: true,
+}

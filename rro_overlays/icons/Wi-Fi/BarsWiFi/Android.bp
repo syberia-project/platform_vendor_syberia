@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "BarsWiFiOverlay",
+    product_specific: true,
+}

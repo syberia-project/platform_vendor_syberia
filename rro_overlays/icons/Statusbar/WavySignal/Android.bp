@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "WavySignalOverlay",
+    product_specific: true,
+}

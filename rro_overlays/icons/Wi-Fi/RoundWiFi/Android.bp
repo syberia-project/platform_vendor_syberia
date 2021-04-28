@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "RoundWiFiOverlay",
+    product_specific: true,
+}

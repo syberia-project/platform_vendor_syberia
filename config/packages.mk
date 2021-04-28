@@ -155,9 +155,20 @@ PRODUCT_PACKAGES += \
     StrokeSignalOverlay \
     SneakySignalOverlay \
     XperiaSignalOverlay \
+    ZigZagSignalOverlay \
+    WavySignalOverlay \
+    RoundSignalOverlay \
+    InsideSignalOverlay \
+    BarsSignalOverlay \
     StrokeWiFiOverlay \
     SneakyWiFiOverlay \
-    XperiaWiFiOverlay
+    XperiaWiFiOverlay \
+    ZigZagWiFiOverlay \
+    WavyWiFiOverlay \
+    RoundWiFiOverlay \
+    InsideWiFiOverlay \
+    BarsWiFiOverlay
+
 
 PRODUCT_PACKAGES += \
     QuickAccessWallet
