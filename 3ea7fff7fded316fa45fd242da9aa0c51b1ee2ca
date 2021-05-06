@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9cdfa5cb_e7d24aec",
+        "filename": "config/packages.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-05-06T12:42:12Z",
+      "side": 1,
+      "message": "Move outside of ifeq block",
+      "revId": "3ea7fff7fded316fa45fd242da9aa0c51b1ee2ca",
+      "serverId": "42502b1d-019c-4a7f-8d4c-3cb7dd1b67f8",
+      "unresolved": true
+    }
+  ]
+}
