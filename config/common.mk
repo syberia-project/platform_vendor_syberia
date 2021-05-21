@@ -117,6 +117,13 @@ include vendor/syberia/config/packages.mk
 # Inherit common product build prop overrides
 -include vendor/syberia/config/versions.mk
 
+# Volume Panel styles
+PRODUCT_PACKAGES += \
+	AospPanel \
+	CompactPanel \
+	OreoPanel \
+	TiledPanel
+
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
