@@ -11,28 +11,22 @@
     "device_model": "Redmi K20 Pro",
     "device_codename": "raphael"
   },
-  "cepheus": {
-    "maintainer": "mesziman",
-    "device_brand": "Xiaomi",
-    "device_model": "Mi 9",
-    "device_codename": "cepheus"
-  },
-  "tulip": {
-    "maintainer": "Niteshkumar15",
-    "device_brand": "Xiaomi",
-    "device_model": "Redmi Note 6 Pro",
-    "device_codename": "tulip"
-  },
-  "riva": {
-    "maintainer": "erwinabs",
-    "device_brand": "Xiaomi",
-    "device_model": "Redmi 5A",
-    "device_codename": "riva"
-  },
   "davinci": {
     "maintainer": "svb22",
     "device_brand": "Xiaomi",
     "device_model": "MI 9T",
     "device_codename": "davinci"
+  },
+  "daisy": {
+    "maintainer": "lupesoltec",
+    "device_brand": "Xiaomi",
+    "device_model": "Mi A2 Lite",
+    "device_codename": "daisy"
+  },
+  "alioth": {
+    "maintainer": "mdeejay",
+    "device_brand": "Xiaomi",
+    "device_model": "Poco F3",
+    "device_codename": "alioth"
   }
 }
