@@ -28,5 +28,11 @@
     "device_brand": "Xiaomi",
     "device_model": "Poco F3",
     "device_codename": "alioth"
+  },
+  "ginkgo": {
+    "maintainer": "TheHitMan",
+    "device_brand": "Xiaomi",
+    "device_model": "Redmi Note 8",
+    "device_codename": "ginkgo"
   }
 }
