@@ -97,6 +97,15 @@ PRODUCT_PACKAGES += \
     AccentColorSyberiaOverlay \
     PrimaryColorSyberiaOverlay
 
+# Rounded Styles
+PRODUCT_PACKAGES += \
+    StockRounded \
+    NoneRounded \
+    SlightRounded \
+    MediumRounded \
+    HighRounded \
+    ExtremeRounded
+
 # Themes
 PRODUCT_PACKAGES += \
     SyberiaThemesStub \
