@@ -156,3 +156,7 @@ ifeq ($(TARGET_WANTS_FOD_ANIMATIONS),true)
 PRODUCT_PACKAGES += \
     FodAnimationResources
 endif
+
+# Ripple
+PRODUCT_PACKAGES += \
+    Ripple
