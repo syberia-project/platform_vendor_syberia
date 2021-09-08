@@ -133,3 +133,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # on supported devices with Deep Press input classifier HALs and models
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.input.video_enabled=false
+
+# Google Photos
+PRODUCT_COPY_FILES += \
+    vendor/syberia/prebuilt/google/etc/sysconfig/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_2016_exclusive.xml
