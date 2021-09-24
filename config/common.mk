@@ -115,6 +115,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Packages
 include vendor/syberia/config/packages.mk
 
+# Plugins
+include packages/apps/Plugins/plugins.mk
+
 # Inherit common product build prop overrides
 -include vendor/syberia/config/versions.mk
 
