@@ -28,5 +28,11 @@
     "device_brand": "Xiaomi",
     "device_model": "Poco F3",
     "device_codename": "alioth"
+  },
+  "laurel_sprout": {
+    "maintainer": "magicxavi",
+    "device_brand": "Xiaomi",
+    "device_model": "Mi A3",
+    "device_codename": "laurel_sprout"
   }
 }
