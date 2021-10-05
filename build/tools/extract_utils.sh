@@ -248,6 +248,23 @@ function truncate_file() {
 }
 
 #
+# truncate_file_odm_etc
+#
+# $1: the filename to truncate
+# $2: the argument to output the truncated filename to
+#
+# Internal function which truncates a filename by removing the first and second dir
+# in the path. ex. vendor/odm/etc/acdbdata/something.acdb -> etc/acdbdata/something/something.acdb
+#
+function truncate_file_odm_etc() {
+    local FILE="$1"
+    RETURN_FILE="$2"
+    local FIND="${FILE%%/*}"
+    local LOCATION="${#FIND}+5"
+    echo ${FILE:$LOCATION}
+}
+
+#
 # write_product_copy_files:
 #
 # $1: make treble compatible makefile - optional and deprecated, default to true
@@ -293,6 +310,10 @@ function write_product_copy_files() {
                 "$OUTDIR" "$TARGET" "$OUTTARGET" "$LINEEND" >> "$PRODUCTMK"
         elif prefix_match_file "odm/" $TARGET ; then
             local OUTTARGET=$(truncate_file $TARGET)
+            printf '    %s/proprietary/%s:$(TARGET_COPY_OUT_ODM)/%s%s\n' \
+                "$OUTDIR" "$TARGET" "$OUTTARGET" "$LINEEND" >> "$PRODUCTMK"
+        elif prefix_match_file "vendor/odm/etc" $TARGET ; then
+            local OUTTARGET=$(truncate_file_odm_etc $TARGET)
             printf '    %s/proprietary/%s:$(TARGET_COPY_OUT_ODM)/%s%s\n' \
                 "$OUTDIR" "$TARGET" "$OUTTARGET" "$LINEEND" >> "$PRODUCTMK"
         elif prefix_match_file "vendor/odm/" $TARGET ; then
@@ -351,6 +372,7 @@ function write_blueprint_packages() {
     local EXTENSION=
     local PKGNAME=
     local SRC=
+    local OVERRIDEPKG=
 
     for P in "${FILELIST[@]}"; do
         FILE=$(target_file "$P")
@@ -416,11 +438,22 @@ function write_blueprint_packages() {
                 SRC="$SRC/app"
             fi
             printf '\tapk: "%s/%s",\n' "$SRC" "$FILE"
-            if [ "$ARGS" = "PRESIGNED" ]; then
-                printf '\tpresigned: true,\n'
-            elif [ ! -z "$ARGS" ]; then
-                printf '\tcertificate: "%s",\n' "$ARGS"
-            else
+            ARGS=(${ARGS//;/ })
+            USE_PLATFORM_CERTIFICATE="true"
+            for ARG in "${ARGS[@]}"; do
+                if [ "$ARG" = "PRESIGNED" ]; then
+                    USE_PLATFORM_CERTIFICATE="false"
+                    printf '\tpresigned: true,\n'
+                elif [[ "$ARG" =~ "OVERRIDES" ]]; then
+                    OVERRIDEPKG=${ARG#*=}
+                    OVERRIDEPKG=${OVERRIDEPKG//,/\", \"}
+                    printf '\toverrides: ["%s"],\n' "$OVERRIDEPKG"
+                elif [ ! -z "$ARG" ]; then
+                    USE_PLATFORM_CERTIFICATE="false"
+                    printf '\tcertificate: "%s",\n' "$ARG"
+                fi
+            done
+            if [ "$USE_PLATFORM_CERTIFICATE" = "true" ]; then
                 printf '\tcertificate: "platform",\n'
             fi
         elif [ "$CLASS" = "JAVA_LIBRARIES" ]; then
@@ -458,6 +491,9 @@ function write_blueprint_packages() {
                 SRC="$SRC/bin"
             fi
             printf '\tsrcs: ["%s/%s"],\n' "$SRC" "$FILE"
+            if [ "$EXTENSION" != "sh" ]; then
+                printf '\tcheck_elf_files: false,\n'
+            fi
             unset EXTENSION
         else
             printf '\tsrcs: ["%s/%s"],\n' "$SRC" "$FILE"
@@ -1631,7 +1667,11 @@ function extract() {
         fi
 
         if [ "$KEEP" = "1" ]; then
-            printf '    + keeping pinned file with hash %s\n' "${HASH}"
+            if [ "${FIXUP_HASH}" != "x" ]; then
+                printf '    + keeping pinned file with hash %s\n' "${FIXUP_HASH}"
+            else
+                printf '    + keeping pinned file with hash %s\n' "${HASH}"
+            fi
         else
             FOUND=false
             # Try Lineage target first.
@@ -1646,53 +1686,53 @@ function extract() {
             done
 
             if [ "${FOUND}" = false ]; then
-                printf '    !! %s: file not found in source\n' "${BLOB_DISPLAY_NAME}"
+                colored_echo red "    !! ${BLOB_DISPLAY_NAME}: file not found in source"
                 continue
             fi
-        fi
 
-        # Blob fixup pipeline has 2 parts: one that is fixed and
-        # one that is user-configurable
-        local PRE_FIXUP_HASH=$(get_hash ${VENDOR_REPO_FILE})
-        # Deodex apk|jar if that's the case
-        if [[ "$FULLY_DEODEXED" -ne "1" && "${VENDOR_REPO_FILE}" =~ .(apk|jar)$ ]]; then
-            oat2dex "${VENDOR_REPO_FILE}" "${SRC_FILE}" "$SRC"
-            if [ -f "$TMPDIR/classes.dex" ]; then
-                touch -t 200901010000 "$TMPDIR/classes"*
-                zip -gjq "${VENDOR_REPO_FILE}" "$TMPDIR/classes"*
-                rm "$TMPDIR/classes"*
-                printf '    (updated %s from odex files)\n' "${SRC_FILE}"
+            # Blob fixup pipeline has 2 parts: one that is fixed and
+            # one that is user-configurable
+            local PRE_FIXUP_HASH=$(get_hash ${VENDOR_REPO_FILE})
+            # Deodex apk|jar if that's the case
+            if [[ "$FULLY_DEODEXED" -ne "1" && "${VENDOR_REPO_FILE}" =~ .(apk|jar)$ ]]; then
+                oat2dex "${VENDOR_REPO_FILE}" "${SRC_FILE}" "$SRC"
+                if [ -f "$TMPDIR/classes.dex" ]; then
+                    touch -t 200901010000 "$TMPDIR/classes"*
+                    zip -gjq "${VENDOR_REPO_FILE}" "$TMPDIR/classes"*
+                    rm "$TMPDIR/classes"*
+                    printf '    (updated %s from odex files)\n' "${SRC_FILE}"
+                fi
+            elif [[ "${VENDOR_REPO_FILE}" =~ .xml$ ]]; then
+                fix_xml "${VENDOR_REPO_FILE}"
             fi
-        elif [[ "${VENDOR_REPO_FILE}" =~ .xml$ ]]; then
-            fix_xml "${VENDOR_REPO_FILE}"
-        fi
-        # Now run user-supplied fixup function
-        blob_fixup "${BLOB_DISPLAY_NAME}" "${VENDOR_REPO_FILE}"
-        local POST_FIXUP_HASH=$(get_hash ${VENDOR_REPO_FILE})
+            # Now run user-supplied fixup function
+            blob_fixup "${BLOB_DISPLAY_NAME}" "${VENDOR_REPO_FILE}"
+            local POST_FIXUP_HASH=$(get_hash ${VENDOR_REPO_FILE})
 
-        if [ -f "${VENDOR_REPO_FILE}" ]; then
-            local DIR=$(dirname "${VENDOR_REPO_FILE}")
-            local TYPE="${DIR##*/}"
-            if [ "$TYPE" = "bin" -o "$TYPE" = "sbin" ]; then
-                chmod 755 "${VENDOR_REPO_FILE}"
-            else
-                chmod 644 "${VENDOR_REPO_FILE}"
+            if [ -f "${VENDOR_REPO_FILE}" ]; then
+                local DIR=$(dirname "${VENDOR_REPO_FILE}")
+                local TYPE="${DIR##*/}"
+                if [ "$TYPE" = "bin" -o "$TYPE" = "sbin" ]; then
+                    chmod 755 "${VENDOR_REPO_FILE}"
+                else
+                    chmod 644 "${VENDOR_REPO_FILE}"
+                fi
             fi
-        fi
 
-        if [ "${KANG}" =  true ]; then
-            print_spec "${IS_PRODUCT_PACKAGE}" "${SPEC_SRC_FILE}" "${SPEC_DST_FILE}" "${SPEC_ARGS}" "${PRE_FIXUP_HASH}" "${POST_FIXUP_HASH}"
-        fi
+            if [ "${KANG}" =  true ]; then
+                print_spec "${IS_PRODUCT_PACKAGE}" "${SPEC_SRC_FILE}" "${SPEC_DST_FILE}" "${SPEC_ARGS}" "${PRE_FIXUP_HASH}" "${POST_FIXUP_HASH}"
+            fi
 
-        # Check and print whether the fixup pipeline actually did anything.
-        # This isn't done right after the fixup pipeline because we want this print
-        # to come after print_spec above, when in kang mode.
-        if [ "${PRE_FIXUP_HASH}" != "${POST_FIXUP_HASH}" ]; then
-            printf "    + Fixed up %s\n" "${BLOB_DISPLAY_NAME}"
-            # Now sanity-check the spec for this blob.
-            if [ "${KANG}" = false ] && [ "${FIXUP_HASH}" = "x" ] && [ "${HASH}" != "x" ]; then
-                printf "WARNING: The %s file was fixed up, but it is pinned.\n" ${BLOB_DISPLAY_NAME}
-                printf "This is a mistake and you want to either remove the hash completely, or add an extra one.\n"
+            # Check and print whether the fixup pipeline actually did anything.
+            # This isn't done right after the fixup pipeline because we want this print
+            # to come after print_spec above, when in kang mode.
+            if [ "${PRE_FIXUP_HASH}" != "${POST_FIXUP_HASH}" ]; then
+                printf "    + Fixed up %s\n" "${BLOB_DISPLAY_NAME}"
+                # Now sanity-check the spec for this blob.
+                if [ "${KANG}" = false ] && [ "${FIXUP_HASH}" = "x" ] && [ "${HASH}" != "x" ]; then
+                    colored_echo yellow "WARNING: The ${BLOB_DISPLAY_NAME} file was fixed up, but it is pinned."
+                    colored_echo yellow "This is a mistake and you want to either remove the hash completely, or add an extra one."
+                fi
             fi
         fi
 
@@ -2047,6 +2087,9 @@ function generate_prop_list_from_image() {
 
     find "$image_dir" -not -type d | sed "s#^$image_dir/##" | while read -r FILE
     do
+        if suffix_match_file ".odex" "$FILE" || suffix_match_file ".vdex" "$FILE" ; then
+            continue
+        fi
         # Skip VENDOR_SKIP_FILES since it will be re-generated at build time
         if array_contains "$FILE" "${VENDOR_SKIP_FILES[@]}"; then
             continue
@@ -2067,4 +2110,25 @@ function generate_prop_list_from_image() {
 
     # Clean-up
     rm -f "$output_list_tmp"
+}
+
+function colored_echo() {
+    IFS=" "
+    local color=$1;
+    shift
+    if ! [[ $color =~ '^[0-9]$' ]] ; then
+        case $(echo $color | tr '[:upper:]' '[:lower:]') in
+        black) color=0 ;;
+        red) color=1 ;;
+        green) color=2 ;;
+        yellow) color=3 ;;
+        blue) color=4 ;;
+        magenta) color=5 ;;
+        cyan) color=6 ;;
+        white|*) color=7 ;; # white or invalid color
+        esac
+    fi
+    if [ -t 1 ] ; then tput setaf $color; fi
+    printf '%s\n' "$*"
+    if [ -t 1 ] ; then tput sgr0; fi
 }
