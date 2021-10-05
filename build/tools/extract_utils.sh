@@ -248,6 +248,23 @@ function truncate_file() {
 }
 
 #
+# truncate_file_odm_etc
+#
+# $1: the filename to truncate
+# $2: the argument to output the truncated filename to
+#
+# Internal function which truncates a filename by removing the first and second dir
+# in the path. ex. vendor/odm/etc/acdbdata/something.acdb -> etc/acdbdata/something/something.acdb
+#
+function truncate_file_odm_etc() {
+    local FILE="$1"
+    RETURN_FILE="$2"
+    local FIND="${FILE%%/*}"
+    local LOCATION="${#FIND}+5"
+    echo ${FILE:$LOCATION}
+}
+
+#
 # write_product_copy_files:
 #
 # $1: make treble compatible makefile - optional and deprecated, default to true
@@ -293,6 +310,10 @@ function write_product_copy_files() {
                 "$OUTDIR" "$TARGET" "$OUTTARGET" "$LINEEND" >> "$PRODUCTMK"
         elif prefix_match_file "odm/" $TARGET ; then
             local OUTTARGET=$(truncate_file $TARGET)
+            printf '    %s/proprietary/%s:$(TARGET_COPY_OUT_ODM)/%s%s\n' \
+                "$OUTDIR" "$TARGET" "$OUTTARGET" "$LINEEND" >> "$PRODUCTMK"
+        elif prefix_match_file "vendor/odm/etc" $TARGET ; then
+            local OUTTARGET=$(truncate_file_odm_etc $TARGET)
             printf '    %s/proprietary/%s:$(TARGET_COPY_OUT_ODM)/%s%s\n' \
                 "$OUTDIR" "$TARGET" "$OUTTARGET" "$LINEEND" >> "$PRODUCTMK"
         elif prefix_match_file "vendor/odm/" $TARGET ; then
