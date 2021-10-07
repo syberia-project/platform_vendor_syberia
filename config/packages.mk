@@ -73,7 +73,7 @@ PRODUCT_PACKAGES += \
     OmniStyle
 
 # Accents
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     AccentColorYellowOverlay \
     AccentColorVioletOverlay \
     AccentColorTealOverlay \
@@ -101,7 +101,7 @@ PRODUCT_PACKAGES += \
     PrimaryColorSyberiaOverlay
 
 # Rounded Styles
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     StockRounded \
     NoneRounded \
     SlightRounded \
@@ -111,8 +111,9 @@ PRODUCT_PACKAGES += \
 
 # Themes
 PRODUCT_PACKAGES += \
-    SyberiaThemesStub \
-    FontGoogleSansOverlay
+    SyberiaThemesStub
+
+#    FontGoogleSansOverlay
 
 # Config
 PRODUCT_PACKAGES += \
@@ -131,7 +132,7 @@ PRODUCT_PACKAGES += \
     StitchImage
 
 # Switch styles
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     SwitchAOSP \
     SwitchAndroid12 \
     SwitchContained \
@@ -141,7 +142,7 @@ PRODUCT_PACKAGES += \
     SwitchOOS
 
 # Navbar
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     GesturalNavigationOverlayLong \
     GesturalNavigationOverlayMedium \
     GesturalNavigationOverlayHidden
