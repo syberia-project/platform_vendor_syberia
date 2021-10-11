@@ -26,6 +26,10 @@ PRODUCT_GENERIC_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.nohdcp=1
 
+# Enable support of one-handed mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode=true
+
 # Set cache location
 ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
