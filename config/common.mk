@@ -94,6 +94,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/syberia/prebuilt/common/bin/system-mount.sh:install/bin/system-mount.sh
 
+# Disable async MTE on system_server
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    arm64.memtag.process.system_server=off
+
 # Bootanimation
 $(call inherit-product, vendor/syberia/config/bootanimation.mk)
 
