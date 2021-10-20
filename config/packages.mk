@@ -148,7 +148,8 @@ PRODUCT_PACKAGES += \
     GesturalNavigationOverlayHidden
 
 PRODUCT_PACKAGES += \
-    Flipendo
+    Flipendo \
+    MarkupGoogle
 
 PRODUCT_PACKAGES += \
     QuickAccessWallet
