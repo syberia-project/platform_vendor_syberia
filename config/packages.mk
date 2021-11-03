@@ -149,7 +149,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     Flipendo \
-    MarkupGoogle
+    MarkupGoogle \
+    Turbo
 
 PRODUCT_PACKAGES += \
     QuickAccessWallet
