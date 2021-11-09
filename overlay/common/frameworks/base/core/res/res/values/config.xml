@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- The duration (in milliseconds) of a short animation. -->
+    <integer name="config_shortAnimTime">100</integer>
+
+    <!-- The duration (in milliseconds) of a medium-length animation. -->
+    <integer name="config_mediumAnimTime">200</integer>
+
+    <!-- The duration (in milliseconds) of a long animation. -->
+    <integer name="config_longAnimTime">250</integer>
+
+    <!-- The duration (in milliseconds) of the activity open/close and fragment open/close animations. -->
+    <integer name="config_activityShortDur">75</integer>
+    <integer name="config_activityDefaultDur">110</integer>
+
+    <string-array name="config_locationProviderPackageNames" translatable="false">
+        <!-- The Google provider -->
+        <item>com.google.android.gms</item>
+        <!-- The standard AOSP fused location provider -->
+        <item>com.android.location.fused</item>
+    </string-array>
+
+    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
+         in hardware. -->
+    <bool name="config_setColorTransformAccelerated">true</bool>
+
+    <!-- Minimum color temperature, in Kelvin, supported by Night display. -->
+    <integer name="config_nightDisplayColorTemperatureMin">1600</integer>
+
+    <!-- Default color temperature, in Kelvin, to tint the screen when Night display is
+         activated. -->
+    <integer name="config_nightDisplayColorTemperatureDefault">2650</integer>
+
+    <!-- Disable stock OTA components if installed -->
+    <string-array name="config_globallyDisabledComponents" translatable="false">
+        <item>com.android.vending/com.google.android.finsky.systemupdateactivity.SystemUpdateActivity</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateActivity</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateGcmTaskService</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
+    </string-array>
+
+    <!-- Whether WiFi display is supported by this device.
+         There are many prerequisites for this feature to work correctly.
+         Here are a few of them:
+         * The WiFi radio must support WiFi P2P.
+         * The WiFi radio must support concurrent connections to the WiFi display and
+           to an access point.
+         * The Audio Flinger audio_policy.conf file must specify a rule for the "r_submix"
+           remote submix module.  This module is used to record and stream system
+           audio output to the WiFi display encoder in the media server.
+         * The remote submix module "audio.r_submix.default" must be installed on the device.
+         * The device must be provisioned with HDCP keys (for protected content).
+
+    -->
+    <bool name="config_enableWifiDisplay">true</bool>
+
+    <!-- enable doze powersaving mode -->
+    <bool name="config_enableAutoPowerModes">true</bool>
+
+    <!-- Pixel -->
+    <bool name="config_buttonTextAllCaps">false</bool>
+    <bool name="config_unplugTurnsOnScreen">true</bool>
+    <bool name="config_sendPackageName">true</bool>
+
+    <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
+    <bool name="config_useRoundIcon">true</bool>
+
+    <!-- Specifies the path that is used by AdaptiveIconDrawable class to crop launcher icons. -->
+    <string name="config_icon_mask" translatable="false">"M50 0C77.6 0 100 22.4 100 50C100 77.6 77.6 100 50 100C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0Z"</string>
+
+    <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
+    <bool name="config_swipe_up_gesture_setting_available">true</bool>
+
+    <!-- Flag indicating whether we should enable smart battery. -->
+    <bool name="config_smart_battery_available">true</bool>
+
+    <!-- Smart replies in notifications: Whether we disable the feature unless the app targets P -->
+    <bool name="config_smart_replies_in_notifications_requires_targeting_p">false</bool>
+
+    <!-- IP address of the dns server to use if nobody else suggests one -->
+    <string name="config_default_dns_server" translatable="false">1.0.0.1</string>
+
+    <!-- System font packages (overlay in vendor) -->
+    <string-array name="config_fontPackages" translatable="false">
+        <item>com.custom.fonts</item>
+    </string-array>
+
+    <!-- Component name for default assistant on this device -->
+    <string name="config_defaultAssistantComponentName">com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService</string>
+
+    <!-- When true, the tethering upstream network follows the current default
+         Internet network (except when the current default network is mobile,
+         in which case a DUN network will be used if required). -->
+    <bool name="config_tether_upstream_automatic">true</bool>
+
+    <!-- If this is true, long press on power button will be available from the non-interactive state -->
+    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
+
+    <!-- The package name for the default wellbeing app.
+         This package must be trusted, as it has the permissions to control other applications
+         on the device.
+         Example: "com.android.wellbeing"
+     -->
+    <string name="config_defaultWellbeingPackage">com.google.android.apps.wellbeing</string>
+
+    <!-- Enable lockscreen rotation by default -->
+    <bool name="config_enableLockScreenRotation">true</bool>
+
+    <!-- The app which will handle routine based automatic battery saver, if empty the UI for
+         routine based battery saver will be hidden -->
+    <string name="config_batterySaverScheduleProvider">com.google.android.apps.turbo</string>
+
+    <!-- List of packages that can use the Conversation space for their category messages
+    notifications until they target R -->
+    <string-array name="config_notificationMsgPkgsAllowedAsConvos" translatable="false">
+        <item>com.facebook.orca</item>
+        <item>com.instagram.android</item>
+        <item>com.whatsapp</item>
+        <item>com.snapchat.android</item>
+        <item>jp.naver.line.android</item>
+        <item>com.kakao.talk</item>
+        <item>com.discord</item>
+        <item>org.thoughtcrime.securesms</item>
+        <item>com.groupme.android</item>
+        <item>org.telegram.messenger</item>
+        <item>com.twitter.android</item>
+        <item>com.viber.voip</item>
+        <item>com.linkedin.android</item>
+        <item>com.tencent.mm</item>
+    </string-array>
+
+    <!-- Package name that will receive an explicit manifest broadcast for
+         android.os.action.POWER_SAVE_MODE_CHANGED. -->
+    <string name="config_powerSaveModeChangedListenerPackage">com.google.android.flipendo</string>
+
+    <!-- Flag indicating which package name can access DeviceConfig table -->
+    <string name="config_deviceConfiguratorPackageName" translatable="false">org.protonaosp.deviceconfig</string>
+
+    <!-- Whether device supports an alt. ambient display -->
+    <bool name="config_alt_ambient_display">true</bool>
+
+    <!-- Control the behavior when the user long presses the power button.
+            0 - Nothing
+            1 - Global actions menu
+            2 - Power off (with confirmation)
+            3 - Power off (without confirmation)
+            4 - Go to voice assist
+            5 - Go to assistant (Settings.Secure.ASSISTANT)
+    -->
+    <integer name="config_longPressOnPowerBehavior">1</integer>
+
+    <!-- Control the behavior when the user presses the power and volume up buttons together.
+            0 - Nothing
+            1 - Mute toggle
+            2 - Global actions menu
+    -->
+    <integer name="config_keyChordPowerVolumeUp">1</integer>
+
+    <!-- Whether this device is supporting the microphone toggle -->
+    <bool name="config_supportsMicToggle">true</bool>
+    <!-- Whether this device is supporting the camera toggle -->
+    <bool name="config_supportsCamToggle">true</bool>
+
+    <!-- the number of the max cached processes in the system. -->
+    <integer name="config_customizedMaxCachedProcesses">48</integer>
+</resources>
