@@ -93,6 +93,8 @@ PRODUCT_COPY_FILES += \
 # Include Lineage LatinIME dictionaries
 #PRODUCT_PACKAGE_OVERLAYS += vendor/syberia/overlay/dictionaries
 
+# Fonts
+$(call inherit-product, vendor/syberia/fonts/fonts.mk)
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := false
