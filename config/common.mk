@@ -12,6 +12,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
+# Optimize everything for preopt
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
+
 # General additions
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
