@@ -142,10 +142,8 @@ PRODUCT_PACKAGES += \
     SwitchOOS
 
 # Navbar
-#PRODUCT_PACKAGES += \
-    GesturalNavigationOverlayLong \
-    GesturalNavigationOverlayMedium \
-    GesturalNavigationOverlayHidden
+PRODUCT_PACKAGES += \
+     NavigationBarModeGesturalOverlayFS
 
 PRODUCT_PACKAGES += \
     Flipendo \
