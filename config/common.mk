@@ -151,6 +151,10 @@ include vendor/syberia/config/packages.mk
 # Plugins
 #include packages/apps/Plugins/plugins.mk
 
+ifneq ($(TARGET_WANTS_AOSP_LAUNCHER), true)
+-include vendor/syberia/prebuilt/Lawnchair/lawnchair.mk
+endif
+
 # Inherit common product build prop overrides
 -include vendor/syberia/config/versions.mk
 
