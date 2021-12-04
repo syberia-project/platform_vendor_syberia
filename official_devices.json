@@ -5,29 +5,17 @@
     "device_model": "OnePlus 6",
     "device_codename": "enchilada"
   },
-  "raphael": {
-    "maintainer": "NATO666613",
+  "alioth": {
+    "maintainer": "DennySPb",
     "device_brand": "Xiaomi",
-    "device_model": "Redmi K20 Pro",
-    "device_codename": "raphael"
+    "device_model": "Poco F3",
+    "device_codename": "alioth"
   },
   "davinci": {
     "maintainer": "svb22",
     "device_brand": "Xiaomi",
     "device_model": "MI 9T",
     "device_codename": "davinci"
-  },
-  "daisy": {
-    "maintainer": "lupesoltec",
-    "device_brand": "Xiaomi",
-    "device_model": "Mi A2 Lite",
-    "device_codename": "daisy"
-  },
-  "alioth": {
-    "maintainer": "mdeejay",
-    "device_brand": "Xiaomi",
-    "device_model": "Poco F3",
-    "device_codename": "alioth"
   },
   "laurel_sprout": {
     "maintainer": "magicxavi",
