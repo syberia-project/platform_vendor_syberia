@@ -17,12 +17,6 @@
     "device_model": "Redmi K20 Pro",
     "device_codename": "raphael"
   },
-  "davinci": {
-    "maintainer": "svb22",
-    "device_brand": "Xiaomi",
-    "device_model": "MI 9T",
-    "device_codename": "davinci"
-  },
   "daisy": {
     "maintainer": "lupesoltec",
     "device_brand": "Xiaomi",
