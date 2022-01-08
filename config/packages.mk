@@ -111,7 +111,8 @@ PRODUCT_PACKAGES += \
 
 # Themes
 PRODUCT_PACKAGES += \
-    SyberiaThemesStub
+    SyberiaThemesStub \
+    AndroidBlackThemeOverlay
 
 #    FontGoogleSansOverlay
 
