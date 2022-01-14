@@ -180,3 +180,7 @@ ifeq ($(TARGET_WANTS_FOD_ANIMATIONS),true)
 PRODUCT_PACKAGES += \
     FodAnimationResources
 endif
+
+# GameMode
+PRODUCT_PACKAGES += \
+    GamingMode
