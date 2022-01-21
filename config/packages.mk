@@ -172,7 +172,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CustomDoze
 
-ifeq ($(TARGET_WANTS_FOD_ANIMATIONS),true)
+ifeq ($(EXTRA_UDFPS_ANIMATIONS),true)
 PRODUCT_PACKAGES += \
-    FodAnimationResources
+    UdfpsResources
 endif
+
