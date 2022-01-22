@@ -187,3 +187,8 @@ ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
 PRODUCT_PACKAGES += \
     product_charger_res_images
 endif
+
+# Flipendo & Turbo sepolicy
+BOARD_SEPOLICY_DIRS += \
+	hardware/google/pixel-sepolicy/flipendo \
+	hardware/google/pixel-sepolicy/turbo_adapter
