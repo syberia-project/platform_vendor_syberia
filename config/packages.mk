@@ -148,7 +148,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Flipendo \
     MarkupGoogle \
-    Turbo
+    TurboPrebuilt \
+    TurboAdapter
 
 # StatusBar icons
 PRODUCT_PACKAGES += \
