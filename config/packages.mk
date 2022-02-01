@@ -145,11 +145,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
      NavigationBarModeGesturalOverlayFS
 
-PRODUCT_PACKAGES += \
-    Flipendo \
-    MarkupGoogle \
-    Turbo
-
 # StatusBar icons
 PRODUCT_PACKAGES += \
     StrokeSignalOverlay \
