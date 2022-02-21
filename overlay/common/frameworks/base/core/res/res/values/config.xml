@@ -45,6 +45,8 @@
         <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicSettingsActivity</item>
         <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicNotificationsSettingsActivity</item>
         <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicSetupWizardActivity</item>
+        <item>com.google.android.as/com.google.android.apps.miphone.aiai.adaptiveaudio.service.AdaptiveAudioBackgroundService</item>
+        <item>com.google.android.as/com.google.android.apps.miphone.aiai.adaptiveaudio.settings.ui.AdaptiveAudioSettingsActivity</item>
     </string-array>
 
     <!-- Whether WiFi display is supported by this device.

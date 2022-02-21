@@ -52,8 +52,8 @@
         <item>device_personalization_services/Captions__visibility_stopped_duration_millis=1500</item>
 
         <!-- Adaptive Sound (Pixel 2020) -->
-        <item>device_personalization_services/AdaptiveAudio__enable_adaptive_audio=true</item>
-        <item>device_personalization_services/AdaptiveAudio__show_promo_notification=true</item>
+        <item>device_personalization_services/AdaptiveAudio__enable_adaptive_audio=false</item>
+        <item>device_personalization_services/AdaptiveAudio__show_promo_notification=false</item>
 
         <!-- Screen attention (Pixel 2019) -->
         <item>device_personalization_services/Attention__accel_sensor_enabled=false</item>
