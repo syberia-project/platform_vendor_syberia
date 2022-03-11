@@ -177,3 +177,8 @@ PRODUCT_PACKAGES += \
     UdfpsResources
 endif
 
+
+ifneq ($(WITH_GMS),true)
+PRODUCT_PACKAGES += \
+    GmsCompat
+endif
