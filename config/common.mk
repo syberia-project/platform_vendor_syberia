@@ -5,7 +5,8 @@ include vendor/syberia/config/art.mk
 
 # ART
 # Optimize everything for preopt
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
+#PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
+
 ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
 # Don't preopt prebuilts
 DONT_DEXPREOPT_PREBUILTS := true
@@ -110,22 +111,15 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/syberia/prebuilt/fonts,$(TARGET_COPY_OUT_SYSTEM)/fonts) \
     vendor/syberia/prebuilt/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
-# Include Lineage LatinIME dictionaries
-#PRODUCT_PACKAGE_OVERLAYS += vendor/syberia/overlay/dictionaries
-
-# Substratum Key
-#PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/apk/SubstratumKey.apk:system/priv-app/SubstratumKey/SubstratumKey.apk
-
 # Packages
 include vendor/syberia/config/packages.mk
 
 # Plugins
 #include packages/apps/Plugins/plugins.mk
 
-ifneq ($(TARGET_WANTS_AOSP_LAUNCHER), true)
--include vendor/syberia/prebuilt/Lawnchair/lawnchair.mk
-endif
+#ifneq ($(TARGET_WANTS_AOSP_LAUNCHER), true)
+#-include vendor/syberia/prebuilt/Lawnchair/lawnchair.mk
+#endif
 
 # Inherit common product build prop overrides
 -include vendor/syberia/config/versions.mk

@@ -64,83 +64,17 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     WeatherIcons
 
-#Syberia wallpapers
-#PRODUCT_PACKAGES += \
-    SyberiaPapers
-
-#OmniStyle
-#PRODUCT_PACKAGES += \
-    OmniStyle
-
-# Accents
-#PRODUCT_PACKAGES += \
-    AccentColorYellowOverlay \
-    AccentColorVioletOverlay \
-    AccentColorTealOverlay \
-    AccentColorRedOverlay \
-    AccentColorQGreenOverlay \
-    AccentColorPinkOverlay \
-    AccentColorLightPurpleOverlay \
-    AccentColorIndigoOverlay \
-    AccentColorFlatPinkOverlay \
-    AccentColorCyanOverlay \
-    AccentColorBlueGrayOverlay \
-    AmberAccent \
-    BlueAccent \
-    BrownAccent \
-    DeepOrangeAccent \
-    DeepPurpleAccent \
-    LimeAccent \
-    PastelDarkBlueAccent \
-    PastelEtonBlueAccent \
-    PastelGreenAccent \
-    PastelRedAccent \
-    AccentColorMintOverlay \
-    AccentColorBloodyRedOverlay \
-    AccentColorSyberiaOverlay \
-    PrimaryColorSyberiaOverlay
-
-# Rounded Styles
-#PRODUCT_PACKAGES += \
-    StockRounded \
-    NoneRounded \
-    SlightRounded \
-    MediumRounded \
-    HighRounded \
-    ExtremeRounded
-
 # Themes
 PRODUCT_PACKAGES += \
-    SyberiaThemesStub \
     AndroidBlackThemeOverlay
-
-#    FontGoogleSansOverlay
 
 # Config
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig
 
-# Etar
-PRODUCT_PACKAGES += \
-    Etar
-
 # Matlog
 PRODUCT_PACKAGES += \
     MatLog
-
-# StichImage
-PRODUCT_PACKAGES += \
-    StitchImage
-
-# Switch styles
-#PRODUCT_PACKAGES += \
-    SwitchAOSP \
-    SwitchAndroid12 \
-    SwitchContained \
-    SwitchTelegram \
-    SwitchRetro \
-    SwitchMD2 \
-    SwitchOOS
 
 # Navbar
 PRODUCT_PACKAGES += \
@@ -164,7 +98,6 @@ PRODUCT_PACKAGES += \
     RoundWiFiOverlay \
     InsideWiFiOverlay \
     BarsWiFiOverlay
-
 
 PRODUCT_PACKAGES += \
     QuickAccessWallet
