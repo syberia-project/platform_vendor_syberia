@@ -1,5 +1,6 @@
 # Versioning System
 SYBERIA_VERSION = v5.4
+CUSTOM_PLATFORM_RELEASE_OR_CODENAME := 12L
 
 ifndef SYBERIA_BUILD_TYPE
     SYBERIA_BUILD_TYPE := UNOFFICIAL
@@ -16,4 +17,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     com.syberia.fingerpring=$(SYBERIA_FINGERPRINT) \
     ro.syberia.display.version=Syberia-$(SYBERIA_VERSION) \
     ro.syberia.releasetype=$(SYBERIA_BUILD_TYPE) \
-    ro.modversion=$(TARGET_BACON_NAME)
+    ro.modversion=$(TARGET_BACON_NAME) \
+    ro.syberia.settings.android_version=$(CUSTOM_PLATFORM_RELEASE_OR_CODENAME)
