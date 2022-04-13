@@ -34,5 +34,11 @@
     "device_brand": "Xiaomi",
     "device_model": "Mi A3",
     "device_codename": "laurel_sprout"
+  },
+  "mi439": {
+    "maintainer": "iaiaian1",
+    "device_brand": "Xiaomi",
+    "device_model": "MI439-Unified",
+    "device_codename": "mi439"
   }
 }
