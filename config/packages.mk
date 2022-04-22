@@ -110,6 +110,9 @@ PRODUCT_PACKAGES += \
     UdfpsResources
 endif
 
+# Repainter integration
+PRODUCT_PACKAGES += \
+    RepainterServicePriv \
 
 ifneq ($(WITH_GMS),true)
 PRODUCT_PACKAGES += \
