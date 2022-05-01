@@ -95,6 +95,7 @@ PRODUCT_PACKAGES += \
     XperiaWiFiOverlay \
     ZigZagWiFiOverlay \
     WavyWiFiOverlay \
+    WeedWiFiOverlay \
     RoundWiFiOverlay \
     InsideWiFiOverlay \
     BarsWiFiOverlay \
