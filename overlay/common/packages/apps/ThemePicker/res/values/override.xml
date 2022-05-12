@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources>
-    <string name="themes_stub_package" translatable="false">com.android.customization</string>
+    <string name="themes_stub_package" translatable="false">com.google.android.apps.customization.pixel</string>
     <string name="clocks_stub_package" translatable="false">com.android.customization</string>
 
     <string name="launcher_overlayable_package" translatable="false">com.android.launcher3</string>
