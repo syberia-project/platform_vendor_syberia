@@ -57,7 +57,7 @@ PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
 PRODUCT_PACKAGES += \
-    GamingMode
+    GameSpace
 
 #OmniJaws
 PRODUCT_PACKAGES += \
