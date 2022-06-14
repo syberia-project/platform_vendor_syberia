@@ -389,6 +389,9 @@ $(KERNEL_OUT):
 	mkdir -p $(KERNEL_OUT)
 
 $(KERNEL_CONFIG): $(KERNEL_OUT) $(ALL_KERNEL_DEFCONFIG_SRCS)
+	@echo "Generating Changelog"
+	$(hide) ./vendor/syberia/tools/changelog
+	$(hide) mv $(PRODUCT_OUT)/Changelog.txt $(PRODUCT_OUT)/$(TARGET_PRODUCT)-Changelog.txt
 	@echo "Building Kernel Config"
 	$(call make-kernel-config,$(KERNEL_OUT),$(KERNEL_DEFCONFIG))
 
