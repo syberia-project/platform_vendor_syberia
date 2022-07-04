@@ -5,12 +5,6 @@
     "device_model": "OnePlus 6",
     "device_codename": "enchilada"
   },
-  "fajita": {
-    "maintainer": "SevralT",
-    "device_brand": "OnePlus",
-    "device_model": "OnePlus 6T",
-    "device_codename": "fajita"
-  },
   "raphael": {
     "maintainer": "NATO666613",
     "device_brand": "Xiaomi",
