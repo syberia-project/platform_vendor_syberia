@@ -1,4 +1,4 @@
-# Copyright (C) 2018-2020 The LineageOS Project
+# Copyright (C) 2018-2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,7 +20,6 @@
 #
 #   TARGET_KERNEL_SOURCE               = Kernel source dir, optional, defaults
 #                                          to kernel/$(TARGET_DEVICE_DIR)
-#   TARGET_KERNEL_ADDITIONAL_FLAGS     = Additional make flags, optional
 #   TARGET_KERNEL_ARCH                 = Kernel Arch
 #   TARGET_KERNEL_CROSS_COMPILE_PREFIX = Compiler prefix (e.g. arm-eabi-)
 #                                          defaults to arm-linux-androidkernel- for arm
@@ -28,6 +27,9 @@
 #                                                      x86_64-linux-android- for x86
 #
 #   TARGET_KERNEL_CLANG_COMPILE        = Compile kernel with clang, defaults to true
+#   TARGET_KERNEL_VERSION              = Reported kernel version in top level kernel
+#                                        makefile. Can be overriden in device trees
+#                                        in the event of prebuilt kernel.
 #
 #   KERNEL_TOOLCHAIN_PREFIX            = Overrides TARGET_KERNEL_CROSS_COMPILE_PREFIX,
 #                                          Set this var in shell to override
@@ -37,7 +39,7 @@
 #                                          is in PATH
 #   USE_CCACHE                         = Enable ccache (global Android flag)
 
-BUILD_TOP := $(shell pwd)
+BUILD_TOP := $(abspath .)
 
 TARGET_AUTO_KDIR := $(shell echo $(TARGET_DEVICE_DIR) | sed -e 's/^device/kernel/g')
 TARGET_KERNEL_SOURCE ?= $(TARGET_AUTO_KDIR)
@@ -48,6 +50,10 @@ KERNEL_ARCH := $(TARGET_ARCH)
 else
 KERNEL_ARCH := $(TARGET_KERNEL_ARCH)
 endif
+
+KERNEL_VERSION := $(shell grep "^VERSION = " $(TARGET_KERNEL_SOURCE)/Makefile | awk '{ print $$3 }')
+KERNEL_PATCHLEVEL := $(shell grep "^PATCHLEVEL = " $(TARGET_KERNEL_SOURCE)/Makefile | awk '{ print $$3 }')
+TARGET_KERNEL_VERSION ?= $(shell echo $(KERNEL_VERSION)"."$(KERNEL_PATCHLEVEL))
 
 CLANG_PREBUILTS := $(BUILD_TOP)/prebuilts/clang/host/$(HOST_PREBUILT_TAG)/clang-r416183b1
 GCC_PREBUILTS := $(BUILD_TOP)/prebuilts/gcc/$(HOST_PREBUILT_TAG)
@@ -104,24 +110,22 @@ KERNEL_MAKE_FLAGS :=
 # Add back threads, ninja cuts this to $(nproc)/2
 KERNEL_MAKE_FLAGS += -j$(shell prebuilts/tools-lineage/$(HOST_PREBUILT_TAG)/bin/nproc --all)
 
-ifeq ($(KERNEL_ARCH),arm)
-  # Avoid "Unknown symbol _GLOBAL_OFFSET_TABLE_" errors
-  KERNEL_MAKE_FLAGS += CFLAGS_MODULE="-fno-pic"
-endif
+ifeq ($(TARGET_KERNEL_CLANG_COMPILE),false)
+  ifeq ($(KERNEL_ARCH),arm)
+    # Avoid "Unknown symbol _GLOBAL_OFFSET_TABLE_" errors
+    KERNEL_MAKE_FLAGS += CFLAGS_MODULE="-fno-pic"
+  endif
 
-ifeq ($(KERNEL_ARCH),arm64)
-  # Avoid "unsupported RELA relocation: 311" errors (R_AARCH64_ADR_GOT_PAGE)
-  KERNEL_MAKE_FLAGS += CFLAGS_MODULE="-fno-pic"
+  ifeq ($(KERNEL_ARCH),arm64)
+    # Avoid "unsupported RELA relocation: 311" errors (R_AARCH64_ADR_GOT_PAGE)
+    KERNEL_MAKE_FLAGS += CFLAGS_MODULE="-fno-pic"
+  endif
 endif
 
 ifeq ($(HOST_OS),darwin)
   KERNEL_MAKE_FLAGS += HOSTCFLAGS="-I$(BUILD_TOP)/external/elfutils/libelf -I/usr/local/opt/openssl/include -fuse-ld=lld" HOSTLDFLAGS="-L/usr/local/opt/openssl/lib -fuse-ld=lld"
 else
   KERNEL_MAKE_FLAGS += CPATH="/usr/include:/usr/include/x86_64-linux-gnu" HOSTCFLAGS="-fuse-ld=lld" HOSTLDFLAGS="-L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -fuse-ld=lld"
-endif
-
-ifneq ($(TARGET_KERNEL_ADDITIONAL_FLAGS),)
-  KERNEL_MAKE_FLAGS += $(TARGET_KERNEL_ADDITIONAL_FLAGS)
 endif
 
 TOOLS_PATH_OVERRIDE := \
@@ -146,6 +150,13 @@ KERNEL_MAKE_CMD := $(BUILD_TOP)/prebuilts/build-tools/$(HOST_PREBUILT_TAG)/bin/m
 # Set the full path to the clang command
 KERNEL_MAKE_FLAGS += HOSTCC=$(CLANG_PREBUILTS)/bin/clang
 KERNEL_MAKE_FLAGS += HOSTCXX=$(CLANG_PREBUILTS)/bin/clang++
+
+# Use LLVM's substitutes for GNU binutils if compatible kernel version.
+ifneq ($(TARGET_KERNEL_CLANG_COMPILE), false)
+ifneq (,$(filter 5.4, $(TARGET_KERNEL_VERSION)))
+    KERNEL_MAKE_FLAGS += LLVM=1 LLVM_IAS=1
+endif
+endif
 
 # Since Linux 4.16, flex and bison are required
 KERNEL_MAKE_FLAGS += LEX=$(BUILD_TOP)/prebuilts/build-tools/$(HOST_PREBUILT_TAG)/bin/flex
