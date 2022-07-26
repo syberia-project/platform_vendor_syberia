@@ -144,6 +144,13 @@ PRODUCT_PACKAGES += \
     product_charger_res_images
 endif
 
+
+# Inherit from fonts config
+$(call inherit-product, vendor/syberia/config/fonts.mk)
+
+# Inherit from gfonts config
+$(call inherit-product, vendor/syberia/config/gfonts.mk)
+
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
 PRODUCT_PACKAGES += \
@@ -153,3 +160,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
 endif
+
+
