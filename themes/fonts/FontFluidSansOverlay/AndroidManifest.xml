@@ -26,6 +26,6 @@
     <application android:label="@string/font_fluidsans_overlay" android:hasCode="false">
         <meta-data
             android:name="android.theme.customization.REQUIRED_SYSTEM_FONTS"
-            android:value="fluid-sans,fluid-sans-medium"/>
+            android:value="fluid-sans,fluid-sans-regular,fluid-sans-medium,fluid-sans-bold"/>
     </application>
 </manifest>

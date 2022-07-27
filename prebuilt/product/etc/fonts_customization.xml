@@ -1196,5 +1196,7 @@
         <font weight="700" style="normal">FluidSans-Bold.ttf</font>
         <font weight="700" style="italic">FluidSans-BoldItalic.ttf</font>
     </family>
+    <alias name="fluid-sans-regular" to="fluid-sans" weight="400" />
     <alias name="fluid-sans-medium" to="fluid-sans" weight="500" />
+    <alias name="fluid-sans-bold" to="fluid-sans" weight="700" />
 </fonts-modification>
