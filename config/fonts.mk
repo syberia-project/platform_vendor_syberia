@@ -62,6 +62,7 @@ PRODUCT_PACKAGES += \
     FontLGSmartGothicOverlay \
     FontLemonMilkOverlay \
     FontLinotteOverlay \
+    FontMiSansOverlay \
     FontManropeOverlay \
     FontNokiaPureOverlay \
     FontNothingDotHeadlineOverlay \
