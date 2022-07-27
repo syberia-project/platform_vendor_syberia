@@ -1187,4 +1187,14 @@
     </font>
   </family>
   <alias name="opposans-medium" to="opposans" weight="500" />
+  
+    <family customizationType="new-named-family" name="fluid-sans">
+        <font weight="400" style="normal">FluidSans-Regular.ttf</font>
+        <font weight="400" style="italic">FluidSans-Italic.ttf</font>
+        <font weight="500" style="normal">FluidSans-Medium.ttf</font>
+        <font weight="500" style="italic">FluidSans-MediumItalic.ttf</font>
+        <font weight="700" style="normal">FluidSans-Bold.ttf</font>
+        <font weight="700" style="italic">FluidSans-BoldItalic.ttf</font>
+    </family>
+    <alias name="fluid-sans-medium" to="fluid-sans" weight="500" />
 </fonts-modification>
