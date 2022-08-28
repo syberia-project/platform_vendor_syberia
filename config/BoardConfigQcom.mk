@@ -135,9 +135,3 @@ ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
         vendor/qcom/opensource/display \
         vendor/qcom/opensource/commonsys-intf/display
 endif
-
-ifeq ($(TARGET_USE_QTI_BT_STACK),true)
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth
-#    vendor/qcom/opensource/commonsys/system/bt/conf
-endif #TARGET_USE_QTI_BT_STACK
