@@ -13,9 +13,9 @@ touch $Changelog
 
 for i in $(seq 7);
 do
-export After_Date=`date --date="$i days ago" +%F`
+export After_Date=`./prebuilts/tools-lineage/linux-x86/bin/date --date="$i days ago" +%F`
 k=$(expr $i - 1)
-export Until_Date=`date --date="$k days ago" +%F`
+export Until_Date=`./prebuilts/tools-lineage/linux-x86/bin/date --date="$k days ago" +%F`
 echo "====================" >> $Changelog;
 echo "     $Until_Date    " >> $Changelog;
 echo "====================" >> $Changelog;
