@@ -76,6 +76,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MatLog
 
+PRODUCT_PACKAGES += \
+    SyberiaPapers
+
 # Navbar
 PRODUCT_PACKAGES += \
      NavigationBarModeGesturalOverlayFS
