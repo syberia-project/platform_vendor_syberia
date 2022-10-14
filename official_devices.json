@@ -5,6 +5,12 @@
     "device_model": "OnePlus 6",
     "device_codename": "enchilada"
   },
+  "lemonade": {
+    "maintainer": "DennySPb",
+    "device_brand": "OnePlus",
+    "device_model": "OnePlus 9",
+    "device_codename": "lemonade"
+  },
   "raphael": {
     "maintainer": "NATO666613",
     "device_brand": "Xiaomi",
