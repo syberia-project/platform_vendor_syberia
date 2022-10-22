@@ -1,50 +1,14 @@
 {
-  "oneplus6": {
-    "maintainer": "DennySPb",
-    "device_brand": "OnePlus",
-    "device_model": "OnePlus 6",
-    "device_codename": "enchilada"
-  },
   "lemonade": {
     "maintainer": "DennySPb",
     "device_brand": "OnePlus",
     "device_model": "OnePlus 9",
     "device_codename": "lemonade"
   },
-  "raphael": {
-    "maintainer": "NATO666613",
-    "device_brand": "Xiaomi",
-    "device_model": "Redmi K20 Pro",
-    "device_codename": "raphael"
-  },
-  "daisy": {
-    "maintainer": "lupesoltec",
-    "device_brand": "Xiaomi",
-    "device_model": "Mi A2 Lite",
-    "device_codename": "daisy"
-  },
   "alioth": {
     "maintainer": "DennySPb",
     "device_brand": "Xiaomi",
     "device_model": "Poco F3",
     "device_codename": "alioth"
-  },
-  "laurel_sprout": {
-    "maintainer": "magicxavi",
-    "device_brand": "Xiaomi",
-    "device_model": "Mi A3",
-    "device_codename": "laurel_sprout"
-  },
-  "mi439": {
-    "maintainer": "iaiaian1",
-    "device_brand": "Xiaomi",
-    "device_model": "MI439-Unified",
-    "device_codename": "mi439"
-  },
-  "cepheus": {
-    "maintainer": "RDS-007",
-    "device_brand": "Xiaomi",
-    "device_model": "Mi 9",
-    "device_codename": "cepheus"
   }
 }
