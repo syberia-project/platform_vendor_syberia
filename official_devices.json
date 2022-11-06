@@ -22,5 +22,11 @@
     "device_brand": "Xiaomi",
     "device_model": "Redmi Note 8 Pro",
     "device_codename": "begonia"
+  },
+  "daisy": {
+    "maintainer": "lupesoltec",
+    "device_brand": "Xiaomi",
+    "device_model": "Mi A2 Lite",
+    "device_codename": "daisy"
   }
 }
