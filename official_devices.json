@@ -16,5 +16,11 @@
     "device_brand": "Xiaomi",
     "device_model": "Mi A3",
     "device_codename": "laurel_sprout"
+  },
+  "begonia": {
+    "maintainer": "Bishwo",
+    "device_brand": "Xiaomi",
+    "device_model": "Redmi Note 8 Pro",
+    "device_codename": "begonia"
   }
 }
