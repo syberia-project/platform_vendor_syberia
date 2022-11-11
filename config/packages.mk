@@ -79,10 +79,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SyberiaPapers
 
-# Navbar
-PRODUCT_PACKAGES += \
-     NavigationBarModeGesturalOverlayFS
-
 # StatusBar icons
 PRODUCT_PACKAGES += \
     DoraSignalOverlay \
