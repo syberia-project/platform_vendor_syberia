@@ -3,7 +3,8 @@
     "maintainer": "DennySPb",
     "device_brand": "OnePlus",
     "device_model": "OnePlus 9",
-    "device_codename": "lemonade"
+    "device_codename": "lemonade",
+    "ota_codename": "OnePlus9"
   },
   "alioth": {
     "maintainer": "DennySPb",
