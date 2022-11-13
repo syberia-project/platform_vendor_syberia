@@ -18,6 +18,12 @@
     "device_model": "Mi A3",
     "device_codename": "laurel_sprout"
   },
+  "ginkgo": {
+    "maintainer": "erwinabs",
+    "device_brand": "Xiaomi",
+    "device_model": "Redmi Note 8",
+    "device_codename": "ginkgo"
+  },
   "begonia": {
     "maintainer": "Bishwo",
     "device_brand": "Xiaomi",
