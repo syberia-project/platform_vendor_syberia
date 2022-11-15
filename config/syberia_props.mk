@@ -30,6 +30,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
+# GMS spoofing fingerprint
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.build.gms_fingerprint=google/angler/angler:6.0/MDB08L/2343525:user/release-keys
+
 # Set cache location
 ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
