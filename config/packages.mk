@@ -79,6 +79,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SyberiaPapers
 
+# Parallel Space
+PRODUCT_PACKAGES += \
+    ParallelSpace
+
 # StatusBar icons
 PRODUCT_PACKAGES += \
     DoraSignalOverlay \
