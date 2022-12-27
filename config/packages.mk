@@ -66,6 +66,7 @@ PRODUCT_PACKAGES += \
 
 # Themes
 PRODUCT_PACKAGES += \
+    ThemeStubPackage \
     AndroidBlackThemeOverlay
 
 # Config

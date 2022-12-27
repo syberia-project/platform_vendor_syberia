@@ -1,0 +1,6 @@
+android_app {
+    name: "ThemeStubPackage",
+    resource_dirs: ["res"],
+    product_specific: true,
+    sdk_version: "current",
+}
