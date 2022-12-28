@@ -35,5 +35,11 @@
     "device_brand": "Xiaomi",
     "device_model": "Mi A2 Lite",
     "device_codename": "daisy"
+  },
+  "munch": {
+    "maintainer": "erwinabs",
+    "device_brand": "Xiaomi",
+    "device_model": "Poco F4",
+    "device_codename": "munch"
   }
 }
