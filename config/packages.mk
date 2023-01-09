@@ -66,6 +66,7 @@ PRODUCT_PACKAGES += \
 
 # Themes
 PRODUCT_PACKAGES += \
+    ThemeStubPackage \
     AndroidBlackThemeOverlay
 
 # Config
@@ -78,6 +79,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     SyberiaPapers
+
+# Parallel Space
+PRODUCT_PACKAGES += \
+    ParallelSpace
 
 # StatusBar icons
 PRODUCT_PACKAGES += \
