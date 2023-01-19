@@ -33,8 +33,11 @@ SOONG_CONFIG_aospGlobalVars += \
     camera_needs_client_info \
     camera_needs_client_info_lib \
     has_legacy_camera_hal1 \
+    uses_oplus_camera \
+    uses_nothing_camera \
     ignores_ftp_pptp_conntrack_failure \
     needs_netd_direct_connect_rule \
+    gralloc_handle_has_reserved_size \
     target_init_vendor_lib \
     target_ld_shim_libs \
     target_process_sdk_version_override \
@@ -62,6 +65,7 @@ SOONG_CONFIG_aospQcomVars += \
 endif
 
 # Soong bool variables
+SOONG_CONFIG_aospGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_aospGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_aospGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
 SOONG_CONFIG_aospGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
@@ -75,8 +79,11 @@ SOONG_CONFIG_aospQcomVars_supports_hw_fde_perf := $(TARGET_HW_DISK_ENCRYPTION_PE
 SOONG_CONFIG_aospQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 SOONG_CONFIG_aospQcomVars_uses_qcom_bsp_legacy := $(TARGET_USES_QCOM_BSP_LEGACY)
 SOONG_CONFIG_aospQcomVars_uses_qti_camera_device := $(TARGET_USES_QTI_CAMERA_DEVICE)
+SOONG_CONFIG_aospGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
+SOONG_CONFIG_aospGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 
 # Set default values
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 BOOTLOADER_MESSAGE_OFFSET ?= 0
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY ?= libcamera_parameters
