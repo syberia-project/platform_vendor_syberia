@@ -74,6 +74,8 @@
         <item>udfps_icon_spiral_blue</item>
         <item>udfps_icon_sun_metro</item>
         <item>udfps_icon_transparent</item>
+        <item>udfps_syberia_1</item>
+        <item>udfps_syberia_2</item>
    </string-array>
 
     <string-array translatable="false" name="udfps_animation_styles">
