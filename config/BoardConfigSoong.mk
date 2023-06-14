@@ -28,6 +28,7 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
 
 SOONG_CONFIG_NAMESPACES += aospGlobalVars
 SOONG_CONFIG_aospGlobalVars += \
+    aapt_version_code \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
     camera_needs_client_info \
@@ -69,6 +70,7 @@ SOONG_CONFIG_aospQcomVars += \
 endif
 
 # Soong bool variables
+SOONG_CONFIG_aospGlobalVars_aapt_version_code := $(shell date -u +%Y%m%d)
 SOONG_CONFIG_aospGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
 SOONG_CONFIG_aospGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_aospGlobalVars_gralloc_handle_has_ubwcp_format := $(TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT)
