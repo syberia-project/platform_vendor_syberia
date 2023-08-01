@@ -47,7 +47,6 @@
 
         <!-- Now Playing (Pixel 2017+) -->
         <item>device_personalization_services/NowPlaying__ambient_music_apk_music_detector_min_score=0.45</item>
-        <item>device_personalization_services/NowPlaying__ambient_music_index_manifest_17_09_02=3060:https://storage.googleapis.com/music-iq-db/updatable_db_v3/20230723-030026/manifest.json</item>
         <item>device_personalization_services/NowPlaying__ambient_music_matcher_match_threshold_17_09_02=1.0E-6</item>
         <item>device_personalization_services/NowPlaying__ambient_music_on_demand_enabled=true</item>
         <item>device_personalization_services/NowPlaying__ambient_music_on_demand_music_confidence=0.48</item>
@@ -107,7 +106,6 @@
         <item>device_personalization_services/EchoSmartspace__strava_check_stop_action=true</item>
         <item>device_personalization_services/Echo__smartspace_dedupe_fast_pair_notification=true</item>
         <item>device_personalization_services/Echo__smartspace_doorbell_aiai_loading_screen=false</item>
-        <item>device_personalization_services/Echo__smartspace_doorbell_allowlist_packages=com.nest.android, com.google.android.apps.chromecast.app</item>
         <item>device_personalization_services/Echo__smartspace_doorbell_loading_screen_state=4</item>
         <item>device_personalization_services/Echo__smartspace_enable_async_icon=true</item>
         <item>device_personalization_services/Echo__smartspace_enable_battery_notification_parser=true</item>
@@ -192,8 +190,6 @@
         <item>device_personalization_services/SmartRecOverviewChips__enable_reflection_generator=true</item>
         <item>device_personalization_services/SmartRecOverviewChips__enable_settings_card_generator=true</item>
         <item>device_personalization_services/SmartRecOverviewChips__enable_smartrec_for_overview_chips=true</item>
-        <item>device_personalization_services/SmartRecOverviewChips__nasa_superpacks_manifest_url=https://www.gstatic.com/nasa/apps/pack_enus_10062022/22100618/2/en-us/superpacks_manifest.zip</item>
-        <item>device_personalization_services/SmartRecOverviewChips__nasa_superpacks_manifest_ver=2022100601</item>
         <item>device_personalization_services/SmartRecPixelSearch__enable_aiai_tc_generator=true</item>
         <item>device_personalization_services/SmartRecPixelSearch__enable_all_fallbacks=true</item>
         <item>device_personalization_services/SmartRecPixelSearch__enable_appaction_generator=true</item>
@@ -217,7 +213,6 @@
         <item>device_personalization_services/SmartRecPixelSearch__spelling_checker_frequency_score_overrides_map={"8":-7}</item>
 
         <!-- WallpaperEffects -->
-        <item>device_personalization_services/WallpaperEffects__cinematic_models_mdd_manifest_config=Ct4IEtsICiF3YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMSwgESdWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9tZGktc2VydmluZy9haWFpLXdhbGxwYXBlcmVmZmVjdHMtY2luZW1hdGljLW1vZGVscy83NDYvNTk2NDgzNDA1MzljOGU2OWRmZGZlYjkzNTk0OTIzYWJmZDBmMGQwNyCM4JQFKig1OTY0ODM0MDUzOWM4ZTY5ZGZkZmViOTM1OTQ5MjNhYmZkMGYwZDA3OhJkZXB0aF9tb2RlbC50ZmxpdGV4AKIBAKoBABLIARJ1aHR0cHM6Ly9kbC5nb29nbGUuY29tL21kaS1zZXJ2aW5nL2FpYWktd2FsbHBhcGVyZWZmZWN0cy1jaW5lbWF0aWMtbW9kZWxzLzc0Ni84NmE3MWYwYTIwYjFhMjhiNTY4MTMwZTliYTZjMTYzZTdhZjQzMTg5IKzsyQQqKDg2YTcxZjBhMjBiMWEyOGI1NjgxMzBlOWJhNmMxNjNlN2FmNDMxODk6GHBlcnNvbl9wb3NlX21vZGVsLnRmbGl0ZXgAogEAqgEAEs0BEnVodHRwczovL2RsLmdvb2dsZS5jb20vbWRpLXNlcnZpbmcvYWlhaS13YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMvNzQ2L2I2NTQxNDFiOTUwNjY3OTVlYjBlNjNlZDRkNzFiZjQxZDQyYjFhNmMgyPPNAiooYjY1NDE0MWI5NTA2Njc5NWViMGU2M2VkNGQ3MWJmNDFkNDJiMWE2YzodcGVyc29uX3NlZ21lbnRlcl9tb2RlbC50ZmxpdGV4AKIBAKoBABLLARJ1aHR0cHM6Ly9kbC5nb29nbGUuY29tL21kaS1zZXJ2aW5nL2FpYWktd2FsbHBhcGVyZWZmZWN0cy1jaW5lbWF0aWMtbW9kZWxzLzc0Ni9lOTllZWJlMDQ2NDk4ZmU2N2MzMzdjZmZkMzkzODM4NTVkMjE0NjM5INCXrwIqKGU5OWVlYmUwNDY0OThmZTY3YzMzN2NmZmQzOTM4Mzg1NWQyMTQ2Mzk6G3JnYmRfaW5wYWludGVyX21vZGVsLnRmbGl0ZXgAogEAqgEAEsQBEnVodHRwczovL2RsLmdvb2dsZS5jb20vbWRpLXNlcnZpbmcvYWlhaS13YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMvNzQ2L2ExNjQ4ZjQ2NDYyZDVmMTExOTVjNmEyYTBhN2M0MTMyZTEwNzJjMDIgsLo6KihhMTY0OGY0NjQ2MmQ1ZjExMTk1YzZhMmEwYTdjNDEzMmUxMDcyYzAyOhVzYWxpZW5jeV9tb2RlbC50ZmxpdGV4AKIBAKoBABgAUABYAGoECAEQAHAAogEAqAEAuAHqBdIBB2RlZmF1bHTaAQDiARsKBwgBEJ+xjRcKBwgCEKCxjRcKBwgDEKGxjRc</item>
         <item>device_personalization_services/WallpaperEffects__cinematic_wallpaper_warmup_completed=true</item>
         <item>device_personalization_services/WallpaperEffects__enable_cinematic_effect=true</item>
         <item>device_personalization_services/WallpaperEffects__enable_cinematic_mdd=true</item>
