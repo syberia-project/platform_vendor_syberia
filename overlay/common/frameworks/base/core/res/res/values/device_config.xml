@@ -38,9 +38,6 @@
         <!-- Enable protected by android banner -->
         <item>privacy/safety_protection_enabled=true</item>
 
-        <!-- Globally enable the new photo picker -->
-        <item>storage_native_boot/take_over_get_content=true</item>
-
         <!--
             Device Personalization Services (AiAi)
         -->
@@ -232,5 +229,37 @@
         <item>notification_assistant/generate_actions=true</item>
         <item>notification_assistant/generate_replies=true</item>
 
+        <!-- Globally enable the new photo picker -->
+        <item>storage_native_boot/take_over_get_content=true</item>
+
+        <!-- Allow more cached apps in the background -->
+        <item>activity_manager/max_cached_processes=64</item>
+
+        <!-- ART heap compaction for cached apps -->
+        <item>activity_manager/use_compaction=true</item>
+    </string-array>
+    <string-array name="pixel_devices">
+        <item>felix</item>
+        <item>tangorpro</item>
+        <item>lynx</item>
+        <item>cheetah</item>
+        <item>panther</item>
+        <item>bluejay</item>
+        <item>oriole</item>
+        <item>raven</item>
+        <item>barbet</item>
+        <item>redfin</item>
+        <item>bramble</item>
+        <item>sunfish</item>
+        <item>coral</item>
+        <item>flame</item>
+        <item>bonito</item>
+        <item>sargo</item>
+        <item>crosshatch</item>
+        <item>blueline</item>
+        <item>taimen</item>
+        <item>walleye</item>
+        <item>marlin</item>
+        <item>sailfish</item>
     </string-array>
 </resources>
