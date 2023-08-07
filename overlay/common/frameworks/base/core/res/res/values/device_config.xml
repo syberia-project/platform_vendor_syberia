@@ -209,14 +209,6 @@
         <item>device_personalization_services/SmartRecPixelSearch__enable_spelling_correction=true</item>
         <item>device_personalization_services/SmartRecPixelSearch__spelling_checker_frequency_score_overrides_map={"8":-7}</item>
 
-        <!-- WallpaperEffects -->
-        <item>device_personalization_services/WallpaperEffects__cinematic_wallpaper_warmup_completed=true</item>
-        <item>device_personalization_services/WallpaperEffects__enable_cinematic_effect=true</item>
-        <item>device_personalization_services/WallpaperEffects__enable_cinematic_mdd=true</item>
-        <item>device_personalization_services/WallpaperEffects__enable_person_segment_tpu=false</item>
-        <item>device_personalization_services/WallpaperEffects__return_texturedmesh_with_error_status=true</item>
-        <item>device_personalization_services/WallpaperEffects__use_gpu=true</item>
-
         <!-- System Ui -->
         <item>systemui/clipboard_overlay_show_actions=true</item>
         <item>systemui/quick_access_wallet_enabled=true</item>
@@ -237,6 +229,15 @@
 
         <!-- ART heap compaction for cached apps -->
         <item>activity_manager/use_compaction=true</item>
+    </string-array>
+    <string-array name="configs_base_non_pixel">
+        <!-- WallpaperEffects -->
+        <item>device_personalization_services/WallpaperEffects__cinematic_models_mdd_manifest_config=</item>
+        <item>device_personalization_services/WallpaperEffects__enable_cinematic_effect=false</item>
+        <item>device_personalization_services/WallpaperEffects__enable_cinematic_mdd=false</item>
+        <item>device_personalization_services/WallpaperEffects__enable_person_segment_tpu=false</item>
+        <item>device_personalization_services/WallpaperEffects__return_texturedmesh_with_error_status=false</item>
+        <item>device_personalization_services/WallpaperEffects__use_gpu=false</item>
     </string-array>
     <string-array name="pixel_devices">
         <item>felix</item>
