@@ -69,10 +69,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AndroidBlackThemeOverlay
 
-# Config
-PRODUCT_PACKAGES += \
-    SimpleDeviceConfig
-
 # Matlog
 PRODUCT_PACKAGES += \
     MatLog
