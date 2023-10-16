@@ -134,6 +134,16 @@ PRODUCT_PACKAGES += \
     UdfpsResources
 endif
 
+#LockClock fonts
+PRODUCT_PACKAGES += \
+    SystemUIClocks-BigNum \
+    SystemUIClocks-Calligraphy \
+    SystemUIClocks-Flex \
+    SystemUIClocks-Growth \
+    SystemUIClocks-Inflate \
+    SystemUIClocks-NumOverlap \
+    SystemUIClocks-Weather
+
 # Repainter integration
 PRODUCT_PACKAGES += \
     RepainterServicePriv \
