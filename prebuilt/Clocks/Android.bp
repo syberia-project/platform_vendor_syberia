@@ -26,7 +26,7 @@ android_app_import {
 	name: "SystemUIClocks-Flex",
 	owner: "google",
 	apk: "SystemUIClocks-Flex/SystemUIClocks-Flex.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
@@ -38,7 +38,7 @@ android_app_import {
 	name: "SystemUIClocks-Growth",
 	owner: "google",
 	apk: "SystemUIClocks-Growth/SystemUIClocks-Growth.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
@@ -50,7 +50,7 @@ android_app_import {
 	name: "SystemUIClocks-Inflate",
 	owner: "google",
 	apk: "SystemUIClocks-Inflate/SystemUIClocks-Inflate.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
@@ -62,7 +62,7 @@ android_app_import {
 	name: "SystemUIClocks-NumOverlap",
 	owner: "google",
 	apk: "SystemUIClocks-NumOverlap/SystemUIClocks-NumOverlap.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
@@ -74,7 +74,7 @@ android_app_import {
 	name: "SystemUIClocks-Weather",
 	owner: "google",
 	apk: "SystemUIClocks-Weather/SystemUIClocks-Weather.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
