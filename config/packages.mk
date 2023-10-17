@@ -141,9 +141,8 @@ PRODUCT_PACKAGES += \
     SystemUIClocks-Flex \
     SystemUIClocks-Growth \
     SystemUIClocks-Inflate \
-    SystemUIClocks-NumOverlap \
-    SystemUIClocks-Weather
+    SystemUIClocks-NumOverlap
 
 # Repainter integration
 PRODUCT_PACKAGES += \
-    RepainterServicePriv \
+    RepainterServicePriv
