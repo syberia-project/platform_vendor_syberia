@@ -129,10 +129,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CustomDoze
 
-ifeq ($(EXTRA_UDFPS_ANIMATIONS),true)
-PRODUCT_PACKAGES += \
-    UdfpsResources
-endif
+#ifeq ($(EXTRA_UDFPS_ANIMATIONS),true)
+#PRODUCT_PACKAGES += \
+#    UdfpsResources
+#endif
 
 #LockClock fonts
 PRODUCT_PACKAGES += \
