@@ -63,6 +63,9 @@ SOONG_CONFIG_aospQcomVars += \
     uses_qcom_bsp_legacy \
     uses_qti_camera_device
 
+SOONG_CONFIG_NAMESPACES += qtidisplaycommonsys
+SOONG_CONFIG_qtidisplaycommonsys := displayextension composer3ext
+
 # Only create display_headers_namespace var if dealing with UM platforms to avoid breaking build for all other platforms
 ifneq ($(filter $(UM_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_aospQcomVars += \
