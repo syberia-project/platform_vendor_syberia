@@ -129,6 +129,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CustomDoze
 
+#QS theme
+PRODUCT_PACKAGES += \
+    A11QSUI
+
 #ifeq ($(EXTRA_UDFPS_ANIMATIONS),true)
 #PRODUCT_PACKAGES += \
 #    UdfpsResources
