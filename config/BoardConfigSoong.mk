@@ -55,6 +55,8 @@ SOONG_CONFIG_aospNvidiaVars += \
 
 SOONG_CONFIG_NAMESPACES += aospQcomVars
 SOONG_CONFIG_aospQcomVars += \
+    qti_vibrator_effect_lib \
+    qti_vibrator_use_effect_stream \
     should_wait_for_qsee \
     supports_extended_compress_format \
     supports_hw_fde \
@@ -84,6 +86,7 @@ SOONG_CONFIG_aospGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA
 SOONG_CONFIG_aospGlobalVars_ignores_ftp_pptp_conntrack_failure := $(TARGET_IGNORES_FTP_PPTP_CONNTRACK_FAILURE)
 SOONG_CONFIG_aospGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE)
 SOONG_CONFIG_aospNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
+SOONG_CONFIG_aospQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM)
 SOONG_CONFIG_aospQcomVars_should_wait_for_qsee := $(TARGET_KEYMASTER_WAIT_FOR_QSEE)
 SOONG_CONFIG_aospQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_aospQcomVars_supports_hw_fde := $(TARGET_HW_DISK_ENCRYPTION)
@@ -102,6 +105,7 @@ TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED ?= false
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE ?= false
 TARGET_INIT_VENDOR_LIB ?= vendor_init
+TARGET_QTI_VIBRATOR_EFFECT_LIB ?= libqtivibratoreffect
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY ?= libcamera_parameters
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 
@@ -117,5 +121,5 @@ ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_aospQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
 else
 SOONG_CONFIG_aospQcomVars_qcom_display_headers_namespace := $(QCOM_SOONG_NAMESPACE)/display
-
 endif
+SOONG_CONFIG_aospQcomVars_qti_vibrator_effect_lib := $(TARGET_QTI_VIBRATOR_EFFECT_LIB)
