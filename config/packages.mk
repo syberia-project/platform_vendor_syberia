@@ -142,6 +142,7 @@ PRODUCT_PACKAGES += \
     SystemUIClocks-Growth \
     SystemUIClocks-Handwritten \
     SystemUIClocks-Inflate \
+    SystemUIClocks-Metro \
     SystemUIClocks-NumOverlap
 
 # Repainter integration
