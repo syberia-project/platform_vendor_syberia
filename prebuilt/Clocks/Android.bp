@@ -2,7 +2,7 @@ android_app_import {
 	name: "SystemUIClocks-BigNum",
 	owner: "google",
 	apk: "SystemUIClocks-BigNum/SystemUIClocks-BigNum.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
@@ -14,7 +14,7 @@ android_app_import {
 	name: "SystemUIClocks-Calligraphy",
 	owner: "google",
 	apk: "SystemUIClocks-Calligraphy/SystemUIClocks-Calligraphy.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
