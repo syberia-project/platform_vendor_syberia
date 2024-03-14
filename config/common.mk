@@ -3,46 +3,6 @@
 # Inherit art options
 include vendor/syberia/config/art.mk
 
-# ART
-# Optimize everything for preopt
-#PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
-
-ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
-# Don't preopt prebuilts
-DONT_DEXPREOPT_PREBUILTS := true
-
-# Use 64-bit dex2oat for better dexopt time.
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat64.enabled=true
-endif
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    pm.dexopt.boot=verify \
-    pm.dexopt.first-boot=verify \
-    pm.dexopt.install=speed-profile \
-    pm.dexopt.bg-dexopt=everything
-
-ifneq ($(AB_OTA_PARTITIONS),)
-PRODUCT_PROPERTY_OVERRIDES += \
-    pm.dexopt.ab-ota=verify
-endif
-
-# General additions
-PRODUCT_PROPERTY_OVERRIDES += \
-    keyguard.no_require_sim=true \
-    dalvik.vm.debug.alloc=0 \
-    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
-    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-    ro.error.receiver.system.apps=com.google.android.gms \
-    ro.setupwizard.enterprise_mode=1 \
-    ro.com.android.dataroaming=false \
-    ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
-    ro.com.android.dateformat=MM-dd-yyyy \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0 \
-    ro.setupwizard.rotation_locked=true \
-    ro.build.selinux=1
-
 #ADB
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
@@ -58,10 +18,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 SELINUX_IGNORE_NEVERALLOWS := true
 endif
-
-PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/bin/sysinit:$(TARGET_COPY_OUT_SYSTEM)/bin/sysinit
-
 
 # Vendor specific init files
 $(foreach f,$(wildcard vendor/syberia/prebuilt/common/etc/init/*.rc),\
@@ -79,12 +35,7 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/syberia/build/tools/50-syberia.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-syberia.sh \
     vendor/syberia/build/tools/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.sh \
-    vendor/syberia/build/tools/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.functions \
-    vendor/syberia/prebuilt/common/bin/clean_cache.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/clean_cache.sh
-
-# system mount
-PRODUCT_COPY_FILES += \
-    vendor/syberia/prebuilt/common/bin/system-mount.sh:install/bin/system-mount.sh
+    vendor/syberia/build/tools/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.functions
 
 # Disable async MTE on system_server
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
@@ -108,25 +59,11 @@ PRODUCT_COPY_FILES += \
 
 include vendor/syberia/config/packages.mk
 
-# Plugins
-#include packages/apps/Plugins/plugins.mk
-
-#ifneq ($(TARGET_WANTS_AOSP_LAUNCHER), true)
-#-include vendor/syberia/prebuilt/Lawnchair/lawnchair.mk
-#endif
-
 # Inherit common product build prop overrides
 -include vendor/syberia/config/versions.mk
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-
-# Dedupe VNDK libraries with identical core variants
-TARGET_VNDK_USE_CORE_VARIANT := true
-
-# Use a generic profile based boot image by default
-PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := art/build/boot/boot-image-profile.txt
 
 # Strip the local variable table and the local variable type table to reduce
 # the size of the system image. This has no bearing on stack traces, but will
@@ -140,13 +77,6 @@ SYSTEMUI_OPTIMIZE_JAVA ?= true
 
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
-
-# IORap app launch prefetching using Perfetto traces and madvise
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.iorapd.enable=true
-
-PRODUCT_SYSTEM_PROPERTIES += \
-    persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
 
 # Disable touch video heatmap to reduce latency, motion jitter, and CPU usage
 # on supported devices with Deep Press input classifier HALs and models

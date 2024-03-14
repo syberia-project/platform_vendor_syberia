@@ -60,6 +60,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GameSpace
 
+PRODUCT_PACKAGES += \
+    BatteryStatsViewer
+
 #OmniJaws
 PRODUCT_PACKAGES += \
     OmniJaws \
@@ -147,7 +150,3 @@ PRODUCT_PACKAGES += \
     SystemUIClocks-Inflate \
     SystemUIClocks-Metro \
     SystemUIClocks-NumOverlap
-
-# Repainter integration
-PRODUCT_PACKAGES += \
-    RepainterServicePriv
