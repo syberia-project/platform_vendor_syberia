@@ -47,7 +47,8 @@ SOONG_CONFIG_aospGlobalVars += \
     target_ld_shim_libs \
     target_process_sdk_version_override \
     target_surfaceflinger_udfps_lib \
-    uses_camera_parameter_lib
+    uses_camera_parameter_lib \
+    needs_camera_boottime
 
 SOONG_CONFIG_NAMESPACES += aospNvidiaVars
 SOONG_CONFIG_aospNvidiaVars += \
@@ -95,6 +96,7 @@ SOONG_CONFIG_aospGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 SOONG_CONFIG_aospGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_aospGlobalVars_uses_oppo_camera := $(TARGET_USES_OPPO_CAMERA)
 SOONG_CONFIG_aospGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
+SOONG_CONFIG_aospGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 
 # Set default values
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
