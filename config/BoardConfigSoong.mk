@@ -49,7 +49,8 @@ SOONG_CONFIG_aospGlobalVars += \
     target_surfaceflinger_udfps_lib \
     uses_camera_parameter_lib \
     needs_camera_boottime \
-    target_camera_package_name
+    target_camera_package_name \
+    uses_miui_camera
 
 SOONG_CONFIG_NAMESPACES += aospNvidiaVars
 SOONG_CONFIG_aospNvidiaVars += \
@@ -99,6 +100,7 @@ SOONG_CONFIG_aospGlobalVars_uses_oppo_camera := $(TARGET_USES_OPPO_CAMERA)
 SOONG_CONFIG_aospGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
 SOONG_CONFIG_aospGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 SOONG_CONFIG_aospGlobalVars_target_camera_package_name := $(TARGET_CAMERA_PACKAGE_NAME)
+SOONG_CONFIG_aospGlobalVars_uses_miui_camera := $(TARGET_USES_MIUI_CAMERA)
 
 # Set default values
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
