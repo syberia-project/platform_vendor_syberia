@@ -680,3 +680,12 @@ target_camera_package_name {
         },
     },
 }
+
+uses_miui_camera {
+    name: "uses_miui_camera_defaults",
+    soong_config_variables: {
+        uses_miui_camera: {
+            cppflags: ["-DUSES_MIUI_CAMERA"],
+        },
+    },
+}
