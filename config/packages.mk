@@ -157,3 +157,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Changelog.txt
 
+# Flags
+PRODUCT_PACKAGES += \
+    SystemUIFlagFlipper
