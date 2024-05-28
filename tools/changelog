@@ -1,48 +1,28 @@
 #!/bin/sh
 
-export Changelog=Changelog.txt
-
-DEVICE=$(echo $TARGET_PRODUCT | sed -e 's/syberia_//g')
-
-if [ -f $Changelog ];
+if [ -f $1 ];
 then
-    rm -f $Changelog
+    rm -f $1
 fi
-
-touch $Changelog
 
 for i in $(seq 7);
 do
 export After_Date=`./prebuilts/tools-lineage/linux-x86/bin/date --date="$i days ago" +%F`
 k=$(expr $i - 1)
 export Until_Date=`./prebuilts/tools-lineage/linux-x86/bin/date --date="$k days ago" +%F`
-echo "====================" >> $Changelog;
-echo "     $Until_Date    " >> $Changelog;
-echo "====================" >> $Changelog;
+echo "====================" >> $1;
+echo "     $Until_Date    " >> $1;
+echo "====================" >> $1;
 while read path;
 do
     # https://www.cyberciti.biz/faq/unix-linux-bash-script-check-if-variable-is-empty/
     Git_log=`git --git-dir ./${path}/.git log --after=$After_Date --until=$Until_Date --pretty=tformat:"%h  %s  [%an]" --abbrev-commit --abbrev=7`
     if [ ! -z "${Git_log}" ]; then
-        echo "\n* ${path}\n${Git_log}\n" >> $Changelog;
+        echo "\n* ${path}\n${Git_log}\n" >> $1;
     fi
 done < ./.repo/project.list;
 
-echo "" >> $Changelog;
+echo "" >> $1;
 done
 
-sed -i 's/[/]$//' $Changelog
-
-if [ -e ./out/target/product/$DEVICE/$Changelog ]
-then
-    rm ./out/target/product/$DEVICE/$Changelog
-fi
-
-if [ -e ./out/target/product/$DEVICE/system/etc/$Changelog ]
-then
-    rm ./out/target/product/$DEVICE/system/etc/$Changelog
-fi
-
-cp $Changelog ./out/target/product/$DEVICE/system/etc/$Changelog
-cp $Changelog ./out/target/product/$DEVICE/
-rm $Changelog
+sed -i 's/[/]$//' $1
