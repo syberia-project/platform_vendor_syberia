@@ -150,3 +150,8 @@ PRODUCT_PACKAGES += \
     SystemUIClocks-Inflate \
     SystemUIClocks-Metro \
     SystemUIClocks-NumOverlap
+
+#Build syberia changelog
+PRODUCT_PACKAGES += \
+    Changelog.txt
+
