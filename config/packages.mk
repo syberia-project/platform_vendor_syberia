@@ -79,9 +79,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SyberiaPapers
 
-# Parallel Space
+# Exact calc
 PRODUCT_PACKAGES += \
-    ParallelSpace
+    ExactCalculator
 
 # StatusBar icons
 PRODUCT_PACKAGES += \
