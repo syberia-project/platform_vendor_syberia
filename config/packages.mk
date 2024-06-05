@@ -149,7 +149,8 @@ PRODUCT_PACKAGES += \
     SystemUIClocks-Growth \
     SystemUIClocks-Inflate \
     SystemUIClocks-Metro \
-    SystemUIClocks-NumOverlap
+    SystemUIClocks-NumOverlap \
+    SystemUIClocks-Handwritten
 
 #Build syberia changelog
 PRODUCT_PACKAGES += \
