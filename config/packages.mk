@@ -150,7 +150,8 @@ PRODUCT_PACKAGES += \
     SystemUIClocks-Inflate \
     SystemUIClocks-Metro \
     SystemUIClocks-NumOverlap \
-    SystemUIClocks-Handwritten
+    SystemUIClocks-Handwritten \
+    SystemUIClocks-Weather
 
 #Build syberia changelog
 PRODUCT_PACKAGES += \
