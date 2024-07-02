@@ -10,3 +10,6 @@ $(call inherit-product, vendor/google/pixel/config.mk)
 ifeq ($(WITH_GMS),true)
 $(call inherit-product, vendor/google/gms/config.mk)
 endif
+
+# Microsoft
+$(call inherit-product-if-exists, vendor/microsoft/mms/products/mms.mk)
