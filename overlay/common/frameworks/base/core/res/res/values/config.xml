@@ -310,5 +310,9 @@
        <item>app_cloning/cloned_apps_enabled=true</item>
        <item>app_cloning/delete_all_app_clones_enabled=true</item>
        <item>app_cloning/enable_app_cloning_building_blocks=true</item>
+
+        <!-- Enable shared connectivity -->
+       <item>wifi/shared_connectivity_enabled=true</item>
+
     </string-array>
 </resources>
