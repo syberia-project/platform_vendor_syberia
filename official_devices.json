@@ -7,7 +7,7 @@
     "ota_codename": "OnePlus9"
   },
   "alioth": {
-    "maintainer": "DennySPb",
+    "maintainer": "erwinabs",
     "device_brand": "Xiaomi",
     "device_model": "Poco F3",
     "device_codename": "alioth"
