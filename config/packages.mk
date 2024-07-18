@@ -45,8 +45,7 @@ endif
 
 # ThemePicker
 PRODUCT_PACKAGES += \
-    ThemePicker \
-    ThemesStub
+    ThemePicker
 
 # Cutout control overlay
 PRODUCT_PACKAGES += \
