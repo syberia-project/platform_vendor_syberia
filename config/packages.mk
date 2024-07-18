@@ -43,6 +43,9 @@ ifeq ($(BOARD_INCLUDE_CMDLINE_TOOLS),true)
     start-ssh
 endif
 
+PRODUCT_PACKAGES += \
+    sqlite3
+
 # ThemePicker
 PRODUCT_PACKAGES += \
     ThemePicker
